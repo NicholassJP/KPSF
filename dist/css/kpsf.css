@@ -73,8 +73,25 @@
     background-color: #2190F6;
     border-radius: 8px;
   }
-  .flop-cabang progress::-webkit-progress-value {
+  .red-bar progress::-webkit-progress-value {
     background-color: #F90D38;
+  }
+  .orange-bar progress::-webkit-progress-value {
+    background-color: #FF8412;
+  }
+
+  .btn-kembali{
+    color: #2691B5;
+    background: #FFFFFF;
+    border: 1px solid #E1E3EF;
+    border-radius: 2px;
+  }
+
+  .badge-orange{
+    padding: 6px 4px;
+    background: #FF8412;
+    border-radius: 8px;
+    color: white;
   }
 
 @media (max-width: 982px) {
