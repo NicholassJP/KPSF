@@ -1,0 +1,48 @@
+.rotate{
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.rotate.down{
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.circle-yellow{
+    color: #FFE500;
+    font-size: 14px;
+}
+.circle-green{
+    color: #00B488;
+    font-size: 14px;
+}
+.legend{
+    width: 6px;
+    height: 6px;
+}
+.legend-op1{
+    background-color: #EDC000;
+}
+.legend-op2{
+    background-color: #FFF1A6;
+}
+.legend-op3{
+    background-color: #FFE600;
+}
+.legend-op4{
+    background-color: #D6B74A;
+}
+.legend-sup1{
+    background-color: #0EBF80;
+}
+.legend-sup2{
+    background-color: #B4EDD8;
+}
+.legend-sup3{
+    background-color: #409C70;
+}
+.legend-sup4{
+    background-color: #00CFAA;
+}

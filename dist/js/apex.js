@@ -30,6 +30,38 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
+// Indeks KPSF Region
+var options = {
+    series: [2.15, 1.50, 2.10, 3.25],
+    chart: {
+        type: "donut",
+        width: "100%",
+    },
+    labels: ["Index 4P NAS", "Index 4P OPR", "Index 4P SUP"],
+    data: ["asd", "va", "zxc"],
+    dataLabels: {
+        enabled: false,
+    },
+    legend: {
+        position: "bottom",
+        formatter: function(seriesName, opts, data) {
+            return (
+                "<span>" +
+                seriesName +
+                "</span>" +
+                "<div>" +
+                "<h5 class='text-bold m-0'>" +
+                opts.w.globals.series[opts.seriesIndex] +
+                "</h5>" +
+                "</div>" +
+                data
+            );
+        },
+    },
+};
+var chart = new ApexCharts(document.querySelector("#chart1"), options);
+chart.render();
+
 //   Trend Achivement KPSF YTD by Month
 const dynamicWidth = 24 * 50;
 const chartWidth =
@@ -323,4 +355,132 @@ dataLabels: {
 };
 
 var chart = new ApexCharts(document.querySelector("#chartcolumn3"), options);
+chart.render();
+
+// Indeks KPSF Dept. Operation
+var options = {
+    colors: ['#EDC000', '#FFF1A6', '#FFE500', '#D6B74A'],
+    series: [{
+        data: [2.97, 2.97, 1.50, 4.00]
+    }],
+    chart: {
+        height: 350,
+        type: 'bar',
+    },
+    grid: {
+        show: false,
+        },
+    plotOptions: {
+        bar: {
+            distributed: true,
+            dataLabels: {
+                position: 'top', // top, center, bottom
+            },
+        }
+    },
+    dataLabels: {
+        enabled: true,
+        offsetY: -20,
+        style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+        }
+    },
+    legend: {
+        show: false
+    },
+    xaxis: {
+        categories: ["Reg 1",
+        "Reg 2",
+        "Reg 3",
+        "Reg 4"],
+        position: 'bottom',
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+        tooltip: {
+            enabled: true,
+        }
+    },
+    yaxis: {
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false,
+        },
+        labels: {
+            show: false,
+        }
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartdeptoperation"), options);
+chart.render();
+
+// Indeks KPSF Dept. Support
+var options = {
+    colors: ['#0EBF80', '#B4EDD8', '#409C70', '#00CFAA'],
+    series: [{
+        data: [2.97, 2.97, 1.50, 4.00]
+    }],
+    chart: {
+        height: 350,
+        type: 'bar',
+    },
+    grid: {
+        show: false,
+        },
+    plotOptions: {
+        bar: {
+            distributed: true,
+            dataLabels: {
+                position: 'top', // top, center, bottom
+            },
+        }
+    },
+    dataLabels: {
+        enabled: true,
+        offsetY: -20,
+        style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+        }
+    },
+    legend: {
+        show: false
+    },
+    xaxis: {
+        categories: ["Reg 1",
+        "Reg 2",
+        "Reg 3",
+        "Reg 4"],
+        position: 'bottom',
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+        tooltip: {
+            enabled: true,
+        }
+    },
+    yaxis: {
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false,
+        },
+        labels: {
+            show: false,
+        }
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartdeptsupport"), options);
 chart.render();

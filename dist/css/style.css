@@ -10,14 +10,14 @@
     font-size: 10px;
 }
 /* Margin */
-.mt-nav{
-    margin-top: 4.5rem;
-}
 .h-100-responsive{
     height: 100%;
 }
 .m-0-p p{
     margin: 0;
+}
+.pb-15px{
+    padding-bottom: 15px;
 }
 /* Font Size */
 .fz-22px{
