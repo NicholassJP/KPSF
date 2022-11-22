@@ -1,9 +1,14 @@
+.padding-kpsf{
+    padding: 2.26rem 1.25rem;
+}
+.height-pie{
+    height: 97%;
+}
 .rotate{
     -moz-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-
 .rotate.down{
     -ms-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -46,3 +51,40 @@
 .legend-sup4{
     background-color: #00CFAA;
 }
+.t-lr-r{
+    text-align: left;
+}
+.w-top-cabang{
+    width: 120px;
+}
+    progress {
+    border: 0;
+    height: 8px;
+    border-radius: 8px;
+  }
+  progress::-webkit-progress-bar {
+    border: 0;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 8px;
+  }
+  progress::-webkit-progress-value {
+    height: 8px;
+    background-color: #2190F6;
+    border-radius: 8px;
+  }
+  .flop-cabang progress::-webkit-progress-value {
+    background-color: #F90D38;
+  }
+
+@media (max-width: 982px) {
+    .height-pie{
+        height: unset;
+    }
+    .t-lr-r{
+        text-align: right;
+    }
+    .w-top-cabang{
+        width: 100%;
+    }
+  }

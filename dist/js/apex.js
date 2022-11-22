@@ -6,7 +6,6 @@ var options = {
         width: "100%",
     },
     labels: ["Index 4P NAS", "Index 4P OPR", "Index 4P SUP"],
-    data: ["asd", "va", "zxc"],
     dataLabels: {
         enabled: false,
     },
@@ -32,32 +31,39 @@ chart.render();
 
 // Indeks KPSF Region
 var options = {
-    series: [2.15, 1.50, 2.10, 3.25],
+    series: [2.96, 2.96, 2.96, 2.96],
     chart: {
         type: "donut",
         width: "100%",
     },
-    labels: ["Index 4P NAS", "Index 4P OPR", "Index 4P SUP"],
-    data: ["asd", "va", "zxc"],
+    labels: ["Region 1", "Region 2", "Region 3", "Region 4"],
     dataLabels: {
         enabled: false,
     },
     legend: {
-        position: "bottom",
-        formatter: function(seriesName, opts, data) {
-            return (
-                "<span>" +
+        fontSize: '14px',
+        position: "right",
+        offsetY: 80,
+        formatter: function(seriesName, opts) {
+            return (    
                 seriesName +
-                "</span>" +
-                "<div>" +
-                "<h5 class='text-bold m-0'>" +
+                "<span class='bold ml-1 mr-1'>" +
                 opts.w.globals.series[opts.seriesIndex] +
-                "</h5>" +
-                "</div>" +
-                data
+                "</span>" +
+                "<img src='/dist/img/custom/down.png'>"
             );
         },
     },
+    responsive: [{
+        breakpoint: 1442,
+        options: {
+            legend: {
+                position: 'bottom',
+                offsetX: 0,
+                offsetY: 0
+            }
+        }
+    }],
 };
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
 chart.render();
@@ -484,3 +490,50 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chartdeptsupport"), options);
 chart.render();
+
+// Indeks KPSF Cabang
+var options = {
+    colors: ['#FFE600', '#0EBF80'],
+    series: [{
+    name: 'Dep. OPR',
+    data: [2.80, 2.50, 2.60, 3.00]
+  }, {
+    name: 'Dep. SUP',
+    data: [2.50, 3.30, 3.50, 3.20]
+  }],
+    chart: {
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '55%',
+      endingShape: 'rounded'
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Pekan Baru', 'Bala Raja', 'Lampung', 'Medan', 'Kota Bumi'],
+  },
+  fill: {
+    opacity: 1
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "$ " + val + " thousands"
+      }
+    }
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chartcolumncabang"), options);
+  chart.render();
