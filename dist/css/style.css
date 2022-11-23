@@ -12,6 +12,9 @@
 #sidebar-overlay{
     z-index: 0;
 }
+.align-middle{
+    vertical-align: middle;
+}
 /* Margin */
 .h-100-responsive{
     height: 100%;
@@ -21,6 +24,9 @@
 }
 .pb-15px{
     padding-bottom: 15px;
+}
+.mt-down{
+    margin-top: 2px;
 }
 /* Font Size */
 .fz-22px{
@@ -73,7 +79,35 @@
 .apexcharts-legend-series{
     align-items: unset !important;
 }
-
+/* Table */
+thead{
+    background-color: #F1F2F8;
+}
+thead .text-center th{
+    border: 0;
+}
+tbody .no-border td{
+    border-top: 0;
+    color: #1976CB;
+}
+.border-bottom{
+    border-color: white !important;
+    border-width: 2px !important;
+}
+.border-lr{
+    border-left: 2px white solid !important;
+    border-right: 2px white solid !important;
+}
+.border-br{
+    border-right: 2px white solid !important;
+    border-bottom: 2px white solid !important;
+}
+.text-red{
+    color: #E54545;
+}
+.page-item.active .page-link{
+    background-color: #2691B5 !important;
+}
 @media (max-width: 1200px) {
     .h-100-responsive{
         height: max-content;
