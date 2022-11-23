@@ -82,22 +82,72 @@
   .yellow-bar progress::-webkit-progress-value {
     background-color: #FFE600;
   }
+  .yellow-bar1 progress::-webkit-progress-value {
+    background-color: #EDC000;
+  }
+  .yellow-bar2 progress::-webkit-progress-value {
+    background-color: #FFF1A6;
+  }
+  .yellow-bar3 progress::-webkit-progress-value {
+    background-color: #D6B74A;
+  }
   .green-bar progress::-webkit-progress-value {
     background-color: #00B488;
   }
+  .green-bar1 progress::-webkit-progress-value {
+    background-color: #0EBF80;
+  }
+  .green-bar2 progress::-webkit-progress-value {
+    background-color: #B4EDD8;
+  }
+  .green-bar3 progress::-webkit-progress-value {
+    background-color: #409C70;
+  }
+  .green-bar4 progress::-webkit-progress-value {
+    background-color: #00CFAA;
+  }
 
-  .btn-kembali{
+  .btn-kembali, .btn-download{
     color: #2691B5;
     background: #FFFFFF;
     border: 1px solid #E1E3EF;
     border-radius: 2px;
+    width: max-content;
+  }
+  .btn-filter{
+    color: #2691B5;
+    background: #F1F2F8;
+    border-radius: 2px;
+    width: max-content;
   }
 
   .badge-orange{
-    padding: 6px 4px;
+    width: max-content;
+    padding: 4px 6px;
     background: #FF8412;
     border-radius: 8px;
     color: white;
+  }
+  .badge-yellow{
+    width: max-content;
+    padding: 4px 6px;
+    background: #FFE600;
+    border-radius: 8px;
+    color: black;
+  }
+  .badge-green{
+    width: max-content;
+    padding: 4px 6px;
+    background: #00B488;
+    border-radius: 8px;
+    color: white;
+  }
+  .badge-info{
+    width: max-content;
+    padding: 4px 18px;
+    background: #DDF1FA;
+    border-radius: 8px;
+    color: black;
   }
 
 @media (max-width: 982px) {
