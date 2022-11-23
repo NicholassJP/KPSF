@@ -65,7 +65,7 @@
   progress::-webkit-progress-bar {
     border: 0;
     height: 8px;
-    background-color: #ccc;
+    background-color: #F1F5F7;
     border-radius: 8px;
   }
   progress::-webkit-progress-value {
@@ -78,6 +78,12 @@
   }
   .orange-bar progress::-webkit-progress-value {
     background-color: #FF8412;
+  }
+  .yellow-bar progress::-webkit-progress-value {
+    background-color: #FFE600;
+  }
+  .green-bar progress::-webkit-progress-value {
+    background-color: #00B488;
   }
 
   .btn-kembali{
