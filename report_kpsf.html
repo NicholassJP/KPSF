@@ -9,13 +9,25 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
+    <link
+      rel="stylesheet"
+      href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+    />
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css" />
     <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="dist/css/kpsf.css" />
+    <link rel="stylesheet" href="dist/css/multiple-select.css" />
     <!-- Apex JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/dist/js/multi/multiselect.min.js"></script>
   </head>
   <body class="control-sidebar-slide-open layout-fixed layout-navbar-fixed">
     <div class="wrapper">
@@ -72,13 +84,13 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="dashboard.html" class="nav-link active">
+                <a href="dashboard.html" class="nav-link">
                   <i class="nav-icon fas fa-home"></i>
                   <p>Home</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="kpsf.html" class="nav-link">
+                <a href="kpsf.html" class="nav-link active">
                   <i class="nav-icon fas fa-medal"></i>
                   <p>KPSF</p>
                 </a>
@@ -92,92 +104,79 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <div class="row">
-              <!-- Summary Indeks KPSF - Nasional -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Indeks KPSF - Nasional</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chart"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Trend Achivement KPSF YTD by Month -->
-              <div class="col-xl-8">
-                <div class="card responsive-over pb-15px">
-                  <div class="card-body">
-                    <h5 class="bold">Trend Achivement KPSF YTD by Month</h5>
-                    <div class="d-flex align-items-center m-0-p gap-1 mb-5">
-                      <p>YTD Jan - Des</p>
-                      <i class="fas fa-circle circle-green"></i>
-                      <p>Periode 2022</p>
-                    </div>
-                    <div id="chartline"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Indeks KPSF - Region -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Indeks KPSF - Region</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div class="d-flex align-items-center">
-                      <div>
-                        <h5 class="m-0">Target Index</h5>
-                        <h5 class="mb-3">4P All</h5>
-                        <h4 class="bold">3.25</h4>
-                      </div>
-                      <div id="chartcolumn1"></div>
-                    </div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Region Dept. OPR -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Region Dept. OPR</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chartcolumn2"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Region Dept. SUP -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Region Dept. SUP</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chartcolumn3"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/kpsf.html" class="btn btn-kembali mb-3">
+              <p class="m-0">
+                Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
+              </p>
+            </a>
+
           </div>
         </div>
       </div>
     </div>
-    <!-- Apex JS -->
-    <script src="dist/js/apex.js"></script>
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/multi/multiselect.js"></script>
+    <!-- Data Table Script -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
+    <script>
+      $(".rotate").click(function () {
+        $(this).toggleClass("down");
+      });
+    </script>
+    <!-- Data Table -->
+    <script type="text/javascript">
+      $("#table1").DataTable({
+        dom: "Bfrtip",
+        dom: "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-6'i><'col-sm-6'p>>",
+        bPaginate: true,
+        bLengthChange: false,
+        bFilter: true,
+        searching: false,
+      });
+    </script>
+    <!-- Button Filter -->
+    <script>
+      var button = document.getElementById("filter-button");
+      var container = document.getElementById("filter-container");
+      var input = document.querySelectorAll("input");
+
+      button.onclick = function (e) {
+        e.stopPropagation();
+        if (container.classList.contains("filter-body--active")) {
+          container.classList.remove("filter-body--active");
+        } else {
+          container.classList.add("filter-body--active");
+        }
+      };
+
+      container.onclick = function (e) {
+        e.stopPropagation();
+      };
+
+      window.onclick = function () {
+        container.classList.remove("filter-body--active");
+      };
+    </script>
+    <!-- Multiple Select -->
+    <script>
+      document
+        .multiselect("#cabang")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#remark")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#bulan")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+    </script>
   </body>
 </html>
