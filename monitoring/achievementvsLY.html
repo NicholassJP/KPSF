@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KPSF</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link
+      rel="stylesheet"
+      href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+    />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <link rel="stylesheet" href="../dist/css/kpsf.css" />
+    <link rel="stylesheet" href="../dist/css/multiple-select.css" />
+    <!-- Apex JS -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../dist/js/multi/multiselect.min.js"></script>
+  </head>
+  <body class="control-sidebar-slide-open layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-alfa navbar-white">
+        <!-- Left Navbar -->
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <img src="../dist/img/custom/alfamart.png" class="img-fluid" />
+          </li>
+          <li class="nav-item d-none d-sm-inline-block ml-2">
+            <h5 class="m-0 color-white">Service Analysis System</h5>
+          </li>
+        </ul>
+
+        <!-- Right Navbar -->
+        <ul class="navbar-nav ml-auto align-items-center">
+          <!-- Nama Navbar -->
+          <li class="nav-item">
+            <p class="m-0 mr-3 color-white">Jonathan Iskandar</p>
+          </li>
+          <!-- NIK Navbar -->
+          <li class="nav-item">
+            <div class="badge-nik">18046009</div>
+          </li>
+          <!-- User Navbar -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-user-circle fz-22px"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="#" class="dropdown-item dropdown-footer">Log out</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-3">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="../dashboard.html" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>Home</p>
+                </a>
+              </li>
+              <!-- KPSF -->
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-medal"></i>
+                  <p>
+                    KPSF
+                    <i class="right fas fa-angle-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../kpsf.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Summary KPSF</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Report
+                        <i class="right fas fa-angle-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="../kpsf/nas_reg_cabang.html" class="nav-link">
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Nasional, Region & Cabang</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="../kpsf/am.html" class="nav-link">
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Area Manager</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="../kpsf/ac.html" class="nav-link">
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Area Coordinator</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="../kpsf/store.html" class="nav-link">
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Store</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Monitoring
+                        <i class="right fas fa-angle-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a
+                          href="../monitoring/indeksMonth.html"
+                          class="nav-link"
+                        >
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Trend Indeks by Month</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="../monitoring/achievementMonth.html"
+                          class="nav-link"
+                        >
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Trend Achievement Indikator by Month</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="../monitoring/achievementPilar.html"
+                          class="nav-link"
+                        >
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Chart Trend Achievement Indikator by Pilar</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="../monitoring/achievementvsLY.html"
+                          class="nav-link active"
+                        >
+                          <i class="far fa-dot-circle nav-icon"></i>
+                          <p>Compare Achievement Indikator vs LY</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Admin Setting -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-cog"></i>
+                  <p>
+                    Admin Setting
+                    <i class="right fas fa-angle-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="/admin/menuSAS.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Menu SAS</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/exception.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Exception</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/upload.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Upload Data</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <div class="content pt-3">
+          <div class="container-fluid">
+            <a href="/kpsf.html" class="btn btn-kembali mb-3">
+              <p class="m-0">
+                Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
+              </p>
+            </a>
+            <div class="card card-tabs mt-1">
+              <div class="card-header pb-0">
+                <h5>Monitoring KSPF -   Compare Achievement Indikator vs LY</h5>
+              </div>
+              <div class="card-body pt-2">
+                <div class="tab-content" id="custom-tabs-one-tabContent">
+                  <!-- KPSF by Nasional, Region & Cabang -->
+                  <p class="color-secondary">Compare KPSF Nasional - All Store</p>
+                  <div class="d-flex-none align-items-center">
+                    <div class="badge-info mb-lg-0 mb-3">
+                      <div class="d-flex-none align-items-center gap-1 m-0-p">
+                        <div class="d-flex align-items-center gap-1">
+                          <!-- Indikator -->
+                          <img src="/dist/img/custom/info.png" />
+                          <p>Indikator :</p>
+                        </div>
+                        <!-- High Value  >= 3.00 -->
+                        <div class="d-flex align-items-center gap-1">
+                          <i class="fas fa-circle circle-green1"></i>
+                          <p>High Value >= 3.00</p>
+                        </div>
+                        <!-- Medium 2.50 =< 3.00 -->
+                        <div class="d-flex align-items-center gap-1">
+                          <i class="fas fa-circle circle-orange"></i>
+                          <p>Medium 2.50 =< 3.00</p>
+                        </div>
+                        <!-- Low Value < 2.50 -->
+                        <div class="d-flex align-items-center gap-1">
+                          <i class="fas fa-circle circle-orange"></i>
+                          <p>Low Value < 2.50</p>
+                        </div>
+                        <!-- Low Value < 2.50 -->
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/dist/img/custom/up-lg.png" />
+                          <p>Low Value < 2.50</p>
+                        </div>
+                        <!-- Low Value < 2.50 -->
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/dist/img/custom/down-lg.png" />
+                          <p>Low Value < 2.50</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ml-auto">
+                      <button class="btn btn-kembali">Download</button>
+                      <button id="filter-button" class="btn btn-filter">
+                        Filter
+                      </button>
+                      <!-- Filter -->
+                      <div id="filter-container" class="filter-body">
+                        <div class="row">
+                          <div class="col-lg-6 vr-right">
+                            <!-- Cabang -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Cabang</label>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="cabang"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- PIC -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">PIC</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio"
+                                    id="deptOPR"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Dept. OPR</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio"
+                                    id="deptSUP"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Dept. SUP</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Pilar -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Pilar</label>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="pilar"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- AM -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">AM</label>
+                              <div>
+                                <select class="form-control" id="am" multiple>
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- AC -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">AC</label>
+                              <div>
+                                <select class="form-control" id="ac" multiple>
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Toko -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Toko</label>
+                              <div>
+                                <select class="form-control" id="toko" multiple>
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Status Toko -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Status Toko</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="reguler"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Reguler</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="franchise"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Franchise</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <!-- Flag Store Focus -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix"
+                                >Flag Store Focus</label
+                              >
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="storefocus"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Store Focus</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="nonstorefocus"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non Store Focus</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Remark SF -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Remark SF</label>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="remark"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Flag HTH -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Flag HTH</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="hth"
+                                    value=""
+                                  />
+                                  <label class="form-check-label">HTH</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="nonhth"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non HTH</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Flag Urban -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Flag Urban</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="urban"
+                                    value=""
+                                  />
+                                  <label class="form-check-label">Urban</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="nonurban"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non Urban</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Format Periode -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix"
+                                >Format Periode</label
+                              >
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="checkbox1"
+                                    id="ytd"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">YTD</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="checkbox1"
+                                    id="ytm"
+                                    value=""
+                                  />
+                                  <label class="form-check-label">YTM</label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Periode Tahun -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix"
+                                >Periode Tahun</label
+                              >
+                              <div>
+                                <select class="form-border padding-select">
+                                  <option value="2022">2022</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Periode Bulan -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix"
+                                >Periode Bulan</label
+                              >
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="bulan"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-right">
+                          <button class="btn btn-filter-apply">Filter</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Monitoring KPSF - Summary Trend KPSF Nasional by Month -->
+                  <div class="card mt-3">
+                    <div class="card-header">
+                      <h3 class="card-title mt-2">
+                        Monitoring KPSF - Summary Trend KPSF Nasional by Month
+                      </h3>
+                      <div class="card-tools">
+                        <button
+                          type="button"
+                          class="btn btn-tool rotate"
+                          data-card-widget="collapse"
+                        >
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive mt-3">
+                        <table class="table table-stripted w-100 mb-3">
+                          <thead class="vertical-middle">
+                            <tr>
+                              <th class="text-center">PIC</th>
+                              <th>Indikator</th>
+                              <th>Target</th>
+                              <th>Jan 2020</th>
+                              <th>Jan 2021</th>
+                              <th>Jan 2020</th>
+                              <th>YTD Jan 2022</th>
+                              <th>YTD Jan 2021</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- Operation -->
+                            <tr>
+                              <td class="text-center">Operation</td>
+                              <td>
+                                <i class="fas fa-circle circle-table1"></i>
+                                Indeks 4P Operation
+                              </td>
+                              <td>-</td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- Dept Support -->
+                            <tr>
+                              <td class="text-center">Dept Support</td>
+                              <td>
+                                <i class="fas fa-circle circle-table2"></i>
+                                Indeks 4P Dept Support
+                              </td>
+                              <td>-</td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- All -->
+                            <tr class="bg-all-table td-bold">
+                              <td class="text-center">All</td>
+                              <td>
+                                <i class="fas fa-circle circle-table1"></i>
+                                Indeks 4P
+                              </td>
+                              <td>-</td>
+                              <td>2.25</td>
+                              <td>2.25</td>
+                              <td>2.25</td>
+                              <td>2.25</td>
+                              <td>2.25</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Trend KPSF Nasional by Month - Dept. Operation -->
+                  <div class="card mt-3">
+                    <div class="card-header">
+                      <h3 class="card-title mt-2">
+                        Trend KPSF Nasional by Month - Dept. Operation
+                      </h3>
+                      <div class="card-tools">
+                        <button
+                          type="button"
+                          class="btn btn-tool rotate"
+                          data-card-widget="collapse"
+                        >
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive mt-3">
+                        <table class="table table-stripted w-100 mb-3">
+                          <thead class="vertical-middle">
+                            <tr>
+                              <th class="text-center">Pilar</th>
+                              <th>Indikator</th>
+                              <th>Target</th>
+                              <th>Jan 2020</th>
+                              <th>Jan 2021</th>
+                              <th>Jan 2020</th>
+                              <th>YTD Jan 2022</th>
+                              <th>YTD Jan 2021</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- People -->
+                            <tr>
+                              <td class="text-center">People</td>
+                              <td>Indeks People</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- People Audit -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>People Audit</td>
+                              <td>85.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Decrease Complain on People -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Decrease Complain on People</td>
+                              <td>-75.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                -22.47%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                -26.26%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                -11.47%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                -11.47%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                -11.47%
+                              </td>
+                            </tr>
+                            <!-- Indeks 4P Operation -->
+                            <tr class="bg-all-table2 td-bold">
+                              <td></td>
+                              <td>Indeks 4P Operation</td>
+                              <td>-</td>
+                              <td>3.56</td>
+                              <td>3.20</td>
+                              <td>3.16</td>
+                              <td>3.16</td>
+                              <td>3.11</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Trend KPSF Nasional by Month - Dept. Support -->
+                  <div class="card mt-3">
+                    <div class="card-header">
+                      <h3 class="card-title mt-2">
+                        Trend KPSF Nasional by Month - Dept. Support
+                      </h3>
+                      <div class="card-tools">
+                        <button
+                          type="button"
+                          class="btn btn-tool rotate"
+                          data-card-widget="collapse"
+                        >
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive mt-3">
+                        <table class="table table-stripted w-100 mb-3">
+                          <thead class="vertical-middle">
+                            <tr>
+                              <th class="text-center">Pilar</th>
+                              <th>Indikator</th>
+                              <th>Target</th>
+                              <th>Jan 2020</th>
+                              <th>Jan 2021</th>
+                              <th>Jan 2020</th>
+                              <th>YTD Jan 2022</th>
+                              <th>YTD Jan 2021</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- People -->
+                            <tr>
+                              <td class="text-center">People</td>
+                              <td>Indeks People</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- People Check -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>People Check</td>
+                              <td>80.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Decrease Complain on People -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Decrease Complain on People</td>
+                              <td>99.50%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                84.41%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                92.31%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.32%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.32%
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.32%
+                              </td>
+                            </tr>
+                            <!-- Indeks 4P Dept. Support -->
+                            <tr class="bg-all-table3 td-bold">
+                              <td></td>
+                              <td>Indeks 4P Dept. Support</td>
+                              <td>-</td>
+                              <td>2.46</td>
+                              <td>2.46</td>
+                              <td>2.46</td>
+                              <td>2.46</td>
+                              <td>2.46</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/multi/multiselect.js"></script>
+    <!-- Data Table Script -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script>
+      $(".rotate").click(function () {
+        $(this).toggleClass("down");
+      });
+    </script>
+    <!-- Button Filter -->
+    <script>
+      var button = document.getElementById("filter-button");
+      var container = document.getElementById("filter-container");
+      var input = document.querySelectorAll("input");
+
+      button.onclick = function (e) {
+        e.stopPropagation();
+        if (container.classList.contains("filter-body--active")) {
+          container.classList.remove("filter-body--active");
+        } else {
+          container.classList.add("filter-body--active");
+        }
+      };
+
+      container.onclick = function (e) {
+        e.stopPropagation();
+      };
+
+      window.onclick = function () {
+        container.classList.remove("filter-body--active");
+      };
+    </script>
+    <!-- Multiple Select -->
+    <script>
+      document
+        .multiselect("#cabang")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#remark")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#pilar")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#ac")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#am")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#bulan")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+      document
+        .multiselect("#toko")
+        .setCheckBoxClick("checkboxAll", function (target, args) {})
+        .setCheckBoxClick("1", function (target, args) {});
+    </script>
+  </body>
+</html>

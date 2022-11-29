@@ -286,19 +286,19 @@ var options = {
         {
             name: 'Indeks Product',
             data: [
-                2.08, 2.08, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
+                2.08, 1.48, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
             ],
         },
         {
             name: 'Indeks Process',
             data: [
-                2.66, 2.66, 2.68, 3.15, 3.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
+                2.66, 2.66, 2.18, 1.15, 2.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
             ],
         },
         {
             name: 'Indeks Place',
             data: [
-                4.00, 4.00, 4.00, 0.00, 0.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00
+                1.00, 1.00, 1.00, 3.00, 3.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00
             ],
         },
     ],
@@ -741,14 +741,314 @@ var options = {
   fill: {
     opacity: 1
   },
-  tooltip: {
-    y: {
-      formatter: function (val) {
-        return "$ " + val + " thousands"
-      }
-    }
-  }
   };
 
   var chart = new ApexCharts(document.querySelector("#chartcolumncabang"), options);
+  chart.render();
+
+
+//   Area Chart
+var options = {
+    chart: {
+      height: 320,
+      type: "area",
+      toolbar: {
+        show: false
+    },
+    },
+    dataLabels: {
+      enabled: true,   
+          formatter: (val) => {
+            return val + '%'
+          }
+    },
+    series: [
+      {
+        name: "Nasional",
+        data: [{
+            x: 'Jan 2020',
+            y: [0.87]
+          },{
+            x: 'Feb 2020',
+            y: [0.77]
+          },{
+            x: 'Mar 2020',
+            y: [0.20]
+          },{
+            x: 'Apr 2020',
+            y: [0.49]
+          },{
+            x: 'Mei 2020',
+            y: [0.48]
+          },{
+            x: 'Jun 2020',
+            y: [1.03]
+          },{
+            x: 'Jul 2020',
+            y: [1.06]
+          },{
+            x: 'Aug 2020',
+            y: [0.95]
+          },{
+            x: 'Sep 2020',
+            y: [0.982]
+          },{
+            x: 'Okt 2020',
+            y: [0.68]
+          },{
+            x: 'Nov 2020',
+            y: [0.47]
+          },{
+            x: 'Des 2020',
+            y: [0.19]
+          },{
+            x: 'YTD Des',
+            y: [0.70]
+          }]
+      }
+    ],
+    
+    stroke: {
+        curve: 'straight'
+      },
+      markers: {
+        size: 5,
+        hover: {
+          size: 9
+        }
+      },
+      colors: ['#FF7A00'],
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.7,
+        opacityTo: 0.9,
+        stops: [0, 100, 100]
+      }
+    },
+    
+    yaxis: {
+        labels: {
+          formatter: (val) => {
+            return val + '%'
+          }
+        }
+      },  grid: {
+        borderColor: '#f1f1f1',
+      }
+  };
+  
+  var chart = new ApexCharts(document.querySelector("#areachart1"), options);
+  
+  chart.render();
+  
+//   Mix Line Chart
+
+var options = {
+    series: [{
+      name: "Nasional",
+      data: [89, 29, 24, 45, 66, 70, 74, 65, 30, 25, 20, 70, 50]
+    },
+    {
+      name: "Balaraja",
+      data: [80, 20, 15, 38, 59, 62, 66, 58, 24, 18, 12, 65, 45]
+    }
+  ],
+    chart: {
+    height: 320,
+    type: 'line',
+    toolbar: {
+      show: false
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  colors: ['#FF7A00', '#5CCDD3'],
+  legend: {
+    tooltipHoverFormatter: function(val, opts) {
+      return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+    }
+  },
+  markers: {
+    size: 6,
+    hover: {
+      sizeOffset: 1
+    },
+    shape: ["square","circle"]
+  },
+  xaxis: {
+    categories: ["Jan 2020",
+    "Feb 2020",
+    "Mar 2020",
+    "Apr 2020",
+    "Mei 2020",
+    "Jun 2020",
+    "Jul 2020",
+    "Aug 2020",
+    "Sep 2020",
+    "Okt 2020",
+    "Nov 2020",
+    "Des 2020",
+    "YTD Des"
+    ],
+  },
+  yaxis: {
+    labels: {
+      formatter: (val) => {
+        return val + '%'
+      }
+    }
+  },
+  legend:{
+    position:"top"
+  },
+  grid: {
+    borderColor: '#f1f1f1',
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#mixline1"), options);
+  chart.render();
+  
+//   Column Chart %
+var options = {
+    series: [{
+    name: 'Nasional',
+    data: [80, 50,50,50,50,50,50,48,40,50,50,50,50,50]
+  }],
+    chart: {
+    height: 320,
+    type: 'bar',
+    toolbar: false
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        position: 'top', // top, center, bottom
+      },
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val) {
+      return val + "%";
+    },
+    offsetY: -20,
+    style: {
+      fontSize: '12px',
+      colors: ["#304758"]
+    }
+  },
+  colors: ['#FF7A00'],
+  xaxis: {
+    categories: ["Jan 2020",
+    "Feb 2020",
+    "Mar 2020",
+    "Apr 2020",
+    "Mei 2020",
+    "Jun 2020",
+    "Jul 2020",
+    "Aug 2020",
+    "Sep 2020",
+    "Okt 2020",
+    "Nov 2020",
+    "Des 2020",
+    "YTD Des"],
+    axisBorder: {
+      show: false
+    },
+    axisTicks: {
+      show: false
+    },
+    crosshairs: {
+      fill: {
+        type: 'gradient',
+        gradient: {
+          colorFrom: '#D8E3F0',
+          colorTo: '#BED1E6',
+          stops: [0, 100],
+          opacityFrom: 0.4,
+          opacityTo: 0.5,
+        }
+      }
+    },
+    tooltip: {
+      enabled: true,
+    }
+  },
+  yaxis: {
+    axisBorder: {
+      show: false
+    },
+    axisTicks: {
+      show: false,
+    },
+    labels: {
+      show: true,
+      formatter: function (val) {
+        return val + "%";
+      }
+    }
+  
+  },
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chartcolumn4"), options);
+  chart.render();
+
+//   Line Column Chart
+var options = {
+    series: [{
+    name: 'Balaraja',
+    type: 'column',
+    data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+  },
+  {
+    name: 'Serpong',
+    type: 'column',
+    data: [330, 480, 410, 620, 320, 415, 222, 111, 444, 555, 252, 126]
+  }, {
+    name: 'Nasional',
+    type: 'line',
+    data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
+  }],
+    chart: {
+    height: 320,
+    type: 'line',
+    toolbar: false
+  },
+  colors: ['#CFD4FF','#5CCDD3','#FF7A00'],
+  stroke: {
+    width: [0, 0, 4]
+  },
+  dataLabels: {
+    enabled: true,
+    enabledOnSeries: [2]
+  },
+  labels: ["Jan 2020",
+  "Feb 2020",
+  "Mar 2020",
+  "Apr 2020",
+  "Mei 2020",
+  "Jun 2020",
+  "Jul 2020",
+  "Aug 2020",
+  "Sep 2020",
+  "Okt 2020",
+  "Nov 2020",
+  "Des 2020",
+  "YTD Des"],
+  yaxis: [{
+  }, {
+    opposite: true,
+    show: false
+  }]
+  };
+
+  var chart = new ApexCharts(document.querySelector("#linecolumnchart"), options);
   chart.render();
