@@ -97,7 +97,7 @@ var options = {
             show: false,
         },
     },
-    colors: ["#50B052", "#F8C045", "#9186D0", "#FF8B8B"],
+    colors: ['#00B488', '#FF8412','#FFE600'],
     dataLabels: {
         enabled: true,
     },
@@ -134,6 +134,221 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chartline"), options);
 chart.render();
+
+//   Trend Achivement KPSF YTD by Month
+var options = {
+    series: [{
+            name: 'Idx 4P OPR',
+            data: [
+                2.58, 2.79, 2.67, 2.63, 2.74, 2.97, 3.25, 3.14, 3.46, 3.68, 3.59, 3.44, 3.27
+            ],
+        },
+        {
+            name: 'Indeks 4P DEPT.Support',
+            data: [
+                2.45, 2.57, 2.49, 2.25, 2.31, 2.67, 2.87, 2.78, 2.92, 3.14, 3.12, 3.07, 2.88
+            ],
+        },
+        {
+            name: 'Indeks 4P OPR',
+            data: [
+                2.33, 2.35, 2.32, 1.87, 1.88, 2.37, 2.50, 2.42, 2.37, 2.60, 2.65, 2.71, 2.50
+            ],
+        },
+    ],
+    chart: {
+        height: 350,
+        width: chartWidth,
+        type: "line",
+        toolbar: {
+            show: false,
+        },
+    },
+    colors: ['#FF8412', '#00B488','#FFE600'],
+    dataLabels: {
+        enabled: true,
+    },
+    stroke: {
+        curve: "smooth",
+    },
+    grid: {
+        show: false,
+    },
+    markers: {
+        size: 4,
+    },
+    xaxis: {
+        categories: [
+            "Jan 2020",
+            "Feb 2020",
+            "Mar 2020",
+            "Apr 2020",
+            "Mei 2020",
+            "Jun 2020",
+            "Jul 2020",
+            "Aug 2020",
+            "Sep 2020",
+            "Okt 2020",
+            "Nov 2020",
+            "Des 2020",
+            "YTD Des",
+        ],
+    },
+    legend: {
+        show: true,
+        position: "top"
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartline2"), options);
+chart.render();
+//   Trend YTD Indeks KSPF by Month - Dept. Operation
+var options = {
+    series: [{
+            name: 'Indeks People',
+            data: [
+                1.68, 1.75, 1.65, 1.00, 1.00, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.68
+            ],
+        },
+        {
+            name: 'Indeks Product',
+            data: [
+                2.08, 2.08, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
+            ],
+        },
+        {
+            name: 'Indeks Process',
+            data: [
+                2.66, 2.66, 2.68, 3.15, 3.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
+            ],
+        },
+        {
+            name: 'Indeks Place',
+            data: [
+                4.00, 4.00, 4.00, 0.00, 0.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00
+            ],
+        },
+    ],
+    chart: {
+        height: 350,
+        width: chartWidth,
+        type: "line",
+        toolbar: {
+            show: false,
+        },
+    },
+    colors: ['#EDC000', '#FFF1A6','#FFE600','#D6B74A'],
+    dataLabels: {
+        enabled: true,
+    },
+    stroke: {
+        curve: "smooth",
+    },
+    grid: {
+        show: false,
+    },
+    markers: {
+        size: 4,
+    },
+    xaxis: {
+        categories: [
+            "Jan 2020",
+            "Feb 2020",
+            "Mar 2020",
+            "Apr 2020",
+            "Mei 2020",
+            "Jun 2020",
+            "Jul 2020",
+            "Aug 2020",
+            "Sep 2020",
+            "Okt 2020",
+            "Nov 2020",
+            "Des 2020",
+            "YTD Des",
+        ],
+    },
+    legend: {
+        show: true,
+        position: "top"
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartline3"), options);
+chart.render();
+//   Trend YTD Indeks KSPF by Month - Dept. Operation
+var options = {
+    series: [{
+            name: 'Indeks People',
+            data: [
+                1.68, 1.75, 1.65, 1.00, 1.00, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.68
+            ],
+        },
+        {
+            name: 'Indeks Product',
+            data: [
+                2.08, 2.08, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
+            ],
+        },
+        {
+            name: 'Indeks Process',
+            data: [
+                2.66, 2.66, 2.68, 3.15, 3.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
+            ],
+        },
+        {
+            name: 'Indeks Place',
+            data: [
+                4.00, 4.00, 4.00, 0.00, 0.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00
+            ],
+        },
+    ],
+    chart: {
+        height: 350,
+        width: chartWidth,
+        type: "line",
+        toolbar: {
+            show: false,
+        },
+    },
+    colors: ['#0EBF80', '#B4EDD8','#409C70','#00CFAA'],
+    dataLabels: {
+        enabled: true,
+    },
+    stroke: {
+        curve: "smooth",
+    },
+    grid: {
+        show: false,
+    },
+    markers: {
+        size: 4,
+    },
+    xaxis: {
+        categories: [
+            "Jan 2020",
+            "Feb 2020",
+            "Mar 2020",
+            "Apr 2020",
+            "Mei 2020",
+            "Jun 2020",
+            "Jul 2020",
+            "Aug 2020",
+            "Sep 2020",
+            "Okt 2020",
+            "Nov 2020",
+            "Des 2020",
+            "YTD Des",
+        ],
+    },
+    legend: {
+        show: true,
+        position: "top"
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartline4"), options);
+chart.render();
+
 
 // Summary Indeks KPSF - Region 
 var options = {

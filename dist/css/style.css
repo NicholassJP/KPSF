@@ -213,6 +213,9 @@
     .d-flex-none {
       display: block;
     }
+    .badge-info{
+      width: 100% !important; 
+    }
   }
   
   .layout-navbar-fixed .wrapper .content-wrapper {
