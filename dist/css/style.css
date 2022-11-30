@@ -167,6 +167,9 @@
   .modal {
     position: absolute;
   }
+  .color-active-table{
+    background-color: #DEE8F1;
+  }
   .btn-filter{
     color: #2691B5;
     background: #F1F2F8;
@@ -217,7 +220,9 @@
       width: 100% !important; 
     }
   }
-  
+  .multiselect-dropdown-arrow{
+    right: 13px;
+  }
   .layout-navbar-fixed .wrapper .content-wrapper {
     margin-top: calc(3.5rem + 0px);
   }
@@ -226,6 +231,13 @@
     border-radius: 4px;
     padding: 1.5px 8px;
     margin: 5px 0 6px 0;
+  }
+  .form-lov{
+    padding: 3px 8px;
+    width: 100%;
+  }
+  .form-group-lov{
+    margin-bottom: 0.56rem;
   }
   .padding-select{
     padding: 2.5px;
@@ -258,4 +270,23 @@
   }
   .vertical-middle th{
     vertical-align: middle !important;
+  }
+  .table-lov tbody tr:hover{
+    background-color: #DEE8F1;
+    cursor: pointer;
+  }
+  .table-lov tbody{
+    display:block;
+    max-height:462px;
+    overflow-y:auto;
+  }
+  
+  .table-lov thead, .table-lov tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+  }
+  
+  .table-lov thead {
+    width: calc( 100% )
   }
