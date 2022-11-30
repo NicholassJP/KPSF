@@ -328,35 +328,44 @@
                               </div>
                             </div>
                             <!-- AM -->
-                            <div class="form-group">
+                            <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">AM</label>
                               <div>
-                                <select class="form-control" id="am" multiple>
-                                  <option value="1">Item 1</option>
-                                  <option value="2">Item 2</option>
-                                  <option value="3">Item 3</option>
+                                <select
+                                  class="my-select-menu form-border form-lov"
+                                  type="submit"
+                                  data-toggle="modal"
+                                  data-target="#modalLOV1"
+                                >
+                                  <option>- Pilih Area Manager -</option>
                                 </select>
                               </div>
                             </div>
                             <!-- AC -->
-                            <div class="form-group">
+                            <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">AC</label>
                               <div>
-                                <select class="form-control" id="ac" multiple>
-                                  <option value="1">Item 1</option>
-                                  <option value="2">Item 2</option>
-                                  <option value="3">Item 3</option>
+                                <select
+                                  class="my-select-menu form-border form-lov"
+                                  type="submit"
+                                  data-toggle="modal"
+                                  data-target="#modalLOV2"
+                                >
+                                  <option>- Pilih Area Coordinator -</option>
                                 </select>
                               </div>
                             </div>
                             <!-- Toko -->
-                            <div class="form-group">
+                            <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">Toko</label>
                               <div>
-                                <select class="form-control" id="toko" multiple>
-                                  <option value="1">Item 1</option>
-                                  <option value="2">Item 2</option>
-                                  <option value="3">Item 3</option>
+                                <select
+                                  class="my-select-menu form-border form-lov"
+                                  type="submit"
+                                  data-toggle="modal"
+                                  data-target="#modalLOV3"
+                                >
+                                  <option>- Pilih Toko -</option>
                                 </select>
                               </div>
                             </div>
@@ -607,102 +616,204 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <!-- %Market Return (BR & BKE) -->
-                      <div class="card mt-3">
-                        <div class="card-header">
-                          <h3 class="card-title mt-2">
-                            %Market Return (BR & BKE)
-                          </h3>
-                          <div class="card-tools">
-                            <button
-                              type="button"
-                              class="btn btn-tool rotate"
-                              data-card-widget="collapse"
-                            >
-                              <i class="fas fa-chevron-down"></i>
-                            </button>
+                  <div class="page" id="page1">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <!-- %Market Return (BR & BKE) -->
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">
+                              %Market Return (BR & BKE)
+                            </h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="card responsive-over">
-                            <div class="card-body">
-                              <div id="areachart1"></div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="areachart1"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- %Product Loss -->
-                    <div class="col-lg-6">
-                      <div class="card mt-3">
-                        <div class="card-header">
-                          <h3 class="card-title mt-2">%Product Loss</h3>
-                          <div class="card-tools">
-                            <button
-                              type="button"
-                              class="btn btn-tool rotate"
-                              data-card-widget="collapse"
-                            >
-                              <i class="fas fa-chevron-down"></i>
-                            </button>
+                      <!-- %Product Loss -->
+                      <div class="col-lg-6">
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Product Loss</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="card responsive-over">
-                            <div class="card-body">
-                              <div id="mixline1"></div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="mixline1"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-lg-6">
+                      <div class="col-lg-6">
+                        <!-- %Productivity Item -->
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Productivity Item</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="chartcolumn4"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <!-- %Productivity Item -->
-                      <div class="card mt-3">
-                        <div class="card-header">
-                          <h3 class="card-title mt-2">
-                            %Productivity Item
-                          </h3>
-                          <div class="card-tools">
-                            <button
-                              type="button"
-                              class="btn btn-tool rotate"
-                              data-card-widget="collapse"
-                            >
-                              <i class="fas fa-chevron-down"></i>
-                            </button>
+                      <div class="col-lg-6">
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Productivity Item</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="card responsive-over">
-                            <div class="card-body">
-                              <div id="chartcolumn4"></div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="linecolumnchart"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- %Productivity Item -->
-                    <div class="col-lg-6">
-                      <div class="card mt-3">
-                        <div class="card-header">
-                          <h3 class="card-title mt-2">%Productivity Item</h3>
-                          <div class="card-tools">
-                            <button
-                              type="button"
-                              class="btn btn-tool rotate"
-                              data-card-widget="collapse"
-                            >
-                              <i class="fas fa-chevron-down"></i>
-                            </button>
+                  </div>
+                  <div class="page" id="page2">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <!-- %Market Return (BR & BKE) -->
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">
+                              %Market Return (BR & BKE)
+                            </h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="areachart1"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="card-body">
-                          <div class="card responsive-over">
-                            <div class="card-body">
-                              <div id="linecolumnchart"></div>
+                      </div>
+                      <!-- %Product Loss -->
+                      <div class="col-lg-6">
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Product Loss</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="mixline1"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <!-- %Productivity Item -->
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Productivity Item</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="chartcolumn4"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- %Productivity Item -->
+                      <div class="col-lg-6">
+                        <div class="card mt-3">
+                          <div class="card-header">
+                            <h3 class="card-title mt-2">%Productivity Item</h3>
+                            <div class="card-tools">
+                              <button
+                                type="button"
+                                class="btn btn-tool rotate"
+                                data-card-widget="collapse"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="responsive-over">
+                              <div class="card-body">
+                                <div id="linecolumnchart"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -710,6 +821,10 @@
                     </div>
                   </div>
                 </div>
+                <ul
+                  id="pagination-demo"
+                  class="pull-right justify-content-right"
+                ></ul>
               </div>
               <!-- /.card -->
             </div>
@@ -717,6 +832,210 @@
         </div>
       </div>
     </div>
+    <!-- Modal LOV 1 -->
+    <div
+      class="modal fade"
+      id="modalLOV1"
+      role="dialog"
+      aria-labelledby="modalLOV"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-default modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form role="form" id="formSWAL1" method="POST">
+              <div class="d-flex gap-1">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari Toko, AM, AC, Cabang, dll"
+                  />
+                </div>
+                <button class="btn btn-filter-apply" type="button">
+                  Proses
+                </button>
+                <button class="btn btn-filter" type="button">Simpan</button>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-lov text-center">
+                  <thead>
+                    <th>Cabang</th>
+                    <th>Kode Toko</th>
+                    <th>NIK AM</th>
+                    <th>Nama AM</th>
+                    <th>NIK AC</th>
+                    <th>Nama AC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Balaraja</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                    </tr>
+                    <tr>
+                      <td>Balikpapan</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                    </tr>
+                    <script>
+                      for (i = 1; i <= 8; i++) {
+                        document.write(
+                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                        );
+                      }
+                    </script>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal LOV 2 -->
+    <div
+      class="modal fade"
+      id="modalLOV2"
+      role="dialog"
+      aria-labelledby="modalLOV"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-default modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form role="form" id="formSWAL1" method="POST">
+              <div class="d-flex gap-1">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari Toko, AM, AC, Cabang, dll"
+                  />
+                </div>
+                <button class="btn btn-filter-apply" type="button">
+                  Proses
+                </button>
+                <button class="btn btn-filter" type="button">Simpan</button>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-lov text-center">
+                  <thead>
+                    <th>Cabang</th>
+                    <th>Kode Toko</th>
+                    <th>NIK AM</th>
+                    <th>Nama AM</th>
+                    <th>NIK AC</th>
+                    <th>Nama AC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Balaraja</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                    </tr>
+                    <tr>
+                      <td>Balikpapan</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                    </tr>
+                    <script>
+                      for (i = 1; i <= 8; i++) {
+                        document.write(
+                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                        );
+                      }
+                    </script>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal LOV 3 -->
+    <div
+      class="modal fade"
+      id="modalLOV3"
+      role="dialog"
+      aria-labelledby="modalLOV"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-default modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form role="form" id="formSWAL1" method="POST">
+              <div class="d-flex gap-1">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari Toko, AM, AC, Cabang, dll"
+                  />
+                </div>
+                <button class="btn btn-filter-apply" type="button">
+                  Proses
+                </button>
+                <button class="btn btn-filter" type="button">Simpan</button>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-lov text-center">
+                  <thead>
+                    <th>Cabang</th>
+                    <th>Kode Toko</th>
+                    <th>NIK AM</th>
+                    <th>Nama AM</th>
+                    <th>NIK AC</th>
+                    <th>Nama AC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Balaraja</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                      <td>00110070</td>
+                      <td>Supriyanto</td>
+                    </tr>
+                    <tr>
+                      <td>Balikpapan</td>
+                      <td class="color-active-table">TD18</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                      <td>01100460</td>
+                      <td>Sutejo</td>
+                    </tr>
+                    <script>
+                      for (i = 1; i <= 8; i++) {
+                        document.write(
+                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                        );
+                      }
+                    </script>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Apex JS -->
     <script src="../dist/js/apex.js"></script>
     <!-- jQuery -->
@@ -729,6 +1048,55 @@
     <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
+    <!-- Pagination -->
+    <script
+      type="text/javascript"
+      src="https://www.solodev.com/assets/pagination/jquery.twbsPagination.js"
+    ></script>
+    <script>
+      $("#pagination-demo").twbsPagination({
+        totalPages: 2,
+        // the current page that show on start
+        startPage: 1,
+
+        // maximum visible pages
+        visiblePages: 2,
+
+        initiateStartPageClick: true,
+
+        // template for pagination links
+        href: false,
+
+        // variable name in href template for page number
+        hrefVariable: "{{number}}",
+
+        // Text labels
+        first: false,
+        prev: "Previous",
+        next: "Next",
+        last: false,
+
+        // carousel-style pagination
+        loop: false,
+
+        // callback function
+        onPageClick: function (event, page) {
+          $(".page-active").removeClass("page-active");
+          $("#page" + page).addClass("page-active");
+        },
+
+        // pagination Classes
+        paginationClass: "pagination",
+        nextClass: "next",
+        prevClass: "prev",
+        lastClass: "last",
+        firstClass: "first",
+        pageClass: "page-item",
+        activeClass: "active",
+        disabledClass: "disabled",
+      });
+    </script>
+
     <script>
       $(".rotate").click(function () {
         $(this).toggleClass("down");
@@ -747,10 +1115,6 @@
         } else {
           container.classList.add("filter-body--active");
         }
-      };
-
-      container.onclick = function (e) {
-        e.stopPropagation();
       };
 
       window.onclick = function () {
@@ -772,19 +1136,7 @@
         .setCheckBoxClick("checkboxAll", function (target, args) {})
         .setCheckBoxClick("1", function (target, args) {});
       document
-        .multiselect("#ac")
-        .setCheckBoxClick("checkboxAll", function (target, args) {})
-        .setCheckBoxClick("1", function (target, args) {});
-      document
-        .multiselect("#am")
-        .setCheckBoxClick("checkboxAll", function (target, args) {})
-        .setCheckBoxClick("1", function (target, args) {});
-      document
         .multiselect("#bulan")
-        .setCheckBoxClick("checkboxAll", function (target, args) {})
-        .setCheckBoxClick("1", function (target, args) {});
-      document
-        .multiselect("#toko")
         .setCheckBoxClick("checkboxAll", function (target, args) {})
         .setCheckBoxClick("1", function (target, args) {});
     </script>

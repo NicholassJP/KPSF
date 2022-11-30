@@ -209,12 +209,17 @@
     }
   }
   
-  @media (max-width: 992px) {
-    .filter-body {
-      width: max-content;
+  @media (max-width: 482px) {
+    .filter-body{
+      width: 300px;
     }
+  }
+  @media (max-width: 992px) {
     .d-flex-none {
       display: block;
+    }
+    .vr-right{
+      display: none;
     }
     .badge-info{
       width: 100% !important; 
@@ -289,4 +294,25 @@
   
   .table-lov thead {
     width: calc( 100% )
+  }
+
+  .modal{
+    z-index: 9999;
+    position: fixed;
+  }
+  .mb-08{
+    margin-bottom: 0.8rem;
+  }
+  .mb-03{
+    margin-bottom: 0.3rem;
+  }
+
+  .page {
+    display: none;
+  }
+  .page-active {
+    display: block;
+  }
+  .justify-content-right{
+    justify-content: right;
   }
