@@ -331,42 +331,42 @@
                             <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">AM</label>
                               <div>
-                                <select
+                                <div
                                   class="my-select-menu form-border form-lov"
                                   type="submit"
                                   data-toggle="modal"
                                   data-target="#modalLOV1"
                                 >
                                   <option>- Pilih Area Manager -</option>
-                                </select>
+                                </div>
                               </div>
                             </div>
                             <!-- AC -->
                             <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">AC</label>
                               <div>
-                                <select
+                                <div
                                   class="my-select-menu form-border form-lov"
                                   type="submit"
                                   data-toggle="modal"
                                   data-target="#modalLOV2"
                                 >
                                   <option>- Pilih Area Coordinator -</option>
-                                </select>
+                                </div>
                               </div>
                             </div>
                             <!-- Toko -->
                             <div class="form-group form-group-lov">
                               <label class="m-0 label-webix">Toko</label>
                               <div>
-                                <select
+                                <div
                                   class="my-select-menu form-border form-lov"
                                   type="submit"
                                   data-toggle="modal"
                                   data-target="#modalLOV3"
                                 >
                                   <option>- Pilih Toko -</option>
-                                </select>
+                                </div>
                               </div>
                             </div>
                             <!-- Status Toko -->
@@ -584,7 +584,7 @@
                                 >Periode Tahun</label
                               >
                               <div>
-                                <select class="form-border padding-select">
+                                <select class="form-border padding-select margin-select">
                                   <option value="2022">2022</option>
                                 </select>
                               </div>
@@ -610,8 +610,23 @@
                             </div>
                           </div>
                         </div>
-                        <div class="text-right">
-                          <button class="btn btn-filter-apply">Filter</button>
+                        <div class="float-right">
+                          <div class="d-flex">
+                            <button
+                              type="submit"
+                              id="btnClose"
+                              class="btn btn-kembali mr-1"
+                            >
+                              Close
+                            </button>
+                            <button
+                              type="submit"
+                              id="filterSubmit"
+                              class="btn btn-filter-apply"
+                            >
+                              Filter
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -832,6 +847,7 @@
         </div>
       </div>
     </div>
+
     <!-- Modal LOV 1 -->
     <div
       class="modal fade"
@@ -840,7 +856,7 @@
       aria-labelledby="modalLOV"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-default modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-body">
             <form role="form" id="formSWAL1" method="POST">
@@ -870,7 +886,7 @@
                   <tbody>
                     <tr>
                       <td>Balaraja</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>00110070</td>
                       <td>Supriyanto</td>
                       <td>00110070</td>
@@ -878,7 +894,7 @@
                     </tr>
                     <tr>
                       <td>Balikpapan</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>01100460</td>
                       <td>Sutejo</td>
                       <td>01100460</td>
@@ -887,7 +903,7 @@
                     <script>
                       for (i = 1; i <= 8; i++) {
                         document.write(
-                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                          " <tr> <td>Bandung 1</td> <td>TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>"
                         );
                       }
                     </script>
@@ -908,7 +924,7 @@
       aria-labelledby="modalLOV"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-default modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-body">
             <form role="form" id="formSWAL1" method="POST">
@@ -938,7 +954,7 @@
                   <tbody>
                     <tr>
                       <td>Balaraja</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>00110070</td>
                       <td>Supriyanto</td>
                       <td>00110070</td>
@@ -946,7 +962,7 @@
                     </tr>
                     <tr>
                       <td>Balikpapan</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>01100460</td>
                       <td>Sutejo</td>
                       <td>01100460</td>
@@ -955,7 +971,7 @@
                     <script>
                       for (i = 1; i <= 8; i++) {
                         document.write(
-                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                          " <tr> <td>Bandung 1</td> <td>TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>"
                         );
                       }
                     </script>
@@ -976,7 +992,7 @@
       aria-labelledby="modalLOV"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-default modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-body">
             <form role="form" id="formSWAL1" method="POST">
@@ -1006,7 +1022,7 @@
                   <tbody>
                     <tr>
                       <td>Balaraja</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>00110070</td>
                       <td>Supriyanto</td>
                       <td>00110070</td>
@@ -1014,7 +1030,7 @@
                     </tr>
                     <tr>
                       <td>Balikpapan</td>
-                      <td class="color-active-table">TD18</td>
+                      <td>TD18</td>
                       <td>01100460</td>
                       <td>Sutejo</td>
                       <td>01100460</td>
@@ -1023,7 +1039,7 @@
                     <script>
                       for (i = 1; i <= 8; i++) {
                         document.write(
-                          ' <tr> <td>Bandung 1</td> <td class="color-active-table">TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>'
+                          " <tr> <td>Bandung 1</td> <td>TD18</td> <td>00110002</td> <td>Hendra Fitriawan</td> <td>00110002</td> <td>Hendra Fitriawan</td> </tr>"
                         );
                       }
                     </script>
@@ -1107,7 +1123,7 @@
       var button = document.getElementById("filter-button");
       var container = document.getElementById("filter-container");
       var input = document.querySelectorAll("input");
-
+      var btnClose = document.getElementById("btnClose");
       button.onclick = function (e) {
         e.stopPropagation();
         if (container.classList.contains("filter-body--active")) {
@@ -1117,7 +1133,7 @@
         }
       };
 
-      window.onclick = function () {
+      btnClose.onclick = function () {
         container.classList.remove("filter-body--active");
       };
     </script>
