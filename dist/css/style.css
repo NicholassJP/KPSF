@@ -108,6 +108,7 @@
   .navbar-alfa {
     background-color: #ed1c24;
     border: 0;
+    border-bottom: 8px solid yellow;
   }
   .navbar-white .nav-item .nav-link {
     color: white;
