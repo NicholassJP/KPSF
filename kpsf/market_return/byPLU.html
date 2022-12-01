@@ -242,7 +242,7 @@
             <div class="card card-tabs mt-1">
               <div class="card-header pb-0">
                 <div class="d-flex-none align-items-center">
-                  <a href="../nas_reg_cabang.html" class="text-primary mr-1"
+                  <a href="byStore.html" class="text-primary mr-1"
                     ><i class="fas fa-chevron-circle-left"></i
                   ></a>
                   <h5 class="m-0">Report KPSF - % Market Return</h5>
@@ -576,10 +576,10 @@
                   <!-- KPSF by Nasional, Region & Cabang -->
                   <p class="color-secondary">Dept. Operation</p>
 
-                  <!-- %Market Return by  Region -->
+                  <!-- %Market Return by Store by PLU -->
                   <div class="card mt-3">
                     <div class="card-header">
-                      <h3 class="card-title mt-2">%Market Return by Region</h3>
+                      <h3 class="card-title mt-2">%Market Return by Store by PLU</h3>
                       <div class="card-tools">
                         <button
                           type="button"
@@ -595,8 +595,7 @@
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
                           <p>
-                            Klik Region untuk detail AM atau AC Region /
-                            Nasional untuk detail AM atau AC Nasional
+                            Klik Market Return untuk lihat detail PLU
                           </p>
                         </div>
                       </div>
@@ -607,84 +606,25 @@
                         >
                           <thead>
                             <tr>
-                              <th>Region</th>
-                              <th>Target</th>
-                              <th>%Market Return</th>
-                              <th>%Ach to Target</th>
-                              <th>%market Return LY</th>
-                              <th>GAP vs LY</th>
-                              <th>GAP vs Target</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <script>
-                              for (i = 1; i <= 30; i++) {
-                                document.write(
-                                  "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
-                                );
-                              }
-                            </script>
-                          </tbody>
-                          <!-- Nasional -->
-                          <tr class="bg-all-table td-bold">
-                            <td>Nasional</td>
-                            <td>0.15%</td>
-                            <td class="text-red">0.51%</td>
-                            <td>-283.50%</td>
-                            <td>0.60%</td>
-                            <td>-0.02%</td>
-                            <td>0.45%</td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- %Market Return by Branch -->
-                  <div class="card mt-3">
-                    <div class="card-header">
-                      <h3 class="card-title mt-2">%Market Return by Branch</h3>
-                      <div class="card-tools">
-                        <button
-                          type="button"
-                          class="btn btn-tool rotate"
-                          data-card-widget="collapse"
-                        >
-                          <i class="fas fa-chevron-down"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="badge-info mb-lg-0 mb-3 m-0-p">
-                        <div class="d-flex align-items-center gap-1">
-                          <img src="/dist/img/custom/info.png" />
-                          <p>Klik Cabang untuk melihat detail AM & AC Cabang</p>
-                        </div>
-                      </div>
-                      <div class="table-responsive mt-3">
-                        <table
-                          class="table table-stripted w-100 mb-3 text-center"
-                          id="table2"
-                        >
-                          <thead>
-                            <tr>
-                              <th>Region</th>
-                              <th>Target</th>
-                              <th>%Market Return</th>
-                              <th>%Ach to Target</th>
-                              <th>%market Return LY</th>
-                              <th>GAP vs LY</th>
-                              <th>GAP vs Target</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <script>
-                              for (i = 1; i <= 30; i++) {
-                                document.write(
-                                  "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
-                                );
-                              }
-                            </script>
-                          </tbody>
+                                <th>Cabang</th>
+                                <th>Kode Toko</th>
+                                <th>Nama Toko</th>
+                                <th>PLU</th>
+                                <th>Descp</th>
+                                <th>Tag</th>
+                                <th>Ket</th>
+                                <th>Qty</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <script>
+                                for (i = 1; i <= 30; i++) {
+                                  document.write(
+                                    "<tr> <td>Jambi</td> <td>TD18</td> <td>Ruko Mall Daan Mogot</td> <td>4042952</td> <td>Doritos BBQ 150 Gr</td> <td>F</td> <td>BKE</td> <td>4</td> </tr>"
+                                  );
+                                }
+                              </script>
+                            </tbody>
                         </table>
                       </div>
                     </div>
@@ -710,15 +650,6 @@
     <!-- Data Table -->
     <script>
       $("#table1").DataTable({
-        bPaginate: true,
-        bLengthChange: false,
-        bFilter: false,
-        bInfo: true,
-        searching: false,
-      });
-    </script>
-    <script>
-      $("#table2").DataTable({
         bPaginate: true,
         bLengthChange: false,
         bFilter: false,

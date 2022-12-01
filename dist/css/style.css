@@ -116,6 +116,12 @@
   .gap-1 {
     gap: 1rem;
   }
+  .text-primary{
+    color: #2691B5 !important;
+  }
+  .sidebar-dark-gray .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-gray .nav-sidebar>.nav-item>.nav-link.active{
+    background-color: #acb2b9;
+  }
   .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
   .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
     background: #50535785;
