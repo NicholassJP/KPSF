@@ -9,13 +9,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
+    <link
+      rel="stylesheet"
+      href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+    />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <link rel="stylesheet" href="../dist/css/kpsf.css" />
+    <link rel="stylesheet" href="../dist/css/multiple-select.css" />
     <!-- Apex JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../dist/js/multi/multiselect.min.js"></script>
+    <!-- SWAL2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body class="control-sidebar-slide-open layout-fixed layout-navbar-fixed">
     <div class="wrapper">
@@ -29,7 +43,7 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <img src="dist/img/custom/alfamart.png" class="img-fluid" />
+            <img src="../dist/img/custom/alfamart.png" class="img-fluid" />
           </li>
           <li class="nav-item d-none d-sm-inline-block ml-2">
             <h5 class="m-0 color-white">Service Analysis System</h5>
@@ -62,7 +76,7 @@
       <!-- /.navbar -->
 
       <!-- Main Sidebar Container -->
-      <aside class="main-sidebar sidebar-light-gray elevation-4">
+      <aside class="main-sidebar sidebar-light-danger elevation-4">
         <!-- Sidebar -->
         <div class="sidebar">
           <!-- Sidebar Menu -->
@@ -74,7 +88,7 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="../../dashboard.html" class="nav-link active">
+                <a href="../../dashboard.html" class="nav-link">
                   <i class="nav-icon fas fa-home"></i>
                   <p>Home</p>
                 </a>
@@ -183,7 +197,7 @@
                 </ul>
               </li>
               <!-- Admin Setting -->
-              <li class="nav-item">
+              <li class="nav-item menu-open">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-cog"></i>
                   <p>
@@ -199,7 +213,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/admin/exception.html" class="nav-link">
+                    <a href="/admin/exception.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Exception</p>
                     </a>
@@ -216,82 +230,58 @@
           </nav>
         </div>
       </aside>
+
       <div class="content-wrapper">
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <div class="row">
-              <!-- Summary Indeks KPSF - Nasional -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Indeks KPSF - Nasional</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chart"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
+            <div class="card mt-1">
+              <div class="card-body">
+                <div class="d-flex-none align-items-center gap-1">
+                  <h5 class="m-0">Setting Menu Exception</h5>
+                  <div class="d-flex-none gap-1 ml-auto text-align-left">
+                    <input
+                      type="text"
+                      class="form-control max-width mt-2 mb-2 mb-lg-0 mt-lg-0"
+                      placeholder="Cari Nama Aturan, NIK. Kode Cabang, dll ..."
+                    />
+                    <a
+                      href="/admin/action/tambah_list_akses.html"
+                      class="btn btn-filter-apply"
+                      >TAMBAH ATURAN</a
+                    >
                   </div>
                 </div>
               </div>
-              <!-- Trend Achivement KPSF YTD by Month -->
-              <div class="col-xl-8">
-                <div class="card responsive-over pb-15px">
-                  <div class="card-body">
-                    <h5 class="bold">Trend Achivement KPSF YTD by Month</h5>
-                    <div class="d-flex align-items-center m-0-p gap-1 mb-5">
-                      <p>YTD Jan - Des</p>
-                      <i class="fas fa-circle circle-green"></i>
-                      <p>Periode 2022</p>
-                    </div>
-                    <div id="chartline"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Indeks KPSF - Region -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Indeks KPSF - Region</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div class="d-flex align-items-center">
-                      <div>
-                        <h5 class="m-0">Target Index</h5>
-                        <h5 class="mb-3">4P All</h5>
-                        <h4 class="bold">3.25</h4>
-                      </div>
-                      <div id="chartcolumn1"></div>
-                    </div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Region Dept. OPR -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Region Dept. OPR</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chartcolumn2"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Summary Region Dept. SUP -->
-              <div class="col-xl-4">
-                <div class="card">
-                  <div class="card-body webkit-center">
-                    <h5 class="bold">Summary Region Dept. SUP</h5>
-                    <p class="color-secondary mb-1">Periode 2022</p>
-                    <div id="chartcolumn3"></div>
-                    <div class="text-center">
-                      <div class="btn btn-lihat mt-3">Lihat Selengkapnya</div>
-                    </div>
-                  </div>
+              <!-- /.card -->
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive mt-3">
+                  <table
+                    class="table table-stripted w-100 mb-3 text-center"
+                    id="table1"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Nama Aturan</th>
+                        <th>Menu SAS</th>
+                        <th>Branch</th>
+                        <th>Tanggal Buat</th>
+                        <th>Pembuat</th>
+                        <th>#</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <script>
+                        for (i = 1; i <= 30; i++) {
+                          document.write(
+                            " <tr> <td>Exeption - 1</td> <td>Admin Setting</td> <td class='text-webix'>HO</td> <td>12/03/2022</td> <td>Jonathan Iskandar</td> <th class='w-action fixed-table clr-th-action'> <div class='dropdown mt-2'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' href='lihat_list_akses.html' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Lihat List Akses </a> </li> <li class='dropdown-item'> <a class='text-gray' href='/admin/action/edit_list_akses.html' ><i class='fas fa-edit mr-1 color-secondary' ></i >Edit </a> </li> <li class='dropdown-item'> <a id='deleteSWAL' class='text-gray' ><i class='fas fa-trash mr-2 color-secondary' ></i >Hapus </a> </li> </div> </div> </th> </tr>"
+                          );
+                        }
+                      </script>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -299,13 +289,51 @@
         </div>
       </div>
     </div>
-    <!-- Apex JS -->
-    <script src="dist/js/apex.js"></script>
+
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/multi/multiselect.js"></script>
+    <!-- Data Table Script -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- SWAL -->
+    <script src="../../dist/js/custom/sweetalert.js"></script>
+    <script>
+      $("#table1 .dropdown").on("show.bs.dropdown", (event) => {
+        let thisTable = event.target.closest("table");
+        thisTable.classList.add("dropdowns-opened");
+        // add class to all <tr>
+        $(thisTable).find("tr").addClass("non-dropdown");
+        // remove class of this <tr>
+        event.target.closest("tr").classList.remove("non-dropdown");
+      });
+
+      $("#table1 .dropdown").on("hidden.bs.dropdown", (event) => {
+        let thisTable = event.target.closest("table");
+        thisTable.classList.remove("dropdowns-opened");
+        $(thisTable).find("tr").removeClass("non-dropdown");
+      });
+
+      $("#table1").DataTable({
+        bPaginate: true,
+        bLengthChange: false,
+        bFilter: false,
+        bInfo: true,
+        searching: false,
+        fixedColumns: {
+          left: false,
+          right: 1,
+        },
+      });
+    </script>
+    <script>
+      $(".rotate").click(function () {
+        $(this).toggleClass("down");
+      });
+    </script>
   </body>
 </html>
