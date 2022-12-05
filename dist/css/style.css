@@ -326,3 +326,11 @@
   .justify-content-right{
     justify-content: right;
   }
+
+
+  [class*=sidebar-light-] .nav-sidebar>.nav-item.menu-open>.nav-link, [class*=sidebar-light-] .nav-sidebar>.nav-item:hover>.nav-link, 
+  [class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link.active, [class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link.active:hover, .sidebar-dark-gray .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-gray .nav-sidebar>.nav-item>.nav-link.active, [class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link:hover {
+    background-color: rgb(66 185 225 / 26%);
+    color: #2691B5;
+    font-weight: 600;
+}

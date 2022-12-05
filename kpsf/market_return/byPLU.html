@@ -234,11 +234,20 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <a href="/kpsf.html" class="btn btn-kembali mb-3">
-              <p class="m-0">
-                Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
-              </p>
-            </a>
+            <!-- Breadcrumbs -->
+            <div class="d-flex gap-1">
+              <a href="../../kpsf.html" class="ml-auto">Home</a>
+              <p>/</p>
+              <a href="../nas_reg_cabang.html">Nasional, Region & Cabang</a>
+              <p>/</p>
+              <a href="region_branch.html">% Market Return - Region & Branch</a>
+              <p>/</p>
+              <a href="am_ac.html">% Market Return - AM & AC</a>
+              <p>/</p>
+              <a href="byStore.html">% Market Return - Store</a>
+              <p>/</p>
+              <p>% Market Return - Store by PLU</p>
+            </div>
             <div class="card card-tabs mt-1">
               <div class="card-header pb-0">
                 <div class="d-flex-none align-items-center">
@@ -579,7 +588,9 @@
                   <!-- %Market Return by Store by PLU -->
                   <div class="card mt-3">
                     <div class="card-header">
-                      <h3 class="card-title mt-2">%Market Return by Store by PLU</h3>
+                      <h3 class="card-title mt-2">
+                        %Market Return by Store by PLU
+                      </h3>
                       <div class="card-tools">
                         <button
                           type="button"
@@ -594,9 +605,7 @@
                       <div class="badge-info mb-lg-0 mb-3 m-0-p">
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
-                          <p>
-                            Klik Market Return untuk lihat detail PLU
-                          </p>
+                          <p>Klik Market Return untuk lihat detail PLU</p>
                         </div>
                       </div>
                       <div class="table-responsive mt-3">
@@ -606,25 +615,25 @@
                         >
                           <thead>
                             <tr>
-                                <th>Cabang</th>
-                                <th>Kode Toko</th>
-                                <th>Nama Toko</th>
-                                <th>PLU</th>
-                                <th>Descp</th>
-                                <th>Tag</th>
-                                <th>Ket</th>
-                                <th>Qty</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <script>
-                                for (i = 1; i <= 30; i++) {
-                                  document.write(
-                                    "<tr> <td>Jambi</td> <td>TD18</td> <td>Ruko Mall Daan Mogot</td> <td>4042952</td> <td>Doritos BBQ 150 Gr</td> <td>F</td> <td>BKE</td> <td>4</td> </tr>"
-                                  );
-                                }
-                              </script>
-                            </tbody>
+                              <th>Cabang</th>
+                              <th>Kode Toko</th>
+                              <th>Nama Toko</th>
+                              <th>PLU</th>
+                              <th>Descp</th>
+                              <th>Tag</th>
+                              <th>Ket</th>
+                              <th>Qty</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <script>
+                              for (i = 1; i <= 30; i++) {
+                                document.write(
+                                  "<tr> <td>Jambi</td> <td>TD18</td> <td>Ruko Mall Daan Mogot</td> <td>4042952</td> <td>Doritos BBQ 150 Gr</td> <td>F</td> <td>BKE</td> <td>4</td> </tr>"
+                                );
+                              }
+                            </script>
+                          </tbody>
                         </table>
                       </div>
                     </div>
