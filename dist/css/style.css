@@ -182,18 +182,21 @@
     background: #F1F2F8;
     border-radius: 2px;
     width: max-content;
+    font-weight: 600;
   }
   .btn-filter-apply{
     color: white;
     background: #2691B5;
     border-radius: 2px;
     width: max-content;
+    font-weight: 600;
   }
   .btn-hapus{
     color: white;
     background: #FF2E2E;
     border-radius: 2px;
     width: max-content;
+    font-weight: 600;
   }
   .filter-body {
     background-color: white;
@@ -232,7 +235,7 @@
       display: block;
     }
     .vr-right{
-      display: none;
+      border: unset !important;
     }
     .badge-info{
       width: 100% !important; 
@@ -383,7 +386,55 @@
 }
 
 .card-fix-h{
-  height: 450px;
+  height: 400px;
   overflow-y: scroll;
-  
+  border: 1px solid #dcdde7;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.custom-switch.custom-switch-md .custom-control-label {
+  padding-top: 0.2rem;
+  padding-left: 1rem;
+}
+
+.custom-switch.custom-switch-md .custom-control-label::before {
+  height: 1.5rem;
+  width: calc(2rem + 0.75rem);
+  border-radius: 3rem;
+}
+
+.custom-switch.custom-switch-md .custom-control-label::after {
+  width: calc(1.5rem - 4px);
+  height: calc(1.5rem - 4px);
+  border-radius: calc(2rem - (1.5rem / 2));
+}
+
+.custom-switch.custom-switch-md .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(calc(1.5rem - 0.25rem));
+}
+
+.check-lg{
+  width: 20px;
+  height: 20px;
+  margin-top: .25rem;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #2690B4;
+  background-color: #2690B4;
+  box-shadow: none;
+}
+
+.custom-control-label::before{
+  background-color: unset;
+}
+
+.page-link{
+  color: #2691B5;
+}
+
+.page-item.active .page-link {
+  border-color: #2691B5;
 }

@@ -248,17 +248,11 @@
                   <div
                     class="d-flex-none gap-1 ml-auto text-align-left mb-2 mt-2 mb-lg-0 mt-lg-0"
                   >
+                    <a href="" class="btn btn-hapus" id="deleteSWAL">HAPUS</a>
                     <a
-                      href="/admin/action/tambah_list_akses.html"
-                      class="btn btn-hapus"
-                      id="deleteSWAL"
-                      >HAPUS</a
-                    >
-                    <a
-                      href="/admin/action/tambah_list_akses.html"
+                      href="/admin/action/edit_list_akses.html"
                       class="btn btn-filter-apply"
-                      id="simpanSWAL"
-                      >SIMPAN</a
+                      >EDIT</a
                     >
                   </div>
                 </div>
@@ -613,9 +607,9 @@
                         name="divisi"
                         required
                       >
-                        <option value="">- Pilih Divisi -</option>
-                        <option value="">A</option>
-                        <option value="">B</option>
+                        <option value="Information Technology">
+                          Information Technology
+                        </option>
                       </select>
                     </div>
                     <div class="m-0-p d-flex align-items-center">
@@ -640,11 +634,14 @@
                           </div>
                         </div>
                         <div class="card-fix-h">
-                          <!-- Content -->
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                " <p class='bold'>(C901) IT Senior Manager</p>"
+                              );
+                            }
+                          </script>
                         </div>
-                        <button class="btn btn-filter mt-2 w-100" type="button">
-                          SIMPAN AKSES
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -733,8 +730,8 @@
       });
     </script>
     <script>
-      $(".hideoff").hide();
       $(function () {
+        $(".hideoff").hide();
         $("#switch1").change(function () {
           if ($(this).is(":checked")) {
             $(".hideoff").show();

@@ -248,17 +248,11 @@
                   <div
                     class="d-flex-none gap-1 ml-auto text-align-left mb-2 mt-2 mb-lg-0 mt-lg-0"
                   >
+                    <a href="" class="btn btn-hapus" id="deleteSWAL">HAPUS</a>
                     <a
-                      href="/admin/action/tambah_list_akses.html"
-                      class="btn btn-hapus"
-                      id="deleteSWAL"
-                      >HAPUS</a
-                    >
-                    <a
-                      href="/admin/action/tambah_list_akses.html"
+                      href="/admin/action/edit_list_akses.html"
                       class="btn btn-filter-apply"
-                      id="simpanSWAL"
-                      >SIMPAN</a
+                      >EDIT</a
                     >
                   </div>
                 </div>
@@ -397,6 +391,7 @@
                             type="checkbox"
                             class="custom-control-input"
                             id="switch1"
+                            checked
                           />
                           <label class="custom-control-label" for="switch1"
                             >Status Visible</label
@@ -613,9 +608,9 @@
                         name="divisi"
                         required
                       >
-                        <option value="">- Pilih Divisi -</option>
-                        <option value="">A</option>
-                        <option value="">B</option>
+                        <option value="Information Technology">
+                          Information Technology
+                        </option>
                       </select>
                     </div>
                     <div class="m-0-p d-flex align-items-center">
@@ -640,10 +635,19 @@
                           </div>
                         </div>
                         <div class="card-fix-h">
-                          <!-- Content -->
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                " <div class='form-check mb-2 '> <input class='form-check-input check-lg' type='checkbox' value='' id='flexCheckDefault'> <label class='form-check-label bold ml-2' for=''>(C901) IT Senior Manager</label> </div>"
+                              );
+                            }
+                          </script>
                         </div>
                         <button class="btn btn-filter mt-2 w-100" type="button">
                           SIMPAN AKSES
+                        </button>
+                        <button class="btn btn-filter w-100 mt-2" type="button">
+                          HAPUS
                         </button>
                       </div>
                     </div>
@@ -733,7 +737,6 @@
       });
     </script>
     <script>
-      $(".hideoff").hide();
       $(function () {
         $("#switch1").change(function () {
           if ($(this).is(":checked")) {

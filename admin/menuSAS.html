@@ -30,6 +30,8 @@
     <script src="../dist/js/multi/multiselect.min.js"></script>
     <!-- SWAL2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Fixed Table -->
+    <script src="https://cdn.datatables.net/fixedcolumns/4.1.0/js/dataTables.fixedColumns.min.js"></script>
   </head>
   <body class="control-sidebar-slide-open layout-fixed layout-navbar-fixed">
     <div class="wrapper">
@@ -276,7 +278,7 @@
                       <script>
                         for (i = 1; i <= 30; i++) {
                           document.write(
-                            " <tr> <td>Aturan SAS - 1</td> <td>Admin Setting</td> <td class='text-webix'>Service Quality</td> <td>12/03/2022</td> <td>Jonathan Iskandar</td> <th class='w-action fixed-table clr-th-action'> <div class='dropdown mt-2'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' href='lihat_list_akses.html' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Lihat List Akses </a> </li> <li class='dropdown-item'> <a class='text-gray' href='/admin/action/edit_list_akses.html' ><i class='fas fa-edit mr-1 color-secondary' ></i >Edit </a> </li> <li class='dropdown-item'> <a id='deleteSWAL' class='text-gray' ><i class='fas fa-trash mr-2 color-secondary' ></i >Hapus </a> </li> </div> </div> </th> </tr>"
+                            " <tr> <td>Aturan SAS - 1</td> <td>Admin Setting</td> <td class='text-webix'>Service Quality</td> <td>12/03/2022</td> <td>Jonathan Iskandar</td> <th class='w-action fixed-table clr-th-action'> <div class='dropdown mt-2'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' href='/admin/action/lihat_list_akses.html' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Lihat List Akses </a> </li> <li class='dropdown-item'> <a class='text-gray' href='/admin/action/edit_list_akses.html' ><i class='fas fa-edit mr-1 color-secondary' ></i >Edit </a> </li> <li class='dropdown-item'> <a id='deleteSWAL' class='text-gray' ><i class='fas fa-trash mr-2 color-secondary' ></i >Hapus </a> </li> </div> </div> </th> </tr>"
                           );
                         }
                       </script>
