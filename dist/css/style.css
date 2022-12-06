@@ -100,7 +100,10 @@
   }
   /* Main Sidebar */
   .main-sidebar {
-    z-index: 1;
+    z-index: 99999;
+  }
+  .layout-navbar-fixed .wrapper .main-header{
+    z-index: 9999999999;
   }
   .main-header {
     margin: 0 !important;
@@ -228,6 +231,13 @@
   @media (max-width: 482px) {
     .filter-body{
       width: 300px;
+    }
+    .hideoff{
+      flex-wrap: unset;
+      overflow-y: scroll;
+    }
+    .w-indeks{
+      width: 120px;
     }
   }
   @media (max-width: 992px) {
