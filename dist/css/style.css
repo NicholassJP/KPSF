@@ -251,6 +251,9 @@
     .d-flex-none {
       display: block;
     }
+    .overflow-content{
+      width: 100% !important;
+    }
     .vr-right{
       border: unset !important;
     }
@@ -492,7 +495,11 @@
     align-items: center;
     justify-content: center;
 }
-
+.overflow-scroll{
+  overflow: scroll;
+  display: block;
+  height:62vh;
+}
 .badge-update{
 width: max-content;
 padding: 6px 12px;
@@ -503,4 +510,8 @@ border-radius: 2px;
 
 .text-blue{
   color: #1976CB;
+}
+
+.fz-14px{
+  font-size: 14px;
 }

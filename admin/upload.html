@@ -237,7 +237,7 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <div class="badge-update ml-auto mb-2 alig">
+            <div class="badge-update ml-auto mb-2 overflow-content">
               <div class="d-flex align-items-center m-0-p">
                 <p>
                   <span class="bold">Update Time :</span>Senin, 26 July 2021 -
@@ -251,7 +251,7 @@
               </div>
             </div>
             <div class="card mt-1">
-              <div class="card-body">
+              <div class="card-body pt-2 pb-2">
                 <div class="d-flex-none align-items-center gap-1">
                   <h5 class="m-0">Setting Data Upload</h5>
                   <div
@@ -282,12 +282,16 @@
                       type="text"
                       placeholder="Cari Data"
                     />
-                    <div class="d-flex m-0-p">
-                      <p>Data Achievement KPSF</p>
-                      <i class="fas fa-circle circle-secondary mt-2 ml-2 mr-2"></i>
-                      <p>Januari 2021</p>
+                    <div class="overflow-scroll">
+                      <!-- List -->
+                      <script>
+                        for (i = 1; i <= 30; i++) {
+                          document.write(
+                            " <div class='d-flex m-0-p'> <p>Data Achievement KPSF</p> <i class='fas fa-circle circle-secondary mt-2 ml-2 mr-2' ></i> <p>Januari 2021</p> <div class='dropdown ml-auto mr-4 text-secondary'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Content 1 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-edit mr-1 color-secondary'></i>Content 2 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-trash mr-2 color-secondary'></i >Content 3 </a> </li> </div> </div> </div> <p class='text-secondary fz-14px'> Uploaded : 16 Februari 2021 </p>"
+                          );
+                        }
+                      </script>
                     </div>
-                    <p class="text-secondary">Uploaded : 16 Februari 2021</p>
                   </div>
                 </div>
               </div>
