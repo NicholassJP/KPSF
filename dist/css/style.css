@@ -13,6 +13,13 @@
     color: #00b488;
     font-size: 10px;
   }
+  .circle-black {
+    font-size: 10px;
+  }
+  .circle-secondary {
+    font-size: 10px;
+    color: #9DA5AD;
+  }
   .circle-green1 {
     color: #5FC43B;
     font-size: 18px;
@@ -253,6 +260,9 @@
     .max-width{
       width: max-content !important;
     }
+    .table-responsive {
+      display: block !important;
+    }
   }
   .multiselect-dropdown-arrow{
     right: 13px;
@@ -461,4 +471,36 @@
 .bg-lov{
   color: #504f4f !important;
   background: yellow !important;
+}
+
+.table-responsive {
+  display: table;
+}
+
+.overflow-content{
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.upload-content1{
+  display: block;
+    height: 75vh;
+}
+.upload-content2{
+  display: flex;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-update{
+width: max-content;
+padding: 6px 12px;
+background: #FEFAF2;
+border: 1px solid #FFFFFF;
+border-radius: 2px;
+}
+
+.text-blue{
+  color: #1976CB;
 }

@@ -237,7 +237,7 @@
         <div class="content pt-3">
           <div class="container-fluid">
             <!-- Breadcrumbs -->
-            <div class="d-flex gap-1">
+            <div class="d-flex gap-1 overflow-content">
               <a href="../../kpsf.html" class="ml-auto">Home</a>
               <p>/</p>
               <a href="../nas_reg_cabang.html">Nasional, Region & Cabang</a>
@@ -596,7 +596,7 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <div class="badge-info mb-lg-0 mb-3 m-0-p">
+                      <div class="badge-info mb-3 m-0-p">
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
                           <p>
@@ -605,45 +605,43 @@
                           </p>
                         </div>
                       </div>
-                      <div class="table-responsive mt-3">
-                        <table
-                          class="table table-stripted w-100 mb-3 text-center"
-                          id="table1"
-                        >
-                          <thead>
-                            <tr>
-                              <th>Region</th>
-                              <th>Target</th>
-                              <th>%Market Return</th>
-                              <th>%Ach to Target</th>
-                              <th>%market Return LY</th>
-                              <th>GAP vs LY</th>
-                              <th>GAP vs Target</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <script>
-                              for (i = 1; i <= 30; i++) {
-                                document.write(
-                                  "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
-                                );
-                              }
-                            </script>
-                          </tbody>
-                          <!-- Nasional -->
-                          <tr class="bg-all-table td-bold">
-                            <td>Nasional</td>
-                            <td>0.15%</td>
-                            <td class="text-red">
-                              <a class="text-red" href="am_ac.html">0.51%</a>
-                            </td>
-                            <td>-283.50%</td>
-                            <td>0.60%</td>
-                            <td>-0.02%</td>
-                            <td>0.45%</td>
+                      <table
+                        class="table table-stripted w-100 mb-2 text-center table-responsive"
+                        id="table1"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Region</th>
+                            <th>Target</th>
+                            <th>%Market Return</th>
+                            <th>%Ach to Target</th>
+                            <th>%market Return LY</th>
+                            <th>GAP vs LY</th>
+                            <th>GAP vs Target</th>
                           </tr>
-                        </table>
-                      </div>
+                        </thead>
+                        <tbody>
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
+                              );
+                            }
+                          </script>
+                        </tbody>
+                        <!-- Nasional -->
+                        <tr class="bg-all-table td-bold">
+                          <td>Nasional</td>
+                          <td>0.15%</td>
+                          <td class="text-red">
+                            <a class="text-red" href="am_ac.html">0.51%</a>
+                          </td>
+                          <td>-283.50%</td>
+                          <td>0.60%</td>
+                          <td>-0.02%</td>
+                          <td>0.45%</td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
                   <!-- %Market Return by Branch -->
@@ -661,39 +659,37 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <div class="badge-info mb-lg-0 mb-3 m-0-p">
+                      <div class="badge-info mb-2 m-0-p">
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
                           <p>Klik Cabang untuk melihat detail AM & AC Cabang</p>
                         </div>
                       </div>
-                      <div class="table-responsive mt-3">
-                        <table
-                          class="table table-stripted w-100 mb-3 text-center"
-                          id="table2"
-                        >
-                          <thead>
-                            <tr>
-                              <th>Region</th>
-                              <th>Target</th>
-                              <th>%Market Return</th>
-                              <th>%Ach to Target</th>
-                              <th>%market Return LY</th>
-                              <th>GAP vs LY</th>
-                              <th>GAP vs Target</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <script>
-                              for (i = 1; i <= 30; i++) {
-                                document.write(
-                                  "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
-                                );
-                              }
-                            </script>
-                          </tbody>
-                        </table>
-                      </div>
+                      <table
+                        class="table table-stripted w-100 mb-3 text-center table-responsive"
+                        id="table2"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Region</th>
+                            <th>Target</th>
+                            <th>%Market Return</th>
+                            <th>%Ach to Target</th>
+                            <th>%market Return LY</th>
+                            <th>GAP vs LY</th>
+                            <th>GAP vs Target</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
+                              );
+                            }
+                          </script>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>

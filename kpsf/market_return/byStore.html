@@ -237,7 +237,7 @@
         <div class="content pt-3">
           <div class="container-fluid">
             <!-- Breadcrumbs -->
-            <div class="d-flex gap-1">
+            <div class="d-flex gap-1 overflow-content">
               <a href="../../kpsf.html" class="ml-auto">Home</a>
               <p>/</p>
               <a href="../nas_reg_cabang.html">Nasional, Region & Cabang</a>
@@ -600,42 +600,41 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <div class="badge-info mb-lg-0 mb-3 m-0-p">
+                      <div class="badge-info mb-2 m-0-p">
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
                           <p>Klik Market Return untuk lihat detail PLU</p>
                         </div>
                       </div>
-                      <div class="table-responsive mt-3">
-                        <table
-                          class="table table-stripted w-100 mb-3 text-center"
-                          id="table1"
-                        >
-                          <thead>
-                            <tr>
-                              <th>Cabang</th>
-                              <th>NIK AM</th>
-                              <th>Nama AM</th>
-                              <th>NIK AC</th>
-                              <th>Nama AC</th>
-                              <th>Kode Toko</th>
-                              <th>Nama Toko</th>
-                              <th>Target</th>
-                              <th>%Market Return</th>
-                              <th>%Ach to Target</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <script>
-                              for (i = 1; i <= 30; i++) {
-                                document.write(
-                                  "<tr> <td>Jambi</td> <td>00110002</td> <td>Ahmad Satari</td> <td>00110070</td> <td>Yongki Padila</td> <td>K195</td> <td>Warung Gantung</td> <td>0.15%</td> <td> <a class='text-red' href='byPLU.html'> 0.79% </a> </td> <td>-425.19%</td> </tr>"
-                                );
-                              }
-                            </script>
-                          </tbody>
-                        </table>
-                      </div>
+
+                      <table
+                        class="table table-stripted w-100 mb-3 text-center table-responsive"
+                        id="table1"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Cabang</th>
+                            <th>NIK AM</th>
+                            <th>Nama AM</th>
+                            <th>NIK AC</th>
+                            <th>Nama AC</th>
+                            <th>Kode Toko</th>
+                            <th>Nama Toko</th>
+                            <th>Target</th>
+                            <th>%Market Return</th>
+                            <th>%Ach to Target</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                "<tr> <td>Jambi</td> <td>00110002</td> <td>Ahmad Satari</td> <td>00110070</td> <td>Yongki Padila</td> <td>K195</td> <td>Warung Gantung</td> <td>0.15%</td> <td> <a class='text-red' href='byPLU.html'> 0.79% </a> </td> <td>-425.19%</td> </tr>"
+                              );
+                            }
+                          </script>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>

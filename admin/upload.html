@@ -237,53 +237,70 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
+            <div class="badge-update ml-auto mb-2 alig">
+              <div class="d-flex align-items-center m-0-p">
+                <p>
+                  <span class="bold">Update Time :</span>Senin, 26 July 2021 -
+                  12:24:11 AM
+                </p>
+                <i class="fas fa-circle circle-black ml-2 mr-2"></i>
+                <p>
+                  <span class="bold">Last Edited </span>by
+                  <span class="text-blue bold">Hanna Fauzi</span>
+                </p>
+              </div>
+            </div>
             <div class="card mt-1">
               <div class="card-body">
                 <div class="d-flex-none align-items-center gap-1">
-                  <h5 class="m-0">Setting Menu SAS</h5>
-                  <div class="d-flex-none gap-1 ml-auto text-align-left">
-                    <input
-                      type="text"
-                      class="form-control max-width mt-2 mb-2 mb-lg-0 mt-lg-0"
-                      placeholder="Cari Divisi, Nama Aturan, Pembuat, dll ..."
-                    />
-                    <a
-                      href="/admin/action/tambah_list_akses.html"
-                      class="btn btn-filter-apply"
-                      >TAMBAH ATURAN</a
-                    >
+                  <h5 class="m-0">Setting Data Upload</h5>
+                  <div
+                    class="d-flex-none gap-1 ml-auto text-align-left align-items-center"
+                  >
+                    <img src="../dist/img/custom/hide.png" alt="" />
+                    <img src="../dist/img/custom/refresh.png" alt="" />
+                    <a href="" class="btn btn-filter-apply">TAMBAH DATA</a>
                   </div>
                 </div>
               </div>
-              <!-- /.card -->
             </div>
-            <div class="card">
-              <div class="card-body">
-                <div class="table-responsive mt-3">
-                  <table
-                    class="table table-stripted w-100 mb-3 text-center"
-                    id="table1"
-                  >
-                    <thead>
-                      <tr>
-                        <th>Nama Aturan</th>
-                        <th>Menu SAS</th>
-                        <th>Branch</th>
-                        <th>Tanggal Buat</th>
-                        <th>Pembuat</th>
-                        <th>#</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <script>
-                        for (i = 1; i <= 30; i++) {
-                          document.write(
-                            " <tr> <td>Aturan SAS - 1</td> <td>Admin Setting</td> <td class='text-webix'>Service Quality</td> <td>12/03/2022</td> <td>Jonathan Iskandar</td> <th class='w-action fixed-table clr-th-action'> <div class='dropdown mt-2'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' href='/admin/action/lihat_list_akses.html' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Lihat List Akses </a> </li> <li class='dropdown-item'> <a class='text-gray' href='/admin/action/edit_list_akses.html' ><i class='fas fa-edit mr-1 color-secondary' ></i >Edit </a> </li> <li class='dropdown-item'> <a id='deleteSWAL' class='text-gray' ><i class='fas fa-trash mr-2 color-secondary' ></i >Hapus </a> </li> </div> </div> </th> </tr>"
-                          );
-                        }
-                      </script>
-                    </tbody>
-                  </table>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body upload-content1">
+                    <div class="d-flex m-0-p align-items-center">
+                      <p>List Data Upload</p>
+                      <img
+                        class="ml-auto mr-2"
+                        src="../dist/img/custom/short-up.png"
+                        alt=""
+                      />
+                      <img src="../dist/img/custom/date.png" alt="" />
+                    </div>
+                    <input
+                      class="form-control mt-2 mb-2"
+                      type="text"
+                      placeholder="Cari Data"
+                    />
+                    <div class="d-flex m-0-p">
+                      <p>Data Achievement KPSF</p>
+                      <i class="fas fa-circle circle-secondary mt-2 ml-2 mr-2"></i>
+                      <p>Januari 2021</p>
+                    </div>
+                    <p class="text-secondary">Uploaded : 16 Februari 2021</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-body upload-content2">
+                    <div class="text-center">
+                      <img src="../dist/img/custom/no_data.png" alt="" />
+                      <p class="text-secondary">
+                        Pilih Report pada List Upload
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
