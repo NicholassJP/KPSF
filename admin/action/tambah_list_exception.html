@@ -210,13 +210,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/admin/menuSAS.html" class="nav-link active">
+                    <a href="/admin/menuSAS.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Menu SAS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/admin/exception.html" class="nav-link">
+                    <a href="/admin/exception.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Exception</p>
                     </a>
@@ -248,11 +248,17 @@
                   <div
                     class="d-flex-none gap-1 ml-auto text-align-left mb-2 mt-2 mb-lg-0 mt-lg-0"
                   >
-                    <a href="" class="btn btn-hapus" id="deleteSWAL">HAPUS</a>
                     <a
-                      href="/admin/action/edit_list_akses.html"
+                      href="/admin/action/tambah_list_akses.html"
+                      class="btn btn-hapus"
+                      id="deleteSWAL"
+                      >HAPUS</a
+                    >
+                    <a
+                      href="/admin/action/tambah_list_akses.html"
                       class="btn btn-filter-apply"
-                      >EDIT</a
+                      id="simpanSWAL"
+                      >SIMPAN</a
                     >
                   </div>
                 </div>
@@ -268,7 +274,7 @@
                       <input
                         type="text"
                         class="form-control mt-2 mb-2 mb-lg-0 mt-lg-0"
-                        placeholder="Cari Divisi, Nama Aturan, Pembuat, dll ..."
+                        placeholder="Masukan Nama Aturan"
                       />
                       <a
                         href="/admin/action/tambah_list_akses.html"
@@ -603,16 +609,16 @@
                   <div class="card-body">
                     <p>List Akses User</p>
                     <div class="form-group mb-4">
-                      <label class="text-webix">DIVISI</label>
+                      <label class="text-webix">CABANG</label>
                       <select
                         class="form-control"
                         id="divisi"
                         name="divisi"
                         required
                       >
-                        <option value="Information Technology">
-                          Information Technology
-                        </option>
+                        <option value="">- Pilih Cabang -</option>
+                        <option value="">A</option>
+                        <option value="">B</option>
                       </select>
                     </div>
                     <div class="m-0-p d-flex align-items-center">
@@ -629,7 +635,7 @@
                                 type="text"
                                 class="form-control bg-lov"
                                 id="lov1"
-                                value="Cari Kode Jabatan, Nama Jabatan"
+                                value="Cari NIK, Nama Karyawan"
                                 readonly
                               />
                             </div>
@@ -645,14 +651,11 @@
                           </div>
                         </div>
                         <div class="card-fix-h">
-                          <script>
-                            for (i = 1; i <= 30; i++) {
-                              document.write(
-                                " <p class='bold'>(C901) IT Senior Manager</p>"
-                              );
-                            }
-                          </script>
+                          <!-- Content -->
                         </div>
+                        <button class="btn btn-filter mt-2 w-100" type="button">
+                          SIMPAN AKSES
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -692,25 +695,16 @@
               <div class="table-responsive mt-3">
                 <table class="table table-lov text-center">
                   <thead>
-                    <th>DIVISI</th>
-                    <th>KODE JABATAN</th>
-                    <th>NAMA JABATAN</th>
+                    <th>KODE CABANG</th>
+                    <th>CABANG</th>
+                    <th>NIK</th>
+                    <th>NAMA KARYAWAN</th>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5301</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5313</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
                     <script>
-                      for (i = 1; i <= 8; i++) {
+                      for (i = 1; i <= 30; i++) {
                         document.write(
-                          " <tr> <td>Human Capital</td> <td>H1910</td> <td>General Service Manager</td> </tr>"
+                          " <tr><td>Z001</td><td>Head Office</td><td>04030064</td><td>DJOKO SETIYONO</td></tr>"
                         );
                       }
                     </script>
@@ -741,8 +735,8 @@
       });
     </script>
     <script>
+      $(".hideoff").hide();
       $(function () {
-        $(".hideoff").hide();
         $("#switch1").change(function () {
           if ($(this).is(":checked")) {
             $(".hideoff").show();

@@ -448,3 +448,17 @@
 .page-item.active .page-link {
   border-color: #2691B5;
 }
+
+.btn-lov{
+  border: 1px solid #3376F6;
+  color: #326CE8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.bg-lov{
+  color: #504f4f !important;
+  background: yellow !important;
+}

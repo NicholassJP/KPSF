@@ -402,7 +402,10 @@
                             >Status Visible</label
                           >
                         </div>
-                        <ul class="nav nav-tabs hideoff text-center" role="tablist">
+                        <ul
+                          class="nav nav-tabs hideoff text-center"
+                          role="tablist"
+                        >
                           <li class="mt-1">
                             <a
                               class="nav-link secondary-hover"
@@ -625,17 +628,25 @@
                     <div class="card mt-2">
                       <div class="card-body p-2">
                         <div class="form-group mb-2">
-                          <div
-                            class="my-select-menu form-border form-lov"
-                            type="submit"
-                            data-toggle="modal"
-                            data-target="#modalLOV1"
-                          >
+                          <div class="d-flex align-items-center">
+                            <!-- Cari -->
+                            <div class="form-group w-100 m-0">
+                              <input
+                                type="text"
+                                class="form-control bg-lov"
+                                id="lov1"
+                                value="Cari Kode Jabatan, Nama Jabatan"
+                                readonly
+                              />
+                            </div>
+                            <!-- LOV -->
                             <div
-                              class="d-flex align-items-center text-secondary"
+                              class="btn btn-lov ml-2"
+                              type="submit"
+                              data-toggle="modal"
+                              data-target="#modalLOV1"
                             >
-                              <p class="m-0">Cari Kode Jabatan, Nama Jabatan</p>
-                              <i class="fas fa-search ml-auto"></i>
+                              LOV
                             </div>
                           </div>
                         </div>

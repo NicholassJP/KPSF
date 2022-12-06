@@ -210,13 +210,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/admin/menuSAS.html" class="nav-link active">
+                    <a href="/admin/menuSAS.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Menu SAS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/admin/exception.html" class="nav-link">
+                    <a href="/admin/exception.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Exception</p>
                     </a>
@@ -241,7 +241,7 @@
             <div class="card mt-1">
               <div class="card-body">
                 <div class="d-flex-none align-items-center gap-1">
-                  <a href="../menuSAS.html" class="btn btn-kembali">
+                  <a href="../exception.html" class="btn btn-kembali">
                     Kembali
                     <i class="ml-2 fas fa-chevron-circle-left"></i>
                   </a>
@@ -250,7 +250,7 @@
                   >
                     <a href="" class="btn btn-hapus" id="deleteSWAL">HAPUS</a>
                     <a
-                      href="/admin/action/edit_list_akses.html"
+                      href="/admin/action/edit_list_exception.html"
                       class="btn btn-filter-apply"
                       >EDIT</a
                     >
@@ -268,13 +268,9 @@
                       <input
                         type="text"
                         class="form-control mt-2 mb-2 mb-lg-0 mt-lg-0"
-                        placeholder="Cari Divisi, Nama Aturan, Pembuat, dll ..."
+                        value="Aturan SAS - 10"
+                        disabled
                       />
-                      <a
-                        href="/admin/action/tambah_list_akses.html"
-                        class="btn btn-filter w-100px"
-                        >OK</a
-                      >
                     </div>
                     <!-- Admin Setting -->
                     <div class="card collapsed-card">
@@ -648,7 +644,7 @@
                           <script>
                             for (i = 1; i <= 30; i++) {
                               document.write(
-                                " <p class='bold'>(C901) IT Senior Manager</p>"
+                                " <p class='bold'>(18051755) ZAENUL LAILY</p>"
                               );
                             }
                           </script>
@@ -692,25 +688,16 @@
               <div class="table-responsive mt-3">
                 <table class="table table-lov text-center">
                   <thead>
-                    <th>DIVISI</th>
-                    <th>KODE JABATAN</th>
-                    <th>NAMA JABATAN</th>
+                    <th>KODE CABANG</th>
+                    <th>CABANG</th>
+                    <th>NIK</th>
+                    <th>NAMA KARYAWAN</th>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5301</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5313</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
                     <script>
-                      for (i = 1; i <= 8; i++) {
+                      for (i = 1; i <= 30; i++) {
                         document.write(
-                          " <tr> <td>Human Capital</td> <td>H1910</td> <td>General Service Manager</td> </tr>"
+                          " <tr><td>Z001</td><td>Head Office</td><td>04030064</td><td>DJOKO SETIYONO</td></tr>"
                         );
                       }
                     </script>

@@ -210,13 +210,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/admin/menuSAS.html" class="nav-link active">
+                    <a href="/admin/menuSAS.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Menu SAS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/admin/exception.html" class="nav-link">
+                    <a href="/admin/exception.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Exception</p>
                     </a>
@@ -249,11 +249,7 @@
                     class="d-flex-none gap-1 ml-auto text-align-left mb-2 mt-2 mb-lg-0 mt-lg-0"
                   >
                     <a href="" class="btn btn-hapus" id="deleteSWAL">HAPUS</a>
-                    <a
-                      href="/admin/action/edit_list_akses.html"
-                      class="btn btn-filter-apply"
-                      >EDIT</a
-                    >
+                    <a id="simpanSWAL" class="btn btn-filter-apply">SIMPAN</a>
                   </div>
                 </div>
               </div>
@@ -391,6 +387,7 @@
                             type="checkbox"
                             class="custom-control-input"
                             id="switch1"
+                            checked
                           />
                           <label class="custom-control-label" for="switch1"
                             >Status Visible</label
@@ -603,16 +600,14 @@
                   <div class="card-body">
                     <p>List Akses User</p>
                     <div class="form-group mb-4">
-                      <label class="text-webix">DIVISI</label>
+                      <label class="text-webix">CABANG</label>
                       <select
                         class="form-control"
-                        id="divisi"
-                        name="divisi"
+                        id="cabang"
+                        name="cabang"
                         required
                       >
-                        <option value="Information Technology">
-                          Information Technology
-                        </option>
+                        <option value="Lampung">Lampung</option>
                       </select>
                     </div>
                     <div class="m-0-p d-flex align-items-center">
@@ -648,11 +643,17 @@
                           <script>
                             for (i = 1; i <= 30; i++) {
                               document.write(
-                                " <p class='bold'>(C901) IT Senior Manager</p>"
+                                " <div class='form-check mb-2 '> <input class='form-check-input check-lg' type='checkbox' value='' id='flexCheckDefault'> <label class='form-check-label bold ml-2' for=''>(18051755) ZAENUL LAILY</label> </div>"
                               );
                             }
                           </script>
                         </div>
+                        <button class="btn btn-filter mt-2 w-100" type="button">
+                          SIMPAN AKSES
+                        </button>
+                        <button class="btn btn-filter w-100 mt-2" type="button">
+                          HAPUS
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -692,25 +693,16 @@
               <div class="table-responsive mt-3">
                 <table class="table table-lov text-center">
                   <thead>
-                    <th>DIVISI</th>
-                    <th>KODE JABATAN</th>
-                    <th>NAMA JABATAN</th>
+                    <th>KODE CABANG</th>
+                    <th>CABANG</th>
+                    <th>NIK</th>
+                    <th>NAMA KARYAWAN</th>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5301</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
-                    <tr>
-                      <td>Human Capital</td>
-                      <td>H5313</td>
-                      <td>Asset & General Services Manager</td>
-                    </tr>
                     <script>
-                      for (i = 1; i <= 8; i++) {
+                      for (i = 1; i <= 30; i++) {
                         document.write(
-                          " <tr> <td>Human Capital</td> <td>H1910</td> <td>General Service Manager</td> </tr>"
+                          " <tr><td>Z001</td><td>Head Office</td><td>04030064</td><td>DJOKO SETIYONO</td></tr>"
                         );
                       }
                     </script>
@@ -742,7 +734,6 @@
     </script>
     <script>
       $(function () {
-        $(".hideoff").hide();
         $("#switch1").change(function () {
           if ($(this).is(":checked")) {
             $(".hideoff").show();
