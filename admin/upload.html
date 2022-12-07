@@ -240,7 +240,7 @@
             <div class="badge-update ml-auto mb-2 overflow-content">
               <div class="d-flex align-items-center m-0-p">
                 <p>
-                  <span class="bold">Update Time :</span>Senin, 26 July 2021 -
+                  <span class="bold">Update Time : </span>Senin, 26 July 2021 -
                   12:24:11 AM
                 </p>
                 <i class="fas fa-circle circle-black ml-2 mr-2"></i>
@@ -257,47 +257,408 @@
                   <div
                     class="d-flex-none gap-1 ml-auto text-align-left align-items-center"
                   >
-                    <img src="../dist/img/custom/hide.png" alt="" />
+                    <a class="btn p-0">
+                      <img src="../dist/img/custom/hide.png" alt="" />
+                    </a>
                     <img src="../dist/img/custom/refresh.png" alt="" />
-                    <a href="" class="btn btn-filter-apply">TAMBAH DATA</a>
+                    <a
+                      data-toggle="tab"
+                      href="#tambah_view"
+                      role="tab1"
+                      class="btn btn-filter-apply tambah_click"
+                      >TAMBAH DATA</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-4">
+              <div id="colHide" class="col-lg-4">
                 <div class="card">
                   <div class="card-body upload-content1">
-                    <div class="d-flex m-0-p align-items-center">
-                      <p>List Data Upload</p>
-                      <img
-                        class="ml-auto mr-2"
-                        src="../dist/img/custom/short-up.png"
-                        alt=""
-                      />
-                      <img src="../dist/img/custom/date.png" alt="" />
+                    <!-- Edit Data Upload -->
+                    <div
+                      class="tab-pane mt-2 hide_edit"
+                      id="edit_view"
+                      role="tabpanel"
+                    >
+                      <div class="d-flex align-items-center">
+                        <h5>Edit Data Upload</h5>
+                        <div class="ml-auto">
+                          <button class="btn p-0 show_list">
+                            <i class="fas fa-times text-secondary"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- BTN LOV -->
+                      <div class="form-group mb-3 mt-2">
+                        <div class="d-flex align-items-center">
+                          <!-- Cari -->
+                          <div class="form-group w-100 m-0">
+                            <input
+                              type="text"
+                              class="form-control bg-lov"
+                              id="lov1"
+                              value="Data Achievement KPSF Periode Januari 2021"
+                              readonly
+                            />
+                          </div>
+                          <!-- LOV -->
+                          <div
+                            class="btn btn-lov ml-2"
+                            type="submit"
+                            data-toggle="modal"
+                            data-target="#modalLOV1"
+                          >
+                            LOV
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Badge Upload -->
+                      <div class="badge-upload">
+                        <div class="d-flex align-items-center m-0-p">
+                          <i class="fas fa-info-circle mr-1"></i>
+                          <p>
+                            <span class="bold text-webix">Uploaded </span>16
+                            February 2021
+                          </p>
+                          <i class="fas fa-circle circle-white mr-2 ml-2"></i>
+                          <p>12:24:11 AM</p>
+                        </div>
+                      </div>
+
+                      <!-- Periode Bulan -->
+                      <div class="form-group mt-4">
+                        <label>Periode Bulan</label>
+                        <select
+                          class="form-control"
+                          id="bulan"
+                          name="bulan"
+                          required
+                        >
+                          <option value="">Januari</option>
+                        </select>
+                      </div>
+
+                      <!-- Periode Tahun -->
+                      <div class="form-group">
+                        <label>Periode Tahun</label>
+                        <select
+                          class="form-control"
+                          id="tahun"
+                          name="tahun"
+                          required
+                        >
+                          <option value="">2021</option>
+                        </select>
+                      </div>
+
+                      <!-- Btn Upload -->
+                      <form
+                        action="#"
+                        method="POST"
+                        enctype="multipart/form-data"
+                        name=""
+                      >
+                        <div class="border-upload">
+                          <div class="d-flex align-items-center">
+                            <div
+                              id="yourBtn"
+                              class="btn btn-upload"
+                              onclick="getFile()"
+                            >
+                              Upload
+                            </div>
+                            <p class="m-0 ml-3">Pilih file upload</p>
+                          </div>
+                        </div>
+                        <p class="text-secondary mt-2">
+                          Silahkan upload data dengan format file *xls,*xlsx
+                        </p>
+                        <div class="hidden-upload">
+                          <input
+                            id="upfile"
+                            type="file"
+                            value="upload"
+                            onchange="sub(this)"
+                          />
+                        </div>
+                      </form>
+
+                      <!-- Btn Simpan & Batal -->
+                      <div class="d-flex align-items-center gap-1">
+                        <i
+                          class="fas fa-trash text-secondary fz-22px ml-auto"
+                        ></i>
+                        <button class="btn btn-filter show_list">Batal</button>
+                        <a class="btn btn-filter-apply">Simpan</a>
+                      </div>
                     </div>
-                    <input
-                      class="form-control mt-2 mb-2"
-                      type="text"
-                      placeholder="Cari Data"
-                    />
-                    <div class="overflow-scroll">
-                      <!-- List -->
-                      <script>
-                        for (i = 1; i <= 30; i++) {
-                          document.write(
-                            " <div class='d-flex m-0-p'> <p>Data Achievement KPSF</p> <i class='fas fa-circle circle-secondary mt-2 ml-2 mr-2' ></i> <p>Januari 2021</p> <div class='dropdown ml-auto mr-4 text-secondary'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Content 1 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-edit mr-1 color-secondary'></i>Content 2 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-trash mr-2 color-secondary'></i >Content 3 </a> </li> </div> </div> </div> <p class='text-secondary fz-14px'> Uploaded : 16 Februari 2021 </p>"
-                          );
-                        }
-                      </script>
+
+                    <!-- Tambah Data Upload -->
+                    <div
+                      class="tab-pane mt-2 hide_tambah"
+                      id="tambah_view"
+                      role="tabpanel1"
+                    >
+                      <div class="d-flex align-items-center">
+                        <h5>Tambah Data Upload</h5>
+                        <div class="ml-auto">
+                          <button class="btn show_list p-0">
+                            <i class="fas fa-times text-secondary"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- BTN LOV -->
+                      <div class="form-group mb-3 mt-2">
+                        <div class="d-flex align-items-center">
+                          <!-- Cari -->
+                          <div class="form-group w-100 m-0">
+                            <input
+                              type="text"
+                              class="form-control bg-lov"
+                              id="lov1"
+                              value="Pilih Nama Data"
+                              readonly
+                            />
+                          </div>
+                          <!-- LOV -->
+                          <div
+                            class="btn btn-lov ml-2"
+                            type="submit"
+                            data-toggle="modal"
+                            data-target="#modalLOV1"
+                          >
+                            LOV
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Badge Upload -->
+                      <div class="badge-upload">
+                        <div class="d-flex align-items-center m-0-p">
+                          <i class="fas fa-info-circle mr-1"></i>
+                          <p>
+                            <span class="bold text-webix">Uploaded </span>16
+                            February 2021
+                          </p>
+                          <i class="fas fa-circle circle-white mr-2 ml-2"></i>
+                          <p>12:24:11 AM</p>
+                        </div>
+                      </div>
+
+                      <!-- Periode Bulan -->
+                      <div class="form-group mt-4">
+                        <label>Periode Bulan</label>
+                        <select
+                          class="form-control"
+                          id="bulan"
+                          name="bulan"
+                          required
+                        >
+                          <option value="">Januari</option>
+                        </select>
+                      </div>
+
+                      <!-- Periode Tahun -->
+                      <div class="form-group">
+                        <label>Periode Tahun</label>
+                        <select
+                          class="form-control"
+                          id="tahun"
+                          name="tahun"
+                          required
+                        >
+                          <option value="">2021</option>
+                        </select>
+                      </div>
+
+                      <!-- Btn Upload -->
+                      <form
+                        action="#"
+                        method="POST"
+                        enctype="multipart/form-data"
+                        name=""
+                      >
+                        <div class="border-upload">
+                          <div class="d-flex align-items-center">
+                            <div
+                              id="yourBtn"
+                              class="btn btn-upload"
+                              onclick="getFile()"
+                            >
+                              Upload
+                            </div>
+                            <p class="m-0 ml-3">Pilih file upload</p>
+                          </div>
+                        </div>
+                        <p class="text-secondary mt-2">
+                          Silahkan upload data dengan format file *xls,*xlsx
+                        </p>
+                        <div class="hidden-upload">
+                          <input
+                            id="upfile"
+                            type="file"
+                            value="upload"
+                            onchange="sub(this)"
+                          />
+                        </div>
+                      </form>
+
+                      <!-- Btn Simpan & Batal -->
+                      <div class="d-flex align-items-center gap-1">
+                        <button class="ml-auto btn btn-filter show_list">
+                          Batal
+                        </button>
+                        <a class="btn btn-filter-apply">Simpan</a>
+                      </div>
+                    </div>
+
+                    <!-- List Content -->
+                    <div class="hide_list">
+                      <div class="d-flex m-0-p align-items-center">
+                        <h5>List Data Upload</h5>
+                        <a class="btn ml-auto p-0">
+                          <img
+                            class="ml-auto mr-2"
+                            src="../dist/img/custom/short-up.png"
+                            alt=""
+                        /></a>
+                        <a class="btn p-0">
+                          <img src="../dist/img/custom/date.png" alt=""
+                        /></a>
+                      </div>
+                      <!-- BTN LOV -->
+                      <div class="form-group mb-3 mt-2">
+                        <div class="d-flex align-items-center">
+                          <!-- Cari -->
+                          <div class="form-group w-100 m-0">
+                            <input
+                              type="text"
+                              class="form-control bg-lov"
+                              id="lov1"
+                              value="Cari Data"
+                              readonly
+                            />
+                          </div>
+                          <!-- LOV -->
+                          <div
+                            class="btn btn-lov ml-2"
+                            type="submit"
+                            data-toggle="modal"
+                            data-target="#modalLOV1"
+                          >
+                            LOV
+                          </div>
+                        </div>
+                      </div>
+                      <div class="overflow-scroll">
+                        <!-- List -->
+                        <div class="d-block btn-hover">
+                          <div class="d-flex m-0-p">
+                            <p>Data Achievement KPSF</p>
+                            <i
+                              class="fas fa-circle circle-secondary mt-2 ml-2 mr-2"
+                            ></i>
+                            <p>Januari 2021</p>
+                            <div class="dropdown ml-auto mr-4 text-secondary">
+                              <i
+                                class="fas fa-ellipsis-v"
+                                type="button"
+                                id="dropdown-item"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              ></i>
+                              <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdown-item"
+                              >
+                                <li class="dropdown-item">
+                                  <a class="text-gray"
+                                    ><i
+                                      class="fas fa-clipboard-list mr-2 color-secondary"
+                                    ></i
+                                    >Content 1
+                                  </a>
+                                </li>
+                                <li class="dropdown-item">
+                                  <a class="text-gray"
+                                    ><i
+                                      class="fas fa-edit mr-1 color-secondary"
+                                    ></i
+                                    >Content 2
+                                  </a>
+                                </li>
+                                <li class="dropdown-item">
+                                  <a class="text-gray"
+                                    ><i
+                                      class="fas fa-trash mr-2 color-secondary"
+                                    ></i
+                                    >Content 3
+                                  </a>
+                                </li>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-secondary fz-14px m-0">
+                            Uploaded : 16 Februari 2021
+                          </p>
+                        </div>
+                        <script>
+                          for (i = 1; i <= 30; i++) {
+                            document.write(
+                              "  <div class='d-block btn-hover'> <div class='d-flex m-0-p'> <p>Data Achievement KPSF</p> <i class='fas fa-circle circle-secondary mt-2 ml-2 mr-2' ></i> <p>Januari 2021</p> <div class='dropdown ml-auto mr-4 text-secondary'> <i class='fas fa-ellipsis-v' type='button' id='dropdown-item' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' ></i> <div class='dropdown-menu' aria-labelledby='dropdown-item' > <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-clipboard-list mr-2 color-secondary' ></i >Content 1 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-edit mr-1 color-secondary' ></i >Content 2 </a> </li> <li class='dropdown-item'> <a class='text-gray' ><i class='fas fa-trash mr-2 color-secondary' ></i >Content 3 </a> </li> </div> </div> </div> <p class='text-secondary fz-14px m-0'> Uploaded : 16 Februari 2021 </p> </div>"
+                            );
+                          }
+                        </script>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-8">
+              <div id="colAdd" class="col-lg-8">
                 <div class="card">
-                  <div class="card-body upload-content2">
+                  <div class="card-body upload-content1 hide_edit">
+                    <!-- Header Table -->
+                    <div class="d-flex align-items-center">
+                      <div class="d-block">
+                        <h5 class="m-0">
+                          Data Achievement KPSF Periode Januari 2021.xls
+                        </h5>
+                        <p class="text-secondary">
+                          Uploaded : 16 Februari 2021
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Table Edit -->
+
+                    <table
+                      id="table1"
+                      class="table table-lov table-lov1 text-center table-responsive"
+                    >
+                      <thead>
+                        <th>CABANG</th>
+                        <th>Kode Toko</th>
+                        <th>Nama Toko</th>
+                        <th>PLU</th>
+                        <th>Descp</th>
+                        <th>Tag</th>
+                        <th>Ket</th>
+                        <th>Qty</th>
+                        <th>Netto</th>
+                      </thead>
+                      <tbody>
+                        <script>
+                          for (i = 1; i <= 30; i++) {
+                            document.write(
+                              " <tr><td>Jambi</td><td>TD18</td><td>Ruko Mall Daan Mogot</td><td>4042952</td><td>Doritos BBQ 150 Gr</td><td>F</td><td>BKE</td><td>4</td><td>29.572</td></tr>"
+                            );
+                          }
+                        </script>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-body upload-content2 hide_list_table">
                     <div class="text-center">
                       <img src="../dist/img/custom/no_data.png" alt="" />
                       <p class="text-secondary">
@@ -308,6 +669,71 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal LOV 1 -->
+    <div
+      class="modal fade"
+      id="modalLOV1"
+      role="dialog"
+      aria-labelledby="modalLOV"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form role="form" id="formSWAL1" method="POST">
+              <div class="d-flex gap-1">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari Data Achivement, Store perfomance, dll"
+                  />
+                </div>
+                <button class="btn btn-filter-apply" type="button">
+                  Proses
+                </button>
+                <a
+                  data-toggle="tab"
+                  href="#edit_view"
+                  role="tab"
+                  class="btn btn-filter edit_click"
+                  type="button"
+                  data-dismiss="modal"
+                  >Edit</a
+                >
+                <a
+                  class="btn btn-filter"
+                  id="colExpand"
+                  data-dismiss="modal"
+                  type="button"
+                  >Lihat</a
+                >
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-lov text-center">
+                  <thead>
+                    <th>NAMA DATA</th>
+                    <th>BULAN</th>
+                    <th>TAHUN</th>
+                    <th>Upload</th>
+                  </thead>
+                  <tbody>
+                    <script>
+                      for (i = 1; i <= 30; i++) {
+                        document.write(
+                          " <tr><td>Checklist SQR & Head Dept</td><td>Januari</td><td>2022</td><td>13 Januari 2022</td></tr>"
+                        );
+                      }
+                    </script>
+                  </tbody>
+                </table>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -326,37 +752,71 @@
     <!-- SWAL -->
     <script src="../../dist/js/custom/sweetalert.js"></script>
     <script>
-      $("#table1 .dropdown").on("show.bs.dropdown", (event) => {
-        let thisTable = event.target.closest("table");
-        thisTable.classList.add("dropdowns-opened");
-        // add class to all <tr>
-        $(thisTable).find("tr").addClass("non-dropdown");
-        // remove class of this <tr>
-        event.target.closest("tr").classList.remove("non-dropdown");
+      $(".rotate").click(function () {
+        $(this).toggleClass("down");
       });
-
-      $("#table1 .dropdown").on("hidden.bs.dropdown", (event) => {
-        let thisTable = event.target.closest("table");
-        thisTable.classList.remove("dropdowns-opened");
-        $(thisTable).find("tr").removeClass("non-dropdown");
-      });
-
+    </script>
+    <script>
       $("#table1").DataTable({
         bPaginate: true,
         bLengthChange: false,
         bFilter: false,
         bInfo: true,
         searching: false,
-        fixedColumns: {
-          left: false,
-          right: 1,
-        },
       });
     </script>
     <script>
-      $(".rotate").click(function () {
-        $(this).toggleClass("down");
+      $(function () {
+        $(".hide_edit").hide();
+        $(".hide_tambah").hide();
+        // Edit
+        $(".edit_click").click(function () {
+          $(".hide_list").hide();
+          $(".hide_list_table").hide();
+          $("#colHide").show();
+          $(".hide_tambah").hide();
+          $(".hide_edit").show();
+          $("#colAdd").removeClass("col-lg-12");
+        });
+        // Tambah
+        $(".tambah_click").click(function () {
+          $(".hide_list").hide();
+          $(".hide_edit").hide();
+          $("#colHide").show();
+          $(".hide_list_table").show();
+          $(".hide_tambah").show();
+          $("#colAdd").removeClass("col-lg-12");
+        });
+        // List
+        $(".show_list").click(function () {
+          $(".hide_list").show();
+          $("#colHide").show();
+          $(".hide_list_table").show();
+          $(".hide_edit").hide();
+          $(".hide_tambah").hide();
+          $("#colAdd").removeClass("col-lg-12");
+        });
       });
+      // Hide Col
+      $("#colExpand").click(function () {
+        $("#colAdd").addClass("col-lg-12");
+        $("#colHide").hide();
+        $(".hide_list_table").hide();
+        $(".hide_edit").show();
+      });
+
+      function getFile() {
+        document.getElementById("upfile").click();
+      }
+
+      function sub(obj) {
+        var file = obj.value;
+        var fileName = file.split("\\");
+        document.getElementById("yourBtn").innerHTML =
+          fileName[fileName.length - 1];
+        document.myForm.submit();
+        event.preventDefault();
+      }
     </script>
   </body>
 </html>
