@@ -262,6 +262,9 @@
     .d-flex-none {
       display: block;
     }
+    .upload-content1, .upload-content2{
+      height: max-content !important;
+    }
     .overflow-content{
       width: 100% !important;
     }
