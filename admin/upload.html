@@ -237,17 +237,22 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <div class="badge-update ml-auto mb-2 overflow-content">
-              <div class="d-flex align-items-center m-0-p">
-                <p>
-                  <span class="bold">Update Time : </span>Senin, 26 July 2021 -
-                  12:24:11 AM
-                </p>
-                <i class="fas fa-circle circle-black ml-2 mr-2"></i>
-                <p>
-                  <span class="bold">Last Edited </span>by
-                  <span class="text-blue bold">Hanna Fauzi</span>
-                </p>
+            <div class="d-flex mb-3 align-items-center">
+              <button class="btn btn-kembali show_list hide_kembali">
+                Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
+              </button>
+              <div class="badge-update ml-auto overflow-content">
+                <div class="d-flex align-items-center m-0-p">
+                  <p>
+                    <span class="bold">Update Time : </span>Senin, 26 July 2021
+                    - 12:24:11 AM
+                  </p>
+                  <i class="fas fa-circle circle-black ml-2 mr-2"></i>
+                  <p>
+                    <span class="bold">Last Edited </span>by
+                    <span class="text-blue bold">Hanna Fauzi</span>
+                  </p>
+                </div>
               </div>
             </div>
             <div class="card mt-1">
@@ -267,6 +272,13 @@
                       role="tab1"
                       class="btn btn-filter-apply tambah_click"
                       >TAMBAH DATA</a
+                    >
+                    <a
+                      data-toggle="tab"
+                      href="#edit_view"
+                      role="tab"
+                      class="btn btn-filter-apply edit_click show_edit"
+                      >EDIT</a
                     >
                   </div>
                 </div>
@@ -769,6 +781,8 @@
       $(function () {
         $(".hide_edit").hide();
         $(".hide_tambah").hide();
+        $(".hide_kembali").hide();
+        $(".show_edit").hide();
         // Edit
         $(".edit_click").click(function () {
           $(".hide_list").hide();
@@ -777,6 +791,8 @@
           $(".hide_tambah").hide();
           $(".hide_edit").show();
           $("#colAdd").removeClass("col-lg-12");
+          $(".hide_kembali").show();
+          $(".show_edit").hide();
         });
         // Tambah
         $(".tambah_click").click(function () {
@@ -786,6 +802,8 @@
           $(".hide_list_table").show();
           $(".hide_tambah").show();
           $("#colAdd").removeClass("col-lg-12");
+          $(".hide_kembali").show();
+          $(".show_edit").hide();
         });
         // List
         $(".show_list").click(function () {
@@ -795,6 +813,8 @@
           $(".hide_edit").hide();
           $(".hide_tambah").hide();
           $("#colAdd").removeClass("col-lg-12");
+          $(".hide_kembali").hide();
+          $(".show_edit").hide();
         });
       });
       // Hide Col
@@ -803,6 +823,8 @@
         $("#colHide").hide();
         $(".hide_list_table").hide();
         $(".hide_edit").show();
+        $(".hide_kembali").show();
+        $(".show_edit").show();
       });
 
       function getFile() {
