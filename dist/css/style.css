@@ -259,6 +259,9 @@
     }
   }
   @media (max-width: 992px) {
+    .w-1000px{
+      width: 1000px;
+    }
     .d-flex-none {
       display: block;
     }

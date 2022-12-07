@@ -237,8 +237,10 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <div class="d-flex mb-3 align-items-center">
-              <button class="btn btn-kembali show_list hide_kembali">
+            <div class="d-flex-none mb-3 align-items-center">
+              <button
+                class="btn btn-kembali show_list hide_kembali mb-2 mb-lg-0"
+              >
                 Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
               </button>
               <div class="badge-update ml-auto overflow-content">
@@ -643,32 +645,33 @@
                       </div>
                     </div>
                     <!-- Table Edit -->
-
-                    <table
-                      id="table1"
-                      class="table table-lov table-lov1 text-center table-responsive"
-                    >
-                      <thead>
-                        <th>CABANG</th>
-                        <th>Kode Toko</th>
-                        <th>Nama Toko</th>
-                        <th>PLU</th>
-                        <th>Descp</th>
-                        <th>Tag</th>
-                        <th>Ket</th>
-                        <th>Qty</th>
-                        <th>Netto</th>
-                      </thead>
-                      <tbody>
-                        <script>
-                          for (i = 1; i <= 30; i++) {
-                            document.write(
-                              " <tr><td>Jambi</td><td>TD18</td><td>Ruko Mall Daan Mogot</td><td>4042952</td><td>Doritos BBQ 150 Gr</td><td>F</td><td>BKE</td><td>4</td><td>29.572</td></tr>"
-                            );
-                          }
-                        </script>
-                      </tbody>
-                    </table>
+                    <div class="table-responsive">
+                      <table
+                        id="table1"
+                        class="table table-lov table-lov1 text-center w-1000px"
+                      >
+                        <thead>
+                          <th>CABANG</th>
+                          <th>Kode Toko</th>
+                          <th>Nama Toko</th>
+                          <th>PLU</th>
+                          <th>Descp</th>
+                          <th>Tag</th>
+                          <th>Ket</th>
+                          <th>Qty</th>
+                          <th>Netto</th>
+                        </thead>
+                        <tbody>
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                " <tr><td>Jambi</td><td>TD18</td><td>Ruko Mall Daan Mogot</td><td>4042952</td><td>Doritos BBQ 150 Gr</td><td>F</td><td>BKE</td><td>4</td><td>29.572</td></tr>"
+                              );
+                            }
+                          </script>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                   <div class="card-body upload-content2 hide_list_table">
                     <div class="text-center">
