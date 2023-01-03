@@ -45,6 +45,10 @@
     font-size: 14px;
   }
   .circle-table3 {
+    color: #d5e0c1;
+    font-size: 14px;
+  }
+  .circle-table3 {
     color: #E6E6E8;
     font-size: 14px;
   }
@@ -156,6 +160,9 @@
   thead {
     background-color: #f1f2f8;
   }
+  .table thead th{
+    background-color: #f1f2f8;
+  }
   thead .text-center th {
     border: 0;
   }
@@ -163,6 +170,11 @@
     border-top: 0;
     color: #1976cb;
   }
+  tbody .exist-td td {
+    border-top: 0;
+    color: unset !important;
+  }
+  
   .border-bottom {
     border-color: white !important;
     border-width: 2px !important;
@@ -174,6 +186,9 @@
   .border-br {
     border-right: 2px white solid !important;
     border-bottom: 2px white solid !important;
+  }
+  .border-r {
+    border-right: 2px white solid !important;
   }
   .text-red {
     color: #e54545;
@@ -236,6 +251,19 @@
   }
   .d-flex-none {
     display: flex;
+  }
+  @media (max-width: 1330px) {
+     .main-sidebar, .sidebar-collapse .main-sidebar::before {
+      margin-left: -250px;
+    }
+    body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header{
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 1000px) {
+    .table-fixed-none th, .table-fixed-none td{
+      position: unset !important;
+    }
   }
   @media (max-width: 1200px) {
     .h-100-responsive {
@@ -563,4 +591,11 @@ border-radius: 2px;
 
 .hidden-upload{
   height: 0px; width: 0px; overflow: hidden
+}
+
+.dtfc-fixed-left{
+  background-color: white;
+}
+.dtfc-fixed-right{
+  background-color: white;
 }

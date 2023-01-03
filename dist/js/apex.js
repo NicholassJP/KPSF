@@ -1,17 +1,21 @@
-// Summary Indeks KPSF - Nasional
+// Index KPSF - Nasional
 var options = {
-    series: [2.96, 3.16, 2.75],
+    series: [2.96, 3.16, 2.75, 2.55],
     chart: {
         type: "donut",
         width: "100%",
+        toolbar: {
+            show: true,
+        },
     },
-    labels: ["Index 4P NAS", "Index 4P OPR", "Index 4P SUP"],
+    labels: ["3 Entitas", "Store", "Office", "DC" ],
     dataLabels: {
         enabled: false,
     },
+  
     legend: {
         position: "bottom",
-        formatter: function(seriesName, opts, data) {
+        formatter: function(seriesName, opts) {
             return (
                 "<span>" +
                 seriesName +
@@ -21,7 +25,9 @@ var options = {
                 opts.w.globals.series[opts.seriesIndex] +
                 "</h5>" +
                 "</div>" +
-                data
+                "<p class='fz-14px'>" +
+                "3.25" +
+                "</p>"
             );
         },
     },
@@ -29,7 +35,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-// Indeks KPSF Region
+// Index KPSF Region
 var options = {
     series: [2.96, 2.96, 2.96, 2.96],
     chart: {
@@ -68,24 +74,33 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
 chart.render();
 
-//   Trend Achivement KPSF YTD by Month
+//   Trend Achievement KPSF YTD
 const dynamicWidth = 24 * 50;
 const chartWidth =
     dynamicWidth < window.innerWidth ? "100%" : dynamicWidth;
 var options = {
     series: [{
+            name: '3 Entitas',
             data: [
                 2.58, 2.79, 2.67, 2.63, 2.74, 2.97, 3.25, 3.14, 3.46, 3.68, 3.59, 3.44, 3.27
             ],
         },
         {
+            name: 'Store',
             data: [
                 2.45, 2.57, 2.49, 2.25, 2.31, 2.67, 2.87, 2.78, 2.92, 3.14, 3.12, 3.07, 2.88
             ],
         },
         {
+            name: 'Office',
             data: [
                 2.33, 2.35, 2.32, 1.87, 1.88, 2.37, 2.50, 2.42, 2.37, 2.60, 2.65, 2.71, 2.50
+            ],
+        },
+        {
+            name: 'DC',
+            data: [
+                3.33, 3.35, 3.33, 1.87, 1.88, 3.37, 3.50, 3.43, 3.37, 3.60, 3.65, 3.71, 3.50
             ],
         },
     ],
@@ -94,10 +109,10 @@ var options = {
         width: chartWidth,
         type: "line",
         toolbar: {
-            show: false,
+            show: true,
         },
     },
-    colors: ['#00B488', '#FF8412','#FFE600'],
+    colors: ['rgb(0, 143, 251)', 'rgb(0, 227, 150)','rgb(254, 176, 25)', 'rgb(255, 69, 96)'],
     dataLabels: {
         enabled: true,
     },
@@ -128,7 +143,7 @@ var options = {
         ],
     },
     legend: {
-        show: false
+        show: true
     },
 };
 
@@ -350,7 +365,7 @@ var chart = new ApexCharts(document.querySelector("#chartline4"), options);
 chart.render();
 
 
-// Summary Indeks KPSF - Region 
+// Index KPSF 3 Entitas
 var options = {
     series: [{
         data: [2.97, 2.5, 2, 1.5]
@@ -426,33 +441,33 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chartcolumn1"), options);
 chart.render();
 
-// Summary Region Dept. OPR
+// Index KPSF Store
 var options = {
-    colors : ['#1A3B59', '#EDC000', '#FFF1A6', '#FFE600', '#D6B74A'],
+    colors : ['#00e396', '#01cf8b', '#02b97c', '#01a16c', '#018559'],
     series: [     {
-        name: 'Idx 4P OPR',
+        name: '4P OPR',
         data: [2.72, 2.70, 2.74, 2.76]
     },
     {
-        name: 'Idx Place',
+        name: 'Place',
         data: [2.45, 2.49, 2.50, 2.50]
     },
     {
-        name: 'Idx Process',
+        name: 'Process',
         data: [2.45, 2.44, 2.38, 2.46]
     },
     {
-        name: 'Idx Product',
+        name: 'Product',
         data: [2.91, 2.81, 3.04, 3.00]
     },
     {
-        name: 'Idx People',
+        name: 'People',
         data: [4.00, 4.00, 4.00, 4.00]
     },
 ],
 dataLabels: {
     style: {
-      colors: ['#fff', '#000', '#000', '#000', '#000']
+      colors: ['#000', '#000', '#fff', '#fff', '#fff']
     }
   },
     chart: {
@@ -491,8 +506,8 @@ dataLabels: {
         ],
     },
     legend: {
-        position: 'right',
-        offsetY: 100
+        position: 'top',
+        offsetY: 20
     },
     fill: {
         opacity: 1
@@ -502,33 +517,33 @@ dataLabels: {
 var chart = new ApexCharts(document.querySelector("#chartcolumn2"), options);
 chart.render();
 
-// Summary Region Dept. SUP
+// Index KPSF Office
 var options = {
-    colors : ['#1A3B59', '#0EBF80', '#B4EDD8', '#409C70', '#0EBF80'],
+    colors : ['#feb019', '#e29f19', '#d1941a', '#bb8417', '#9e7014'],
     series: [     {
-        name: 'Idx 4P OPR',
+        name: '4P OPR',
         data: [2.72, 2.70, 2.74, 2.76]
     },
     {
-        name: 'Idx Place',
+        name: 'Place',
         data: [3.10, 3.09, 3.00, 3.08]
     },
     {
-        name: 'Idx Process',
+        name: 'Process',
         data: [2.69, 2.26, 2.68, 2.63]
     },
     {
-        name: 'Idx Product',
+        name: 'Product',
         data: [3.85, 3.89, 3.93, 3.85]
     },
     {
-        name: 'Idx People',
+        name: 'People',
         data: [3.85, 2.60, 3.70, 2.43]
     },
 ],
 dataLabels: {
     style: {
-      colors: ['#fff', '#000', '#000', '#000', '#000']
+        colors: ['#000', '#000', '#fff', '#fff', '#fff']
     }
   },
     chart: {
@@ -567,8 +582,8 @@ dataLabels: {
         ],
     },
     legend: {
-        position: 'right',
-        offsetY: 100
+        position: 'top',
+        offsetY: 20
     },
     fill: {
         opacity: 1
@@ -576,6 +591,82 @@ dataLabels: {
 };
 
 var chart = new ApexCharts(document.querySelector("#chartcolumn3"), options);
+chart.render();
+
+// Index KPSF DC
+var options = {
+    colors : ['#ff4560', '#e23c55', '#c43449', '#a12b3d', '#802331'],
+    series: [     {
+        name: '4P OPR',
+        data: [2.72, 2.70, 2.74, 2.76]
+    },
+    {
+        name: 'Place',
+        data: [3.10, 3.09, 3.00, 3.08]
+    },
+    {
+        name: 'Process',
+        data: [2.69, 2.26, 2.68, 2.63]
+    },
+    {
+        name: 'Product',
+        data: [3.85, 3.89, 3.93, 3.85]
+    },
+    {
+        name: 'People',
+        data: [3.85, 2.60, 3.70, 2.43]
+    },
+],
+dataLabels: {
+    style: {
+        colors: ['#000', '#000', '#fff', '#fff', '#fff']
+    }
+  },
+    chart: {
+        type: 'bar',
+        height: 350,
+        stacked: true,
+        toolbar: {
+            show: true
+        },
+        zoom: {
+            enabled: true
+        }
+    },
+    grid: {
+        show: false,
+        },
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            legend: {
+                position: 'bottom',
+                offsetX: -10,
+                offsetY: 0
+            }
+        }
+    }],
+    yaxis:{
+        show : false,
+      },
+    xaxis: {
+        categories: [
+            "Reg 1",
+            "Reg 2",
+            "Reg 3",
+            "Reg 4"
+        ],
+    },
+    legend: {
+        position: 'top',
+        offsetY: 20
+    },
+    fill: {
+        opacity: 1
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#chartcolumn6"), options);
 chart.render();
 
 // Indeks KPSF Dept. Operation
@@ -704,6 +795,69 @@ var options = {
 };
 
 var chart = new ApexCharts(document.querySelector("#chartdeptsupport"), options);
+chart.render();
+// Indeks KPSF Dept. Support
+var options = {
+    colors: ['#fa3250', '#e62f4a', '#ce2b43', '#af2439'],
+    series: [{
+        data: [2.97, 2.97, 1.50, 4.00]
+    }],
+    chart: {
+        height: 350,
+        type: 'bar',
+    },
+    grid: {
+        show: false,
+        },
+    plotOptions: {
+        bar: {
+            distributed: true,
+            dataLabels: {
+                position: 'top', // top, center, bottom
+            },
+        }
+    },
+    dataLabels: {
+        enabled: true,
+        offsetY: -20,
+        style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+        }
+    },
+    legend: {
+        show: false
+    },
+    xaxis: {
+        categories: ["Reg 1",
+        "Reg 2",
+        "Reg 3",
+        "Reg 4"],
+        position: 'bottom',
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+        tooltip: {
+            enabled: true,
+        }
+    },
+    yaxis: {
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false,
+        },
+        labels: {
+            show: false,
+        }
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chartdeptdc"), options);
 chart.render();
 
 // Indeks KPSF Cabang

@@ -19,6 +19,10 @@
     color: #FFE500;
     font-size: 14px;
 }
+.circle-red{
+    color: #fa3250;
+    font-size: 14px;
+}
 .circle-orange{
     color: #FF8412;
     font-size: 14px;
@@ -30,6 +34,18 @@
 .legend{
     width: 6px;
     height: 6px;
+}
+.legend-dc1{
+    background-color: #fa3250;;
+}
+.legend-dc2{
+    background-color: #e62f4a;
+}
+.legend-dc3{
+    background-color: #ce2b43;
+}
+.legend-dc4{
+    background-color: #af2439;
 }
 .legend-op1{
     background-color: #EDC000;
@@ -110,6 +126,19 @@
   .green-bar4 progress::-webkit-progress-value {
     background-color: #00CFAA;
   }
+    
+  .red-bar1 progress::-webkit-progress-value {
+    background-color: #fa3250;
+  }
+  .red-bar2 progress::-webkit-progress-value {
+    background-color: #e62f4a;
+  }
+  .red-bar3 progress::-webkit-progress-value {
+    background-color: #ce2b43;
+  }
+  .red-bar4 progress::-webkit-progress-value {
+    background-color: #af2439;
+  }
 
   .btn-kembali, .btn-download{
     color: #2691B5;
@@ -138,6 +167,13 @@
     width: max-content;
     padding: 4px 6px;
     background: #00B488;
+    border-radius: 8px;
+    color: white;
+  }
+  .badge-red{
+    width: max-content;
+    padding: 4px 6px;
+    background: #fa3250;
     border-radius: 8px;
     color: white;
   }

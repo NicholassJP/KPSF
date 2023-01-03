@@ -11,20 +11,20 @@
     />
     <link
       rel="stylesheet"
-      href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+      href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
     />
     <link
       rel="stylesheet"
-      href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
+      href="/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
     />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-    <link rel="stylesheet" href="dist/css/style.css" />
-    <link rel="stylesheet" href="dist/css/kpsf.css" />
-    <link rel="stylesheet" href="dist/css/multiple-select.css" />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/dist/css/style.css" />
+    <link rel="stylesheet" href="/dist/css/kpsf.css" />
+    <link rel="stylesheet" href="/dist/css/multiple-select.css" />
     <!-- Apex JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="/dist/js/multi/multiselect.min.js"></script>
@@ -41,7 +41,7 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <img src="dist/img/custom/alfamart.png" class="img-fluid" />
+            <img src="/dist/img/custom/alfamart.png" class="img-fluid" />
           </li>
           <li class="nav-item d-none d-sm-inline-block ml-2">
             <h5 class="m-0 color-white">Service Analysis System</h5>
@@ -242,16 +242,34 @@
         <!-- Main content -->
         <div class="content pt-3">
           <div class="container-fluid">
-            <a href="/kpsf.html" class="btn btn-kembali mb-3">
-              <p class="m-0">
-                Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
-              </p>
-            </a>
-            <!-- Achievement Index KPSF ( View by Nasional ) -->
+            <div class="d-flex-none align-items-center">
+              <a href="reg1.html" class="btn btn-kembali mb-3">
+                <p class="m-0">
+                  Kembali<i class="fas fa-chevron-circle-left ml-2"></i>
+                </p>
+              </a>
+              <!-- Breadcrumbs -->
+              <div class="ml-auto d-flex gap-1 overflow-content">
+                <a href="../../dashboard.html" class="ml-auto">Home</a>
+                <p>/</p>
+                <a href="../../kpsf.html">KPSF</a>
+                <p>/</p>
+                <a href="../achievement_indeks_kpsf.html"
+                  >Achievement Index KPSF</a
+                >
+                <p>/</p>
+                <a href="reg1.html"
+                  >Region</a
+                >
+                <p>/</p>
+                <p>Cabang</p>
+              </div>
+            </div>
+            <!-- Achievement Index KPSF ( View by Cabang ) -->
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
-                  Achievement Index KPSF ( View by Nasional )
+                  Achievement Index KPSF ( View by Cabang )
                 </h3>
                 <div class="card-tools">
                   <button
@@ -512,11 +530,11 @@
               </div>
             </div>
 
-            <!-- Achievement Index KPSF ( View by Nasional ) Table -->
+            <!-- Achievement Index KPSF by AM Table -->
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
-                  Achievement Index KPSF ( View by Nasional )
+                  Achievement Index KPSF by AM
                 </h3>
                 <div class="card-tools">
                   <button
@@ -637,9 +655,11 @@
                               </div>
                             </div>
                           </div>
-                           <!-- Flag Rest Area -->
-                           <div class="form-group">
-                            <label class="m-0 label-webix">Flag Rest Area</label>
+                          <!-- Flag Rest Area -->
+                          <div class="form-group">
+                            <label class="m-0 label-webix"
+                              >Flag Rest Area</label
+                            >
                             <div class="form-border">
                               <div class="form-check form-check-inline">
                                 <input
@@ -660,7 +680,9 @@
                                   id="restArea"
                                   value=""
                                 />
-                                <label class="form-check-label">Rest Area</label>
+                                <label class="form-check-label"
+                                  >Rest Area</label
+                                >
                               </div>
                               <div class="form-check form-check-inline">
                                 <input
@@ -670,12 +692,14 @@
                                   id="nonrestArea"
                                   value=""
                                 />
-                                <label class="form-check-label">Non Rest Area</label>
+                                <label class="form-check-label"
+                                  >Non Rest Area</label
+                                >
                               </div>
                             </div>
                           </div>
-                           <!-- Flag Alfa X -->
-                           <div class="form-group">
+                          <!-- Flag Alfa X -->
+                          <div class="form-group">
                             <label class="m-0 label-webix">Flag Alfa X</label>
                             <div class="form-border">
                               <div class="form-check form-check-inline">
@@ -707,7 +731,9 @@
                                   id="nonalfaX"
                                   value=""
                                 />
-                                <label class="form-check-label">Non Alfa X</label>
+                                <label class="form-check-label"
+                                  >Non Alfa X</label
+                                >
                               </div>
                             </div>
                           </div>
@@ -1017,7 +1043,13 @@
                       <tr class="text-center">
                         <th class="align-middle no-sort" rowspan="2">No</th>
                         <th class="border-lr align-middle no-sort" rowspan="2">
-                          Region
+                          Cabang
+                        </th>
+                        <th class="border-r align-middle no-sort" rowspan="2">
+                          NIK
+                        </th>
+                        <th class="border-r align-middle no-sort" rowspan="2">
+                          NAMA
                         </th>
                         <th class="border-br no-sort" colspan="5">
                           <i class="fas fa-circle circle-green mr-2"></i>Index
@@ -1056,11 +1088,9 @@
                     <tbody>
                       <tr class="exist-td text-center">
                         <td>1</td>
-                        <td>
-                          <a href="/achievement_indeks_kpsf/reg1.html"
-                            >Region 1</a
-                          >
-                        </td>
+                        <td>Jambi</td>
+                        <td>00120041</td>
+                        <td>Yunanto</td>
                         <td>
                           <div
                             class="d-flex align-items-center justify-content-center"
@@ -1240,7 +1270,9 @@
                       </tr>
                       <tr class="exist-td text-center">
                         <td>2</td>
-                        <td>Region 2</td>
+                        <td>Jambi</td>
+                        <td>01090402</td>
+                        <td>Jaenal Mutakin</td>
                         <td>
                           <div
                             class="d-flex align-items-center justify-content-center"
@@ -1414,13 +1446,15 @@
                               class="mt-down"
                               src="/dist/img/custom/down.png"
                             />
-                            <p class="m-0 ml-1 text-red">2.70</p>
+                            <p class="m-0 ml-1 text-red">2.90</p>
                           </div>
                         </td>
                       </tr>
                       <tr class="exist-td text-center">
                         <td>3</td>
-                        <td>Region 3</td>
+                        <td>Jambi</td>
+                        <td>02080247</td>
+                        <td>Dedi Winanto</td>
                         <td>
                           <div
                             class="d-flex align-items-center justify-content-center"
@@ -1594,193 +1628,19 @@
                               class="mt-down"
                               src="/dist/img/custom/down.png"
                             />
-                            <p class="m-0 ml-1 text-red">2.70</p>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="exist-td text-center">
-                        <td>4</td>
-                        <td>Region 4</td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.49</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.44</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.81</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/up.png"
-                            />
-                            <p class="m-0 ml-1">4.00</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-up"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1">2.70</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="d-flex align-items-center justify-content-center"
-                          >
-                            <img
-                              class="mt-down"
-                              src="/dist/img/custom/down.png"
-                            />
-                            <p class="m-0 ml-1 text-red">2.70</p>
+                            <p class="m-0 ml-1 text-red">2.90</p>
                           </div>
                         </td>
                       </tr>
                       <tr class="exist-td text-center">
                         <td>#</td>
-                        <td>Nasional</td>
+                        <td>Jambi</td>
+                        <td>1DZ1</td>
+                        <td>
+                          <a href="/achievement_indeks_kpsf/cabang_am.html"
+                            >Semua AM</a
+                          >
+                        </td>
                         <td>
                           <div
                             class="d-flex align-items-center justify-content-center"
@@ -1954,7 +1814,7 @@
                               class="mt-down"
                               src="/dist/img/custom/down.png"
                             />
-                            <p class="m-0 ml-1 text-red">2.70</p>
+                            <p class="m-0 ml-1 text-red">2.90</p>
                           </div>
                         </td>
                       </tr>
@@ -1968,16 +1828,16 @@
       </div>
     </div>
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="dist/js/multi/multiselect.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/multi/multiselect.js"></script>
     <!-- Data Table Script -->
-    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/4.1.0/js/dataTables.fixedColumns.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
     <script>
       $(".rotate").click(function () {
         $(this).toggleClass("down");
@@ -1995,7 +1855,7 @@
         bLengthChange: false,
         bFilter: true,
         searching: false,
-        order: [[17, "desc"]],
+        order: [[19, "desc"]],
         ordering: true,
         columnDefs: [
           {
@@ -2004,7 +1864,7 @@
           },
         ],
         fixedColumns: {
-          left: 2,
+          left: 4,
           right: 1,
         },
       });
