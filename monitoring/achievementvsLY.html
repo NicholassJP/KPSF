@@ -269,18 +269,18 @@
                         </div>
                         <!-- Low Value < 2.50 -->
                         <div class="d-flex align-items-center gap-1">
-                          <i class="fas fa-circle circle-orange"></i>
+                          <i class="fas fa-circle circle-red"></i>
                           <p>Low Value < 2.50</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- On/Above Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/up-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>On/Above Target</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- Below Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/down-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>Below Target</p>
                         </div>
                       </div>
                     </div>
@@ -305,6 +305,8 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
                               </div>
                             </div>
@@ -361,49 +363,9 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
-                              </div>
-                            </div>
-                            <!-- AM -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AM</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV1"
-                                >
-                                  <option>- Pilih Area Manager -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- AC -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AC</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV2"
-                                >
-                                  <option>- Pilih Area Coordinator -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Toko -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">Toko</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV3"
-                                >
-                                  <option>- Pilih Toko -</option>
-                                </div>
                               </div>
                             </div>
                             <!-- Status Toko -->
@@ -490,9 +452,6 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div class="col-lg-6">
                             <!-- Remark SF -->
                             <div class="form-group">
                               <label class="m-0 label-webix">Remark SF</label>
@@ -505,9 +464,14 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
                               </div>
                             </div>
+                          </div>
+
+                          <div class="col-lg-6">
                             <!-- Flag HTH -->
                             <div class="form-group">
                               <label class="m-0 label-webix">Flag HTH</label>
@@ -587,7 +551,7 @@
                               </div>
                             </div>
                             <!-- Format Periode -->
-                            <div class="mb-08">
+                            <div class="form-group">
                               <label class="m-0 label-webix"
                                 >Format Periode</label
                               >
@@ -615,68 +579,34 @@
                                 </div>
                               </div>
                             </div>
-                            <!-- Periode 1 (Tahun & Bulan) -->
-                            <div class="mb-03">
+                            <!-- Periode Tahun -->
+                            <div class="form-group form-group-lov">
                               <label class="m-0 label-webix"
-                                >Periode 1 (Tahun & Bulan)</label
+                                >Periode Tahun</label
                               >
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <select class="form-border form-lov">
-                                    <option value="2022">2022</option>
-                                  </select>
-                                </div>
-                                <div class="col-lg-6">
-                                  <select class="form-border form-lov">
-                                    <option value="Maret">Maret</option>
-                                  </select>
-                                </div>
+                              <div>
+                                <select class="form-border padding-select">
+                                  <option value="2022">2022</option>
+                                </select>
                               </div>
                             </div>
-                            <!-- Periode 2 (Tahun & Bulan) -->
-                            <div class="mb-03">
+                            <!-- Periode Bulan -->
+                            <div class="form-group">
                               <label class="m-0 label-webix"
-                                >Periode 2 (Tahun & Bulan)</label
+                                >Periode Bulan</label
                               >
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <select class="form-border form-lov">
-                                    <option value="2021">2021</option>
-                                  </select>
-                                </div>
-                                <div class="col-lg-6">
-                                  <input
-                                    type=""
-                                    class="form-border form-lov"
-                                    placeholder="Maret"
-                                    disabled
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Periode 3 (Tahun & Bulan) -->
-                            <div class="mb-03">
-                              <label class="m-0 label-webix"
-                                >Periode 3 (Tahun & Bulan)</label
-                              >
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <select class="form-border form-lov">
-                                    <option value="Pilih Tahun">
-                                      - Pilih Tahun -
-                                    </option>
-                                  </select>
-                                </div>
-                                <div class="col-lg-6">
-                                  <div class="form-group">
-                                    <input
-                                      type=""
-                                      class="form-border form-lov"
-                                      placeholder="Otomatis"
-                                      disabled
-                                    />
-                                  </div>
-                                </div>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="bulan"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
+                                </select>
                               </div>
                             </div>
                           </div>
@@ -726,11 +656,10 @@
                               <th class="text-center">PIC</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Jan 2021</th>
-                              <th>Jan 2020</th>
-                              <th>YTD Jan 2022</th>
-                              <th>YTD Jan 2021</th>
+                              <th>Jan 20</th>
+                              <th>Jan 21</th>
+                              <th>YTD Jan 20</th>
+                              <th>YTD Jan 21</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -760,12 +689,6 @@
                                 ></i>
                                 2.25
                               </td>
-                              <td>
-                                <i
-                                  class="fas fa-circle circle-orange-table"
-                                ></i>
-                                2.25
-                              </td>
                             </tr>
                             <!-- Dept Support -->
                             <tr>
@@ -775,10 +698,6 @@
                                 Indeks 4P Dept Support
                               </td>
                               <td>-</td>
-                              <td>
-                                <i class="fas fa-circle circle-red-table"></i>
-                                2.25
-                              </td>
                               <td>
                                 <i class="fas fa-circle circle-red-table"></i>
                                 2.25
@@ -808,7 +727,6 @@
                                 Indeks 4P
                               </td>
                               <td>-</td>
-                              <td>2.25</td>
                               <td>2.25</td>
                               <td>2.25</td>
                               <td>2.25</td>
@@ -843,11 +761,10 @@
                               <th class="text-center">Pilar</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Jan 2021</th>
-                              <th>Jan 2020</th>
-                              <th>YTD Jan 2022</th>
-                              <th>YTD Jan 2021</th>
+                              <th>Jan 20</th>
+                              <th>Jan 21</th>
+                              <th>YTD Jan 20</th>
+                              <th>YTD Jan 21</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -873,10 +790,6 @@
                                   class="fas fa-circle circle-orange-table"
                                 ></i>
                                 2.54
-                              </td>
-                              <td>
-                                <i class="fas fa-circle circle-red-table"></i>
-                                2.25
                               </td>
                               <td>
                                 <i class="fas fa-circle circle-red-table"></i>
@@ -922,14 +835,6 @@
                                 />
                                 95.79
                               </td>
-                              <td>
-                                <img
-                                  class="mb-1"
-                                  width="14"
-                                  src="/dist/img/custom/up-lg.png"
-                                />
-                                95.79
-                              </td>
                             </tr>
                             <!-- Decrease Complain on People -->
                             <tr>
@@ -945,14 +850,6 @@
                                   src="/dist/img/custom/down-lg.png"
                                 />
                                 -22.47%
-                              </td>
-                              <td>
-                                <img
-                                  class="mb-1"
-                                  width="14"
-                                  src="/dist/img/custom/down-lg.png"
-                                />
-                                -26.26%
                               </td>
                               <td>
                                 <img
@@ -988,7 +885,6 @@
                               <td>3.20</td>
                               <td>3.16</td>
                               <td>3.16</td>
-                              <td>3.11</td>
                             </tr>
                           </tbody>
                         </table>
@@ -1019,11 +915,10 @@
                               <th class="text-center">Pilar</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Jan 2021</th>
-                              <th>Jan 2020</th>
-                              <th>YTD Jan 2022</th>
-                              <th>YTD Jan 2021</th>
+                              <th>Jan 20</th>
+                              <th>Jan 21</th>
+                              <th>YTD Jan 20</th>
+                              <th>YTD Jan 21</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -1032,12 +927,6 @@
                               <td class="text-center">People</td>
                               <td>Indeks People</td>
                               <td>-</td>
-                              <td>
-                                <i
-                                  class="fas fa-circle circle-orange-table"
-                                ></i>
-                                2.54
-                              </td>
                               <td>
                                 <i
                                   class="fas fa-circle circle-orange-table"
@@ -1066,14 +955,6 @@
                               </td>
                               <td>People Check</td>
                               <td>80.00</td>
-                              <td>
-                                <img
-                                  class="mb-1"
-                                  width="14"
-                                  src="/dist/img/custom/down-lg.png"
-                                />
-                                89.08
-                              </td>
                               <td>
                                 <img
                                   class="mb-1"
@@ -1114,14 +995,7 @@
                               </td>
                               <td>Decrease Complain on People</td>
                               <td>99.50%</td>
-                              <td>
-                                <img
-                                  class="mb-1"
-                                  width="14"
-                                  src="/dist/img/custom/down-lg.png"
-                                />
-                                84.41%
-                              </td>
+
                               <td>
                                 <img
                                   class="mb-1"
@@ -1160,7 +1034,6 @@
                               <td></td>
                               <td>Indeks 4P Dept. Support</td>
                               <td>-</td>
-                              <td>2.46</td>
                               <td>2.46</td>
                               <td>2.46</td>
                               <td>2.46</td>

@@ -267,18 +267,18 @@
                         </div>
                         <!-- Low Value < 2.50 -->
                         <div class="d-flex align-items-center gap-1">
-                          <i class="fas fa-circle circle-orange"></i>
+                          <i class="fas fa-circle circle-red"></i>
                           <p>Low Value < 2.50</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- On/Above Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/up-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>On/Above Target</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- Below Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/down-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>Below Target</p>
                         </div>
                       </div>
                     </div>
@@ -291,6 +291,23 @@
                       <div id="filter-container" class="filter-body">
                         <div class="row">
                           <div class="col-lg-6 vr-right">
+                            <!-- Cabang -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Cabang</label>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="cabang"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
+                                </select>
+                              </div>
+                            </div>
                             <!-- PIC -->
                             <div class="form-group">
                               <label class="m-0 label-webix">PIC</label>
@@ -344,64 +361,9 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
-                              </div>
-                            </div>
-                            <!-- Cabang -->
-                            <div class="form-group">
-                              <label class="m-0 label-webix">Cabang</label>
-                              <div>
-                                <select
-                                  class="form-control"
-                                  id="cabang"
-                                  multiple
-                                >
-                                  <option value="1">Item 1</option>
-                                  <option value="2">Item 2</option>
-                                  <option value="3">Item 3</option>
-                                </select>
-                              </div>
-                            </div>
-                            <!-- AM -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AM</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV1"
-                                >
-                                  <option>- Pilih Area Manager -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- AC -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AC</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV2"
-                                >
-                                  <option>- Pilih Area Coordinator -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Toko -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">Toko</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV3"
-                                >
-                                  <option>- Pilih Toko -</option>
-                                </div>
                               </div>
                             </div>
                             <!-- Status Toko -->
@@ -445,9 +407,6 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div class="col-lg-6">
                             <!-- Flag Store Focus -->
                             <div class="form-group">
                               <label class="m-0 label-webix"
@@ -503,9 +462,14 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
                               </div>
                             </div>
+                          </div>
+
+                          <div class="col-lg-6">
                             <!-- Flag HTH -->
                             <div class="form-group">
                               <label class="m-0 label-webix">Flag HTH</label>
@@ -614,7 +578,7 @@
                               </div>
                             </div>
                             <!-- Periode Tahun -->
-                            <div class="form-group">
+                            <div class="form-group form-group-lov">
                               <label class="m-0 label-webix"
                                 >Periode Tahun</label
                               >
@@ -690,11 +654,11 @@
                               <th class="text-center">PIC</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Feb 2020</th>
-                              <th>Mar 2020</th>
-                              <th>Apr 2020</th>
-                              <th>Mei 2020</th>
+                              <th>Jan 20</th>
+                              <th>Feb 20</th>
+                              <th>Mar 20</th>
+                              <th>Apr 20</th>
+                              <th>Mei 20</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -807,11 +771,11 @@
                               <th class="text-center">Pilar</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Feb 2020</th>
-                              <th>Mar 2020</th>
-                              <th>Apr 2020</th>
-                              <th>Mei 2020</th>
+                              <th>Jan 20</th>
+                              <th>Feb 20</th>
+                              <th>Mar 20</th>
+                              <th>Apr 20</th>
+                              <th>Mei 20</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -983,11 +947,11 @@
                               <th class="text-center">Pilar</th>
                               <th>Indikator</th>
                               <th>Target</th>
-                              <th>Jan 2020</th>
-                              <th>Feb 2020</th>
-                              <th>Mar 2020</th>
-                              <th>Apr 2020</th>
-                              <th>Mei 2020</th>
+                              <th>Jan 20</th>
+                              <th>Feb 20</th>
+                              <th>Mar 20</th>
+                              <th>Apr 20</th>
+                              <th>Mei 20</th>
                             </tr>
                           </thead>
                           <tbody>

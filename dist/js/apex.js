@@ -153,21 +153,27 @@ chart.render();
 //   Trend Achivement KPSF YTD by Month
 var options = {
     series: [{
-            name: 'Idx 4P OPR',
+            name: '3 Entitas',
             data: [
                 2.58, 2.79, 2.67, 2.63, 2.74, 2.97, 3.25, 3.14, 3.46, 3.68, 3.59, 3.44, 3.27
             ],
         },
         {
-            name: 'Indeks 4P DEPT.Support',
+            name: 'Store',
             data: [
                 2.45, 2.57, 2.49, 2.25, 2.31, 2.67, 2.87, 2.78, 2.92, 3.14, 3.12, 3.07, 2.88
             ],
         },
         {
-            name: 'Indeks 4P OPR',
+            name: 'Office',
             data: [
                 2.33, 2.35, 2.32, 1.87, 1.88, 2.37, 2.50, 2.42, 2.37, 2.60, 2.65, 2.71, 2.50
+            ],
+        },
+        {
+            name: 'DC',
+            data: [
+                3.33, 3.35, 3.33, 1.87, 1.88, 3.37, 3.50, 3.43, 3.37, 3.60, 3.65, 3.71, 3.50
             ],
         },
     ],
@@ -176,10 +182,10 @@ var options = {
         width: chartWidth,
         type: "line",
         toolbar: {
-            show: false,
+            show: true,
         },
     },
-    colors: ['#FF8412', '#00B488','#FFE600'],
+    colors: ['rgb(0, 143, 251)', 'rgb(0, 227, 150)','rgb(254, 176, 25)', 'rgb(255, 69, 96)'],
     dataLabels: {
         enabled: true,
     },
@@ -210,35 +216,33 @@ var options = {
         ],
     },
     legend: {
-        show: true,
-        position: "top"
+        show: true
     },
 };
-
 var chart = new ApexCharts(document.querySelector("#chartline2"), options);
 chart.render();
-//   Trend YTD Indeks KSPF by Month - Dept. Operation
+//   Trend YTD Index KSPF by Month - Dept. Operation
 var options = {
     series: [{
-            name: 'Indeks People',
+            name: 'Index People',
             data: [
                 1.68, 1.75, 1.65, 1.00, 1.00, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.68
             ],
         },
         {
-            name: 'Indeks Product',
+            name: 'Index Product',
             data: [
                 2.08, 2.08, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
             ],
         },
         {
-            name: 'Indeks Process',
+            name: 'Index Process',
             data: [
                 2.66, 2.66, 2.68, 3.15, 3.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
             ],
         },
         {
-            name: 'Indeks Place',
+            name: 'Index Place',
             data: [
                 4.00, 4.00, 4.00, 0.00, 0.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00
             ],
@@ -290,28 +294,28 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chartline3"), options);
 chart.render();
-//   Trend YTD Indeks KSPF by Month - Dept. Operation
+//   Trend YTD Index KSPF by Month - Dept. Operation
 var options = {
     series: [{
-            name: 'Indeks People',
+            name: 'Index People',
             data: [
                 1.68, 1.75, 1.65, 1.00, 1.00, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.68
             ],
         },
         {
-            name: 'Indeks Product',
+            name: 'Index Product',
             data: [
                 2.08, 1.48, 2.06, 2.09, 2.10, 2.18, 2.27, 2.27, 2.40, 2.62, 2.73, 2.78, 2.08
             ],
         },
         {
-            name: 'Indeks Process',
+            name: 'Index Process',
             data: [
                 2.66, 2.66, 2.18, 1.15, 2.15, 2.64, 2.96, 2.72, 2.73, 2.98, 3.01, 3.16, 2.66
             ],
         },
         {
-            name: 'Indeks Place',
+            name: 'Index Place',
             data: [
                 1.00, 1.00, 1.00, 3.00, 3.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00
             ],
@@ -669,7 +673,7 @@ dataLabels: {
 var chart = new ApexCharts(document.querySelector("#chartcolumn6"), options);
 chart.render();
 
-// Indeks KPSF Dept. Operation
+// Index KPSF Dept. Operation
 var options = {
     colors: ['#EDC000', '#FFF1A6', '#FFE500', '#D6B74A'],
     series: [{
@@ -733,7 +737,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chartdeptoperation"), options);
 chart.render();
 
-// Indeks KPSF Dept. Support
+// Index KPSF Dept. Support
 var options = {
     colors: ['#0EBF80', '#B4EDD8', '#409C70', '#00CFAA'],
     series: [{
@@ -796,7 +800,7 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chartdeptsupport"), options);
 chart.render();
-// Indeks KPSF Dept. Support
+// Index KPSF Dept. Support
 var options = {
     colors: ['#fa3250', '#e62f4a', '#ce2b43', '#af2439'],
     series: [{
@@ -860,7 +864,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chartdeptdc"), options);
 chart.render();
 
-// Indeks KPSF Cabang
+// Index KPSF Cabang
 var options = {
     colors: ['#FFE600', '#0EBF80'],
     series: [{
