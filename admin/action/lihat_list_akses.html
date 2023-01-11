@@ -34,6 +34,12 @@
     <!-- SWAL2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
+  <style>
+    div.dataTables_wrapper div.dataTables_filter label {
+      text-align: left;
+      width: 100% !important;
+    }
+  </style>
   <body class="control-sidebar-slide-open layout-fixed layout-navbar-fixed">
     <div class="wrapper">
       <!-- Navbar -->
@@ -218,7 +224,7 @@
                   <li class="nav-item">
                     <a href="/admin/exception.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Exception</p>
+                      <p>Exception by NIK</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -445,7 +451,47 @@
                             id="homePage"
                             role="tabpanel"
                           >
-                            <p>Home Page</p>
+                            <!-- Isi Konten -->
+                            <ul class="checklist">
+                              <li class="li-none">
+                                <input
+                                  class="form-check-input check-lg"
+                                  type="checkbox"
+                                />
+                                <label class="form-check-label bold ml-2"
+                                  >Home</label
+                                >
+                                <ul class="ul-mb">
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Index KPSF - Nasional</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Trend Achievement KPSF YTD</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Index KPSF 3 Entitas</label
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
                           </div>
                           <!-- Achivement Indeks KPSF -->
                           <div
@@ -453,128 +499,112 @@
                             id="indeksKPSF"
                             role="tabpanel"
                           >
-                            <!-- Achivement Indeks KPSF -->
-                            <div class="form-check mb-2">
-                              <input
-                                class="form-check-input check-lg"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                              <label class="form-check-label bold ml-2" for=""
-                                >Achivement Indeks KPSF</label
-                              >
-                            </div>
-                            <div class="ml-4">
-                              <!-- Achievement Nasional -->
-                              <div class="form-check mb-2">
+                            <ul class="checklist">
+                              <li class="li-none">
                                 <input
                                   class="form-check-input check-lg"
                                   type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
                                 />
-                                <label class="form-check-label ml-2" for=""
-                                  >Achievement Nasional</label
+                                <label class="form-check-label bold ml-2"
+                                  >Achivement Indeks KPSF</label
                                 >
-                              </div>
-                              <!-- People check -->
-                              <div class="form-check mb-2 ml-4">
-                                <input
-                                  class="form-check-input check-lg"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label class="form-check-label ml-2" for=""
-                                  >People check</label
-                                >
-                              </div>
-                              <!-- Decrease Complain on People -->
-                              <div class="form-check mb-2 ml-4">
-                                <input
-                                  class="form-check-input check-lg"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label class="form-check-label ml-2" for=""
-                                  >Decrease Complain on People</label
-                                >
-                              </div>
-                              <!-- Indeks People Dept. Operation -->
-                              <div class="form-check mb-2 ml-4">
-                                <input
-                                  class="form-check-input check-lg"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label class="form-check-label ml-2" for=""
-                                  >Indeks People Dept. Operation</label
-                                >
-                              </div>
-                              <!-- Product Check Kesesuaian Plan -->
-                              <div class="form-check mb-2 ml-4">
-                                <input
-                                  class="form-check-input check-lg"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label class="form-check-label ml-2" for=""
-                                  >Product Check Kesesuaian Plan</label
-                                >
-                              </div>
-                              <!-- Indeks 4P -->
-                              <div class="form-check mb-2 ml-4">
-                                <input
-                                  class="form-check-input check-lg"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label class="form-check-label ml-2" for=""
-                                  >Indeks 4P</label
-                                >
-                              </div>
-                            </div>
-                            <!-- Achievement Regional -->
-                            <div class="form-check mb-2 ml-4">
-                              <input
-                                class="form-check-input check-lg"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                              <label class="form-check-label ml-2" for=""
-                                >Achievement Regional</label
-                              >
-                            </div>
-                            <!-- Achievement Cabang -->
-                            <div class="form-check mb-2 ml-4">
-                              <input
-                                class="form-check-input check-lg"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                              <label class="form-check-label ml-2" for=""
-                                >Achievement Cabang</label
-                              >
-                            </div>
-                            <!-- Achievement Store -->
-                            <div class="form-check mb-2 ml-4">
-                              <input
-                                class="form-check-input check-lg"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                              <label class="form-check-label ml-2" for=""
-                                >Achievement Store</label
-                              >
-                            </div>
+                                <ul class="ul-mb">
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Achievement Nasional</label
+                                    >
+                                    <ul>
+                                      <li>
+                                        <input
+                                          class="form-check-input check-lg"
+                                          type="checkbox"
+                                        />
+                                        <label
+                                          class="form-check-label ml-2"
+                                          for=""
+                                          >People Check</label
+                                        >
+                                      </li>
+                                      <li>
+                                        <input
+                                          class="form-check-input check-lg"
+                                          type="checkbox"
+                                        />
+                                        <label
+                                          class="form-check-label ml-2"
+                                          for=""
+                                          >Decrease Complain on People</label
+                                        >
+                                      </li>
+                                      <li>
+                                        <input
+                                          class="form-check-input check-lg"
+                                          type="checkbox"
+                                        />
+                                        <label
+                                          class="form-check-label ml-2"
+                                          for=""
+                                          >Indeks People Dept. Operation</label
+                                        >
+                                      </li>
+                                      <li>
+                                        <input
+                                          class="form-check-input check-lg"
+                                          type="checkbox"
+                                        />
+                                        <label
+                                          class="form-check-label ml-2"
+                                          for=""
+                                          >Product Check Kesesuaian Plan</label
+                                        >
+                                      </li>
+                                      <li>
+                                        <input
+                                          class="form-check-input check-lg"
+                                          type="checkbox"
+                                        />
+                                        <label
+                                          class="form-check-label ml-2"
+                                          for=""
+                                          >Index 4P</label
+                                        >
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Achievement Regional</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Achievement Cabang</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Achievement Store</label
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
                           </div>
                           <!-- Report KPSF -->
                           <div
@@ -582,7 +612,56 @@
                             id="reportKPSF"
                             role="tabpanel"
                           >
-                            <p>Report KPSF</p>
+                            <!-- Isi Konten -->
+                            <ul class="checklist">
+                              <li class="li-none">
+                                <input
+                                  class="form-check-input check-lg"
+                                  type="checkbox"
+                                />
+                                <label class="form-check-label bold ml-2"
+                                  >Report KPSF</label
+                                >
+                                <ul class="ul-mb">
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Nasional, Region & Cabang</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Area Manager</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Area Coordinator</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Store</label
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
                           </div>
                           <!-- Monitoring KPSF -->
                           <div
@@ -590,7 +669,59 @@
                             id="monitoringKPSF"
                             role="tabpanel"
                           >
-                            <p>Monitoring KPSF</p>
+                            <!-- Isi Konten -->
+                            <ul class="checklist">
+                              <li class="li-none">
+                                <input
+                                  class="form-check-input check-lg"
+                                  type="checkbox"
+                                />
+                                <label class="form-check-label bold ml-2"
+                                  >Monitoring KPSF</label
+                                >
+                                <ul class="ul-mb">
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Trend Indeks by Month</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Trend Achievement Indikator by
+                                      Month</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Chart Trend Achievement Indikator by
+                                      Pilar</label
+                                    >
+                                  </li>
+                                  <li>
+                                    <input
+                                      class="form-check-input check-lg"
+                                      type="checkbox"
+                                    />
+                                    <label class="form-check-label ml-2" for=""
+                                      >Compare Achievement Indikator vs
+                                      LY</label
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -645,13 +776,7 @@
                           </div>
                         </div>
                         <div class="card-fix-h">
-                          <script>
-                            for (i = 1; i <= 30; i++) {
-                              document.write(
-                                " <p class='bold'>(C901) IT Senior Manager</p>"
-                              );
-                            }
-                          </script>
+                          <p class='bold'>(C901) IT Senior Manager</p>
                         </div>
                       </div>
                     </div>
@@ -676,21 +801,14 @@
         <div class="modal-content">
           <div class="modal-body">
             <form role="form" id="formSWAL1" method="POST">
-              <div class="d-flex gap-1">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Cari Kode Jabatan, Nama Jabatan"
-                  />
-                </div>
+              <div class="justify-content-right d-flex gap-1">
+                <button class="btn btn-filter" data-dismiss="modal" type="button">Close</button>
                 <button class="btn btn-filter-apply" type="button">
-                  Proses
+                  Simpan
                 </button>
-                <button class="btn btn-filter" type="button">Simpan</button>
               </div>
               <div class="table-responsive mt-3">
-                <table class="table table-lov text-center">
+                <table id="table1" class="table table-lov text-center">
                   <thead>
                     <th>DIVISI</th>
                     <th>KODE JABATAN</th>
@@ -707,13 +825,11 @@
                       <td>H5313</td>
                       <td>Asset & General Services Manager</td>
                     </tr>
-                    <script>
-                      for (i = 1; i <= 8; i++) {
-                        document.write(
-                          " <tr> <td>Human Capital</td> <td>H1910</td> <td>General Service Manager</td> </tr>"
-                        );
-                      }
-                    </script>
+                    <tr>
+                      <td>Human Capital</td>
+                      <td>H5113</td>
+                      <td>General Service Manager</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -735,9 +851,48 @@
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- SWAL -->
     <script src="../../dist/js/custom/sweetalert.js"></script>
+    <script type="text/javascript">
+      $("#table1").DataTable({
+        dom: "Bfrti",
+        language: {
+          search: "",
+          searchPlaceholder: "Cari Kode Jabatan, Nama Jabatan",
+        },
+      });
+
+      $(document).ready(function () {
+        $('.dataTables_filter input[type="search"]').css({
+          width: "100%",
+          display: "inline-block",
+          margin: "unset",
+        });
+
+        $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+          $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+        });
+      });
+    </script>
     <script>
       $(".rotate").click(function () {
         $(this).toggleClass("down");
+      });
+    </script>
+    <script>
+      $("input[type=checkbox]").on("click", function () {
+        var mom = $(this).closest("li").parent().parent();
+        var momAndKids = $(this).closest("li").find("input[type=checkbox]");
+        var kids = $(this)
+          .closest("li")
+          .children("ul")
+          .find("input[type=checkbox]");
+        mom.toggleClass("test");
+        momAndKids.prop("checked", $(this).is(":checked"));
+      });
+      $("#tag-filter").on("click", function () {
+        $(this)
+          .closest("li")
+          .find("input[type=checkbox]")
+          .prop("checked", $(this).is(":checked"));
       });
     </script>
     <script>

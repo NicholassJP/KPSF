@@ -77,7 +77,7 @@
       <!-- /.navbar -->
 
       <!-- Main Sidebar Container -->
-      <aside class="main-sidebar sidebar-light-danger elevation-4">
+      <aside class="main-sidebar sidebar-light-gray elevation-4">
         <!-- Sidebar -->
         <div class="sidebar">
           <!-- Sidebar Menu -->
@@ -216,7 +216,7 @@
                   <li class="nav-item">
                     <a href="/admin/exception.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Exception</p>
+                      <p>Exception by NIK</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -242,19 +242,15 @@
               <p>/</p>
               <a href="../nas_reg_cabang.html">Nasional, Region & Cabang</a>
               <p>/</p>
-              <a href="region_branch.html">Region & Branch</a>
-              <p>/</p>
-              <a href="am_ac.html">AM & AC</a>
-              <p>/</p>
-              <p>Store</p>
+              <p>Region & Branch</p>
             </div>
             <div class="card card-tabs mt-1">
               <div class="card-header pb-0">
                 <div class="d-flex-none align-items-center">
-                  <a href="am_ac.html" class="text-primary mr-1"
+                  <a href="../nas_reg_cabang.html" class="text-primary mr-1"
                     ><i class="fas fa-chevron-circle-left"></i
                   ></a>
-                  <h5 class="m-0">Report KPSF - % Market Return</h5>
+                  <h5 class="m-0">Report KPSF - % Product Loss</h5>
                   <div class="ml-auto">
                     <button class="btn btn-kembali">Download</button>
                     <button id="filter-button" class="btn btn-filter">
@@ -582,13 +578,73 @@
               </div>
               <div class="card-body pt-2">
                 <div class="tab-content" id="custom-tabs-one-tabContent">
-                  <!-- KPSF by Nasional, Region & Cabang -->
-                  <p class="color-secondary">Dept. Operation</p>
-
-                  <!-- %Market Return by Store -->
+                  <!-- %Product Loss by  Region -->
                   <div class="card mt-3">
                     <div class="card-header">
-                      <h3 class="card-title mt-2">%Market Return by Store</h3>
+                      <h3 class="card-title mt-2">%Product Loss by Region</h3>
+                      <div class="card-tools">
+                        <button
+                          type="button"
+                          class="btn btn-tool rotate"
+                          data-card-widget="collapse"
+                        >
+                          <i class="fas fa-chevron-up"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="badge-info mb-3 m-0-p">
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/dist/img/custom/info.png" />
+                          <p>
+                            Klik Region untuk detail AM atau AC Region /
+                            Nasional untuk detail AM atau AC Nasional
+                          </p>
+                        </div>
+                      </div>
+                      <table
+                        class="table table-stripted w-100 mb-2 text-center table-responsive"
+                        id="table1"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Region</th>
+                            <th>Target</th>
+                            <th>%Product Loss</th>
+                            <th>%Ach to Target</th>
+                            <th>%product Loss LY</th>
+                            <th>GAP vs LY</th>
+                            <th>GAP vs Target</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <script>
+                            for (i = 1; i <= 30; i++) {
+                              document.write(
+                                "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
+                              );
+                            }
+                          </script>
+                        </tbody>
+                        <!-- Nasional -->
+                        <tr class="bg-all-table td-bold">
+                          <td>Nasional</td>
+                          <td>0.15%</td>
+                          <td class="text-red">
+                            <a class="text-red" href="am_ac.html">0.51%</a>
+                          </td>
+                          <td>-283.50%</td>
+                          <td>0.60%</td>
+                          <td>-0.02%</td>
+                          <td>0.45%</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- %Product Loss by Branch -->
+                  <div class="card mt-3">
+                    <div class="card-header">
+                      <h3 class="card-title mt-2">%Product Loss by Branch</h3>
                       <div class="card-tools">
                         <button
                           type="button"
@@ -603,33 +659,29 @@
                       <div class="badge-info mb-2 m-0-p">
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/info.png" />
-                          <p>Klik Market Return untuk lihat detail PLU</p>
+                          <p>Klik Cabang untuk melihat detail AM & AC Cabang</p>
                         </div>
                       </div>
-
                       <table
                         class="table table-stripted w-100 mb-3 text-center table-responsive"
-                        id="table1"
+                        id="table2"
                       >
                         <thead>
                           <tr>
-                            <th>Cabang</th>
-                            <th>NIK AM</th>
-                            <th>Nama AM</th>
-                            <th>NIK AC</th>
-                            <th>Nama AC</th>
-                            <th>Kode Toko</th>
-                            <th>Nama Toko</th>
+                            <th>Region</th>
                             <th>Target</th>
-                            <th>%Market Return</th>
+                            <th>%Product Loss</th>
                             <th>%Ach to Target</th>
+                            <th>%product Loss LY</th>
+                            <th>GAP vs LY</th>
+                            <th>GAP vs Target</th>
                           </tr>
                         </thead>
                         <tbody>
                           <script>
                             for (i = 1; i <= 30; i++) {
                               document.write(
-                                "<tr> <td>Jambi</td> <td>00110002</td> <td>Ahmad Satari</td> <td>00110070</td> <td>Yongki Padila</td> <td>K195</td> <td>Warung Gantung</td> <td>0.15%</td> <td> <a class='text-red' href='byPLU.html'> 0.79% </a> </td> <td>-425.19%</td> </tr>"
+                                "<tr> <td>Region 4</td> <td>0.15%</td> <td> <a class='text-red' href='am_ac.html'> 0.58% </a> </td> <td>-283.50%</td> <td>0.60%</td> <td>-0.02%</td> <td>0.45%</td> </tr>"
                               );
                             }
                           </script>
@@ -658,6 +710,15 @@
     <!-- Data Table -->
     <script>
       $("#table1").DataTable({
+        bPaginate: true,
+        bLengthChange: false,
+        bFilter: false,
+        bInfo: true,
+        searching: false,
+      });
+    </script>
+    <script>
+      $("#table2").DataTable({
         bPaginate: true,
         bLengthChange: false,
         bFilter: false,

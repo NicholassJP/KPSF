@@ -213,7 +213,7 @@
                   <li class="nav-item">
                     <a href="/admin/exception.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Exception</p>
+                      <p>Exception by NIK</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -267,18 +267,18 @@
                         </div>
                         <!-- Low Value < 2.50 -->
                         <div class="d-flex align-items-center gap-1">
-                          <i class="fas fa-circle circle-orange"></i>
+                          <i class="fas fa-circle circle-red"></i>
                           <p>Low Value < 2.50</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- On/Above Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/up-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>On/Above Target</p>
                         </div>
-                        <!-- Low Value < 2.50 -->
+                        <!-- Below Target -->
                         <div class="d-flex align-items-center gap-1">
                           <img src="/dist/img/custom/down-lg.png" />
-                          <p>Low Value < 2.50</p>
+                          <p>Below Target</p>
                         </div>
                       </div>
                     </div>
@@ -303,94 +303,11 @@
                                   <option value="1">Item 1</option>
                                   <option value="2">Item 2</option>
                                   <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
                                 </select>
                               </div>
                             </div>
-                            <!-- AM -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AM</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV1"
-                                >
-                                  <option>- Pilih Area Manager -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- AC -->
-                            <div class="form-group form-group-lov">
-                              <label class="m-0 label-webix">AC</label>
-                              <div>
-                                <div
-                                  class="my-select-menu form-border form-lov"
-                                  type="submit"
-                                  data-toggle="modal"
-                                  data-target="#modalLOV2"
-                                >
-                                  <option>- Pilih Area Coordinator -</option>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Flag Store Focus -->
-                            <div class="form-group">
-                              <label class="m-0 label-webix"
-                                >Flag Store Focus</label
-                              >
-                              <div class="form-border">
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="radio2"
-                                    id="semua"
-                                    value=""
-                                    checked
-                                  />
-                                  <label class="form-check-label">Semua</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="radio2"
-                                    id="storefocus"
-                                    value=""
-                                  />
-                                  <label class="form-check-label"
-                                    >Store Focus</label
-                                  >
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="radio2"
-                                    id="nonstorefocus"
-                                    value=""
-                                  />
-                                  <label class="form-check-label"
-                                    >Non Store Focus</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Toko -->
-                            <div class="form-group">
-                              <label class="m-0 label-webix">Toko</label>
-                              <div>
-                                <select class="form-control" id="toko" multiple>
-                                  <option value="1">Item 1</option>
-                                  <option value="2">Item 2</option>
-                                  <option value="3">Item 3</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-6">
                             <!-- PIC -->
                             <div class="form-group">
                               <label class="m-0 label-webix">PIC</label>
@@ -447,6 +364,188 @@
                                   <option value="4">Item 4</option>
                                   <option value="5">Item 5</option>
                                 </select>
+                              </div>
+                            </div>
+                            <!-- Status Toko -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Status Toko</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="reguler"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Reguler</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1"
+                                    id="franchise"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Franchise</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Flag Store Focus -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix"
+                                >Flag Store Focus</label
+                              >
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="storefocus"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Store Focus</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2"
+                                    id="nonstorefocus"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non Store Focus</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Remark SF -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Remark SF</label>
+                              <div>
+                                <select
+                                  class="form-control"
+                                  id="remark"
+                                  multiple
+                                >
+                                  <option value="1">Item 1</option>
+                                  <option value="2">Item 2</option>
+                                  <option value="3">Item 3</option>
+                                  <option value="4">Item 4</option>
+                                  <option value="5">Item 5</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <!-- Flag HTH -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Flag HTH</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="hth"
+                                    value=""
+                                  />
+                                  <label class="form-check-label">HTH</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio3"
+                                    id="nonhth"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non HTH</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Flag Urban -->
+                            <div class="form-group">
+                              <label class="m-0 label-webix">Flag Urban</label>
+                              <div class="form-border">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="semua"
+                                    value=""
+                                    checked
+                                  />
+                                  <label class="form-check-label">Semua</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="urban"
+                                    value=""
+                                  />
+                                  <label class="form-check-label">Urban</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio4"
+                                    id="nonurban"
+                                    value=""
+                                  />
+                                  <label class="form-check-label"
+                                    >Non Urban</label
+                                  >
+                                </div>
                               </div>
                             </div>
                             <!-- Format Periode -->
@@ -588,12 +687,12 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <!-- Operation -->
+                            <!-- Store -->
                             <tr>
-                              <td class="text-center">Operation</td>
+                              <td class="text-center">Store</td>
                               <td>
                                 <i class="fas fa-circle circle-table1"></i>
-                                Indeks 4P Operation
+                                Index 4P Store
                               </td>
                               <td>-</td>
                               <td>
@@ -621,12 +720,45 @@
                                 2.25
                               </td>
                             </tr>
-                            <!-- Dept Support -->
+                            <!-- Office -->
                             <tr>
-                              <td class="text-center">Dept Support</td>
+                              <td class="text-center">Office</td>
                               <td>
                                 <i class="fas fa-circle circle-table2"></i>
-                                Indeks 4P Dept Support
+                                Index 4P Office
+                              </td>
+                              <td>-</td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- DC -->
+                            <tr>
+                              <td class="text-center">DC</td>
+                              <td>
+                                <i class="fas fa-circle circle-table3"></i>
+                                Index 4P DC
                               </td>
                               <td>-</td>
                               <td>
@@ -659,7 +791,7 @@
                               <td class="text-center">All</td>
                               <td>
                                 <i class="fas fa-circle circle-table1"></i>
-                                Indeks 4P
+                                Index 4P
                               </td>
                               <td>-</td>
                               <td>2.25</td>
@@ -733,7 +865,7 @@
                             <!-- People -->
                             <tr>
                               <td class="text-center">People</td>
-                              <td>Indeks People</td>
+                              <td>Index People</td>
                               <td>-</td>
                               <td>
                                 <i
@@ -762,13 +894,13 @@
                                 2.25
                               </td>
                             </tr>
-                            <!-- People Audit -->
+                            <!-- %Kehadiran COS -->
                             <tr>
                               <td class="text-center">
                                 <i class="fas fa-circle circle-table3"></i>
                               </td>
-                              <td>People Audit</td>
-                              <td>85.00</td>
+                              <td>%Kehadiran COS</td>
+                              <td>100.00%</td>
                               <td>
                                 <img
                                   class="mb-1"
@@ -810,58 +942,1194 @@
                                 95.79
                               </td>
                             </tr>
-                            <!-- Decrease Complain on People -->
+                            <!-- %Kehadiran Acos -->
                             <tr>
                               <td class="text-center">
                                 <i class="fas fa-circle circle-table3"></i>
                               </td>
-                              <td>Decrease Complain on People</td>
-                              <td>-75.00</td>
+                              <td>%Kehadiran Acos</td>
+                              <td>100.00%</td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                -22.47%
+                                89.08
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                -26.26%
+                                94.86
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                -11.47%
+                                95.79
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                -11.47%
+                                95.79
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                -11.47%
+                                95.79
                               </td>
                             </tr>
-                            <!-- Indeks 4P Operation -->
+                            <!-- %Kehadiran Crew -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Kehadiran Crew</td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Rata-rata Kecepatan Transaksi Kasir (detik) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                Rata-rata Kecepatan Transaksi Kasir (detik)
+                              </td>
+                              <td>120</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Transaksi Alfagift dengan SLA Penyiapan <= 5 Menit -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                %Transaksi Alfagift dengan SLA Penyiapan <= 5
+                                Menit
+                              </td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Transaksi Alfagift dengan SLA Delivery <= 30 Menit -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                %Transaksi Alfagift dengan SLA Delivery <= 30
+                                Menit
+                              </td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Product -->
+                            <tr>
+                              <td class="text-center">Product</td>
+                              <td>Index Product</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- %Barang Rusak (BR) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Barang Rusak (BR)</td>
+                              <td>0.20%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Barang Expired (BKE) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Barang Expired (BKE)</td>
+                              <td>0.20%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Barang Musnah (Beanspot) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Barang Musnah (Beanspot)</td>
+                              <td>8.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Barang Musnah (Exclude Beanspot) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Barang Musnah (Exclude Beanspot)</td>
+                              <td>0.01%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- On Shelf Avaibility (Max Display) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>On Shelf Avaibility (Max Display)</td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Product Loss -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Product Loss</td>
+                              <td>
+                                <a
+                                  href="../../kpsf/product_loss/region_branch.html"
+                                  >0.14%</a
+                                >
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Kesesuaian Hasil SO (%<span>&#177;</span>vs PLU -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                %Kesesuaian Hasil SO (% <span>&#177;</span> vs
+                                PLU SO / Master)
+                              </td>
+                              <td>90.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Unproductive Item (Tag OFMB) 3 Month -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Unproductive Item (Tag OFMB) 3 Month</td>
+                              <td>10.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Unproductive Item (Beanspot) 3 Month -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Unproductive Item (Beanspot) 3 Month</td>
+                              <td>10.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Kontribusi Transaksi Beanspot -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Kontribusi Transaksi Beanspot</td>
+                              <td>5.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Kontribusi Transaksi Online (Alfagift) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Kontribusi Transaksi Online (Alfagift)</td>
+                              <td>5.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Kenaikan Jumlah Transaksi Toko -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Kenaikan Jumlah Transaksi Toko</td>
+                              <td>5.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Contribution Sales Member -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Contribution Sales Member</td>
+                              <td>50.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- New Member Activition -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>New Member Activition</td>
+                              <td>56.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Process -->
+                            <tr>
+                              <td class="text-center">Process</td>
+                              <td>Index Process</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- %Contribution Sales Non Tunai -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Contribution Sales Non Tunai</td>
+                              <td>15.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Kenaikan Transaksi EDC BCA -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Kenaikan Transaksi EDC BCA</td>
+                              <td>30.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Kenaikan Transaksi EDC LINK + Android -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Kenaikan Transaksi EDC LINK + Android</td>
+                              <td>30.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Kenaikan Transaksi Wallet -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Kenaikan Transaksi Wallet</td>
+                              <td>30.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Index 4P Store -->
                             <tr class="bg-all-table2 td-bold">
                               <td></td>
-                              <td>Indeks 4P Operation</td>
+                              <td>Index 4P Store</td>
                               <td>-</td>
                               <td>3.56</td>
                               <td>3.20</td>
@@ -934,7 +2202,7 @@
                             <!-- People -->
                             <tr>
                               <td class="text-center">People</td>
-                              <td>Indeks People</td>
+                              <td>Index People</td>
                               <td>-</td>
                               <td>
                                 <i
@@ -963,13 +2231,711 @@
                                 2.25
                               </td>
                             </tr>
-                            <!-- People Check -->
+                            <!-- Nilai Functional Test Pejabat -->
                             <tr>
                               <td class="text-center">
                                 <i class="fas fa-circle circle-table3"></i>
                               </td>
-                              <td>People Check</td>
-                              <td>80.00</td>
+                              <td>Nilai Functional Test Pejabat</td>
+                              <td>85.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Nilai Functional Test Crew -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Nilai Functional Test Crew</td>
+                              <td>85.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Nilai Functional Test Personil DC (Coor Up) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                Nilai Functional Test Personil DC (Coor Up)
+                              </td>
+                              <td>85.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Nilai Functional Test Personil DC (Coor Down) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                Nilai Functional Test Personil DC (Coor Down)
+                              </td>
+                              <td>85.00</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- a. Komposisi Personil Toko (COS) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>a. Komposisi Personil Toko (COS)</td>
+                              <td>99.50%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- b. Komposisi Personil Toko (Acos) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>b. Komposisi Personil Toko (Acos)</td>
+                              <td>99.50%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- c. Komposisi Personil Toko (Crew) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>c. Komposisi Personil Toko (Crew)</td>
+                              <td>99.50%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- d. Kesesuaian Komposisi Personil Toko (COS) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                d. Kesesuaian Komposisi Personil Toko (COS)
+                              </td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- e. Kesesuaian Komposisi Personil Toko (Acos) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                e. Kesesuaian Komposisi Personil Toko (Acos)
+                              </td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- f. Kesesuaian Komposisi Personil Toko (Crew) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                f. Kesesuaian Komposisi Personil Toko (Crew)
+                              </td>
+                              <td>100.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Product -->
+                            <tr>
+                              <td class="text-center">Product</td>
+                              <td>Index Product</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- %Service Level Supplier to DC (Item) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Service Level Supplier to DC (Item)</td>
+                              <td>80.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Service Level Supplier to DC (Qty) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Service Level Supplier to DC (Qty)</td>
+                              <td>80.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Service Level Supplier to DC (Rupiah) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Service Level Supplier to DC (Rupiah)</td>
+                              <td>80.00%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Process -->
+                            <tr>
+                              <td class="text-center">Process</td>
+                              <td>Index Process</td>
+                              <td>-</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- Konektifitas -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Konektifitas</td>
+                              <td>99.95%</td>
                               <td>
                                 <img
                                   class="mb-1"
@@ -998,7 +2964,7 @@
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
                                 95.79
                               </td>
@@ -1006,25 +2972,25 @@
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
                                 95.79
                               </td>
                             </tr>
-                            <!-- Decrease Complain on People -->
+                            <!-- Success Rate Feebased -->
                             <tr>
                               <td class="text-center">
                                 <i class="fas fa-circle circle-table3"></i>
                               </td>
-                              <td>Decrease Complain on People</td>
-                              <td>99.50%</td>
+                              <td>Success Rate Feebased</td>
+                              <td>99.95%</td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
                                   src="/dist/img/custom/down-lg.png"
                                 />
-                                84.41%
+                                89.08
                               </td>
                               <td>
                                 <img
@@ -1032,7 +2998,7 @@
                                   width="14"
                                   src="/dist/img/custom/down-lg.png"
                                 />
-                                92.31%
+                                94.86
                               </td>
                               <td>
                                 <img
@@ -1040,35 +3006,310 @@
                                   width="14"
                                   src="/dist/img/custom/down-lg.png"
                                 />
-                                94.32%
+                                95.79
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                94.32%
+                                95.79
                               </td>
                               <td>
                                 <img
                                   class="mb-1"
                                   width="14"
-                                  src="/dist/img/custom/down-lg.png"
+                                  src="/dist/img/custom/up-lg.png"
                                 />
-                                94.32%
+                                95.79
                               </td>
                             </tr>
-                            <!-- Indeks 4P Dept. Support -->
-                            <tr class="bg-all-table3 td-bold">
-                              <td></td>
-                              <td>Indeks 4P Dept. Support</td>
+                            <!-- Success Rate e-voucher -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Success Rate e-voucher</td>
+                              <td>99.95%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- %Keberhasilan Transaksi Wallet -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>%Keberhasilan Transaksi Wallet</td>
+                              <td>99.95%</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Scoring Layanan AHO (exc. Mtc + Building & Logistik) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>
+                                Scoring Layanan AHO (exc. Mtc + Building &
+                                Logistik)
+                              </td>
+                              <td>3.25</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- AHO Office (IT & MTC) -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>AHO Office (IT & MTC)</td>
+                              <td>3.25</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Place -->
+                            <tr>
+                              <td class="text-center">Place</td>
+                              <td>Index Place</td>
                               <td>-</td>
-                              <td>2.46</td>
-                              <td>2.46</td>
-                              <td>2.46</td>
-                              <td>2.46</td>
-                              <td>2.46</td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i
+                                  class="fas fa-circle circle-orange-table"
+                                ></i>
+                                2.54
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                              <td>
+                                <i class="fas fa-circle circle-red-table"></i>
+                                2.25
+                              </td>
+                            </tr>
+                            <!-- Scoring Layanan Mtc + Building -->
+                            <tr>
+                              <td class="text-center">
+                                <i class="fas fa-circle circle-table3"></i>
+                              </td>
+                              <td>Scoring Layanan Mtc + Building</td>
+                              <td>3.50</td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                89.08
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                94.86
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/down-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                              <td>
+                                <img
+                                  class="mb-1"
+                                  width="14"
+                                  src="/dist/img/custom/up-lg.png"
+                                />
+                                95.79
+                              </td>
+                            </tr>
+                            <!-- Index 4P Office -->
+                            <tr class="bg-all-table2 td-bold">
+                              <td></td>
+                              <td>Index 4P Office</td>
+                              <td>-</td>
+                              <td>3.56</td>
+                              <td>3.20</td>
+                              <td>3.16</td>
+                              <td>3.16</td>
+                              <td>3.11</td>
                             </tr>
                           </tbody>
                         </table>
